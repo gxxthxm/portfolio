@@ -1,0 +1,33 @@
+{
+ "title": "Branding Works",
+ "category": "Brand",
+ "blocks": [
+  {
+   "t": "img",
+   "src": "assets/images/eDbBTkDmrQbpfhfqeOcLcvCgY.png",
+   "alt": ""
+  },
+  {
+   "t": "button",
+   "label": "Visit Site",
+   "href": "https://www.behance.net/gauthemkrishna1"
+  },
+  {
+   "t": "h5",
+   "h": "Visit my Behance profile for the gallery⬆"
+  },
+  {
+   "t": "p",
+   "h": "This branding showcase highlights a curated selection of freelance projects where I crafted distinct and memorable visual identities for diverse clients. From logo design and typography systems to comprehensive color palettes and brand guidelines, each project reflects a tailored approach that aligns with the client's vision and target audience. I focused on creating cohesive brand experiences across digital and print mediums, ensuring consistency, professionalism, and emotional resonance. These works demonstrate my ability to translate core brand values into compelling visuals that elevate recognition and trust across platforms."
+  },
+  {
+   "t": "img",
+   "src": "assets/images/4l485F6geGQmaH3tnbAZ69CYkZ8.png",
+   "alt": ""
+  }
+ ],
+ "section": "other_works",
+ "slug": "brandingworks",
+ "tags": "Multiple",
+ "cover": "assets/images/eDbBTkDmrQbpfhfqeOcLcvCgY.png"
+}

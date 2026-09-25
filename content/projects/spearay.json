@@ -1,0 +1,194 @@
+{
+ "title": "SpeaRay",
+ "category": "Product",
+ "blocks": [
+  {
+   "t": "img",
+   "src": "assets/images/8XkQKb0zf8Pn4m05RXtddttGyc.png",
+   "alt": ""
+  },
+  {
+   "t": "p",
+   "h": "SpeaRay is a mobile app concept designed to reinvigorate the experience of renting and collecting high-quality Blu-ray discs of movies and series, delivered directly to your home. In a digital age dominated by streaming, SpeaRay seeks to offer movie lovers, collectors, and cinephiles both the nostalgia and unmatched quality of physical media—while providing the convenience and personalization expected from modern mobile platforms."
+  },
+  {
+   "t": "img",
+   "src": "assets/images/ef4gt29RL7JWAvGRyaUpX6ZUz6M.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/t7FtrCgBmpKRUof7vd4kfDzgy2k.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/VlRiZX3Vi8o7eT0w6TnHfw5pBDc.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/jmg30qnLGNwdtUQecruW8lCxLg.png",
+   "alt": ""
+  },
+  {
+   "t": "h2",
+   "h": "Personas"
+  },
+  {
+   "t": "p",
+   "h": "<strong>1. Jason, 32 – The Film Aficionado</strong><br>Collects movies in their highest quality, prefers owning physical discs, and enjoys director commentaries or exclusive box sets. Looks for rare releases and wants a wish list to keep track of hard-to-find titles."
+  },
+  {
+   "t": "p",
+   "h": "<strong>2. Maria, 24 – The Casual Binge Watcher</strong><br>Enjoys a mix of classics and new releases. Likes curated genre lists, easy offers, and occasional deals for boxed sets on her favorite shows."
+  },
+  {
+   "t": "p",
+   "h": "<strong>3. Sanjay, 41 – The Nostalgic Parent</strong><br>Wants to introduce children to the movies of his youth but is disappointed by streaming services’ rotating catalogs. Values straightforward home delivery and family bundles."
+  },
+  {
+   "t": "h2",
+   "h": "Problem Statement"
+  },
+  {
+   "t": "p",
+   "h": "Streaming has made access to content easy, but picture/sound quality and collectability have declined.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Movie collectors struggle to find, track, and purchase authentic Blu-rays for their shelves.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Physical media delivery websites are often outdated, slow, and lack user-friendly mobile experiences.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "There are few apps offering wishlist management, personalized genre browsing, and exclusive physical media deals in one seamless flow.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Competitive Analysis"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Blu-ray.com My Movies App</strong>"
+  },
+  {
+   "t": "p",
+   "h": "Offers barcode scanning and collection tracking but limited e-commerce and delivery features; UI is dated and less focused on personalization.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Amazon &amp; Major Retail Apps</strong>"
+  },
+  {
+   "t": "p",
+   "h": "Massive inventory and fast delivery, but poor discoverability for cinephiles, limited curation, and weak experience for collectors.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Streaming Platforms (Netflix, Disney+, Amazon Prime)</strong>"
+  },
+  {
+   "t": "p",
+   "h": "No physical ownership; rely on subscriptions, ever-changing catalogs, and no way to own or gift a tangible collectible.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Key Differentiators for SpeaRay:</strong>"
+  },
+  {
+   "t": "p",
+   "h": "Combines the quality and permanence of physical media with the intuitiveness of modern mobile shopping.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Focuses on collectors: wishlists, detailed product info, collector’s editions, and high-res imagery.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Curated browsing—genre and offer-driven discovery—allowing exploration, not just searching.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Solution Highlights"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Homepage:</strong><br>Hero carousel for featured discs and latest arrivals; sections for new, popular, and recommended content.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Wishlist Page:</strong><br>Grid of saved and tracked titles, with instant availability notification and direct “add to cart” action.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Genre Page:</strong><br>Browse and filter by genres; each with its own landing visual and curated lists.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Offers Page:</strong><br>Time-limited deals, bundles, and exclusives; deals surfaced with bold visuals and easy redemption.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Profile Page:</strong><br>Account management, address book, order history, and purchase preferences.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Navigation:</strong><br>Primary pages accessible via a bottom tab bar.<br>A hamburger menu at the top right provides quick access to secondary controls (Settings, Preferences, Shipping Locations, Language, and Support)."
+  },
+  {
+   "t": "h2",
+   "h": "Design Rationale"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Visuals:</strong><br>Dark theme with bold orange accents, maximizing contrast and focus on vibrant movie artwork.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Usability:</strong><br>Large covers, easy swiping, one-tap wishlist and orders; hamburger menu only for less-used, non-core options.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Personalization:</strong><br>Persistent wishlists, dynamic offers, user profiles, and push notifications for rare finds or restocks.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Accessibility:</strong><br>Full voiceover support, large tap targets, and visual cues on every interactive element.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Outcome"
+  },
+  {
+   "t": "p",
+   "h": "SpeaRay provides a modern, cinematic, and delightful way for physical media lovers to discover, wishlist, and own Blu-ray movies and series. It bridges the tactile joys of collection with today’s expectations for convenience, curation, and mobile-first access—restoring ownership, quality, and nostalgia for film fans everywhere."
+  }
+ ],
+ "section": "other_works",
+ "slug": "spearay",
+ "tags": "BlueRay Movies Delivery",
+ "cover": "assets/images/8XkQKb0zf8Pn4m05RXtddttGyc.png"
+}

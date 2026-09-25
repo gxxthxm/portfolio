@@ -1,0 +1,150 @@
+{
+ "hero": "assets/images/jiUkTNJt7XyDXvbvwcfdO8Lw3A.png",
+ "visit": "https://www.agrivator.com",
+ "overview": [
+  "<strong>Agrivator</strong> is an agriculture-focused startup launched during the COVID-19 pandemic with the goal of supporting both new and experienced farmers. The platform aimed to bridge the gap between essential agricultural supplies and those in need by offering an online delivery service for groceries and farming-related goods. With a mission rooted in accessibility and community resilience, Agrivator provided timely solutions during a period of global uncertainty, empowering farmers and rural households through digital convenience and reliable service."
+ ],
+ "gallery": [],
+ "blocks": [
+  {
+   "t": "h1",
+   "h": "Challenges"
+  },
+  {
+   "t": "p",
+   "h": "Designing for low-digital-literacy users was one of the biggest challenges. The primary target audience—<strong>rural farmers</strong>—had minimal experience with digital interfaces and often used <strong>low-end smartphones</strong> with limited internet connectivity. The product needed to be simple, legible, and accessible while still offering key e-commerce functionality like inventory tracking, order placement, and delivery updates."
+  },
+  {
+   "t": "p",
+   "h": "Additionally, the pandemic added a layer of complexity—requiring a logistics-friendly e-commerce solution that supported <strong>remote delivery</strong>, <strong>real-time inventory management</strong>, and <strong>vendor-user coordination</strong>. Overcoming these challenges required not only technical problem-solving but also empathy and insight into real-world behaviors."
+  },
+  {
+   "t": "h2",
+   "h": "Research and Design Strategy:"
+  },
+  {
+   "t": "p",
+   "h": "Led interviews with farmers, vendors, and delivery partners to document workflows and real pain points.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Mapped personas for first-time digital users, translating familiar farming tasks into simple digital flows.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Prioritized legibility, large tap targets, high-contrast visuals, and regional language support for accessibility.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Coordinated vendor feedback loops, ensuring backend tools and dashboards worked for low-literacy users.",
+   "list": "ul"
+  },
+  {
+   "t": "h3",
+   "h": "Persona Example"
+  },
+  {
+   "t": "p",
+   "h": "Name: Raju, 44<br>Profile: Small-scale farmer in a remote village<br>Needs: Track inventory, order seeds and tools, get delivery updates—using a basic smartphone, minimal digital experience, prefers local language"
+  },
+  {
+   "t": "h3",
+   "h": "User Problem Statement"
+  },
+  {
+   "t": "p",
+   "h": "Rural farmers like Raju struggle with digital interfaces—apps are often complex, hard to navigate, and not available in local languages. Limited connectivity and low-end devices make many e-commerce options unusable, blocking access to essential supplies and farming tools—especially during the disruptions of the pandemic."
+  },
+  {
+   "t": "h2",
+   "h": "Prototyping and Testing:"
+  },
+  {
+   "t": "p",
+   "h": "Built and tested clickable wireframes and mid-fi prototypes with actual devices in rural environments.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Ran usability sessions observing error rates and drop-off points; iterated navigation and labeling.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Set up A/B tests to refine onboarding and product listing formats, reducing cart abandonment.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Worked directly with developers to optimize app performance for basic smartphones and patchy internet.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Product Launch and Rollout:"
+  },
+  {
+   "t": "p",
+   "h": "Managed a targeted MVP launch in rural areas, gathering delivery, ordering, and UI comprehension insights.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Iterated on order flow, filters, and localization to improve comprehension, speed, and reliability.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Designed vendor onboarding kits and mobile-friendly admin dashboards for effortless backend adoption.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Developed offline and online marketing materials in local languages with the marketing team to build platform awareness.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Design Leadership &amp; Measurable Outcomes:"
+  },
+  {
+   "t": "p",
+   "h": "Led full-cycle design, slashing release timelines by 40% compared to previous projects.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "In-depth research and simplified flows dropped bounce rates by 28% in the first weeks.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Usability upgrades driven by real user feedback improved satisfaction by 45% within two months.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Built a trusted, inclusive marketplace that helped bridge the digital gap in rural farming communities, sustaining access to essentials during crises.",
+   "list": "ul"
+  },
+  {
+   "t": "h3",
+   "h": "<strong>Conclusion</strong>"
+  },
+  {
+   "t": "p",
+   "h": "This project demonstrated the power of <strong>user-centered design</strong> in a high-stakes, low-access environment. By deeply understanding the unique constraints of rural users and vendors—and building for real-world usage—we helped bridge the digital gap in a time of critical need. The work delivered not only a functional e-commerce tool for farming communities but also an inclusive platform that users trusted and understood."
+  }
+ ],
+ "employer": "Agrivator",
+ "domain": "Product",
+ "section": "professional_works",
+ "slug": "agrivator",
+ "title": "Agrivator",
+ "category": "Product",
+ "tags": "B2B | B2C",
+ "cover": "assets/images/jiUkTNJt7XyDXvbvwcfdO8Lw3A.png"
+}

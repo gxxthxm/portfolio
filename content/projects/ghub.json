@@ -1,0 +1,226 @@
+{
+ "title": "Game Hub",
+ "category": "Redesign",
+ "blocks": [
+  {
+   "t": "img",
+   "src": "assets/images/k5Z6vBx4DEmDCNSQz6Wmzvz8eE8.jpg",
+   "alt": ""
+  },
+  {
+   "t": "p",
+   "h": "GameHub was born out of a personal passion for both gaming and digital product design. As a gamer and a frequent user of popular marketplaces like Steam and Epic Games, I saw a gap in how landing pages prioritize, promote, and market new game releases. Many platforms bury upcoming titles under trending or discounted sections, and their homepages can feel visually overwhelming rather than cinematic or immersive."
+  },
+  {
+   "t": "p",
+   "h": "For GameHub, I set out to create a landing page that blends modern dark mode aesthetics, interactive animations, and a strong focus on new game drops—all while maintaining a streamlined user experience that draws users into the world of gaming from their very first click."
+  },
+  {
+   "t": "img",
+   "src": "assets/images/0N2WtwuOYiWwWliHjYUqGiRwhE.jpg",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/FVXhn3tumP3rorfHsWelUal76OY.jpg",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/0SDCvx991npGHCt12Hx9lAw8E.jpg",
+   "alt": ""
+  },
+  {
+   "t": "h2",
+   "h": "Competitive Analysis and Pain Points"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Steam</strong><br>Strengths: Massive catalog, strong community integration, robust wishlist and review systems.<br>Pain Points: Busy and cluttered homepage, insufficient focus on upcoming releases, often static and slow to load, lack of immersive media and animation."
+  },
+  {
+   "t": "p",
+   "h": "<strong>Epic Games Store</strong><br>Strengths: Simpler layout, frequent exclusives, focus on featured titles.<br>Pain Points: Sale banners can overshadow new launches, limited multimedia engagement, important releases sometimes lost in general grids."
+  },
+  {
+   "t": "p",
+   "h": "<strong>GOG/Origin</strong><br>Strengths: Combination of game management and community features.<br>Pain Points: Feeds become noisy, difficult to distinguish new releases visually, static UI/UX with little animation."
+  },
+  {
+   "t": "p",
+   "h": "<strong>Key Issues Addressed by GameHub:</strong>"
+  },
+  {
+   "t": "p",
+   "h": "New releases are often hidden, not immediately visible or market-focused.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Visual clutter reduces excitement; many sections compete for attention.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Little use of cinematic animation or media to create drama around game launches.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Weak hierarchy: hard to find the most relevant or newest content on landing.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "User Problems"
+  },
+  {
+   "t": "p",
+   "h": "Difficulty instantly locating and exploring new game releases when landing on marketplace homepages.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Overwhelming UI with too many competing CTAs and information blocks.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Discovery only after navigating several sections, leading to missed opportunities for engagement or pre-order.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Desire for interactive previews, animated trailers, and rich media without needing extra clicks.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Lack of a modern, visually immersive experience that matches the excitement of the gaming world.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Solution and Design Approach"
+  },
+  {
+   "t": "p",
+   "h": "<strong>GameHub</strong> gives pride of place to new drops and upcoming launches with a dramatic hero section—full-width carousel featuring animated game art, countdowns, and instant CTAs (pre-order, wishlist, read more). Supporting sections showcase curated collections, active sales, game categories, and community highlights, arranged to keep user focus on the latest and most important releases."
+  },
+  {
+   "t": "h2",
+   "h": "Core Features &amp; User Flow"
+  },
+  {
+   "t": "p",
+   "h": "<strong>New Game Drops Spotlight</strong>",
+   "list": "ol"
+  },
+  {
+   "t": "p",
+   "h": "Hero carousel with cinematic artwork, launch timers, and rich animation to build hype. Action buttons for pre-ordering or wishlisting are prominent and sticky.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Featured and Trending Games</strong>",
+   "list": "ol"
+  },
+  {
+   "t": "p",
+   "h": "Horizontal showcase of top-selling or critically acclaimed games with easy-to-access quick actions shown on hover.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Curated Discovery Grid</strong>",
+   "list": "ol"
+  },
+  {
+   "t": "p",
+   "h": "Animated filters for genre, price, and release date. Card-based design with animated previews, media, and hover interactions for instant engagement.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Promotions and Sales Banner</strong>",
+   "list": "ol"
+  },
+  {
+   "t": "p",
+   "h": "Banners for sales, bundles, or special offers with animated reveals. One-click access to full catalog.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Game Categories</strong>",
+   "list": "ol"
+  },
+  {
+   "t": "p",
+   "h": "Genre cards with custom icons and animated hover states for exploration.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Community and Social Media Section</strong>",
+   "list": "ol"
+  },
+  {
+   "t": "p",
+   "h": "Embedded interactive carousel for reviews, live streams, and discussion highlights—all animated and media-rich.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Newsletter Signup and App Download</strong>",
+   "list": "ol"
+  },
+  {
+   "t": "p",
+   "h": "Attention-grabbing animated CTA for subscription and downloads.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Visual and Interaction Design"
+  },
+  {
+   "t": "p",
+   "h": "Modern, pitch-dark backgrounds and vibrant accent colors (electric blue, neon green) for readability and focus.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Smooth transitions (fade, scale, parallax) and cinematic presentation for new release marketing.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Large, bold typography that creates hierarchy; clear, touch-friendly interactive elements.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Responsive layout for desktop and mobile; optimized images and preloaded media for speed.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Accessibility ensured with high contrast, alt text, and keyboard navigation.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Outcome and Reflection"
+  },
+  {
+   "t": "p",
+   "h": "GameHub represents my vision for a next-generation gaming marketplace: immersive, interactive, and laser-focused on marketing and presenting new game launches with drama and excitement. By combining dark mode UI best practices, integrated animation, and a clear visual hierarchy, I created a compelling landing experience that maximizes user engagement with the freshest offerings on the market."
+  }
+ ],
+ "section": "other_works",
+ "slug": "ghub",
+ "tags": "Gaming",
+ "cover": "assets/images/k5Z6vBx4DEmDCNSQz6Wmzvz8eE8.jpg"
+}

@@ -1,0 +1,189 @@
+{
+ "title": "VistaGo",
+ "category": "Research and Design",
+ "blocks": [
+  {
+   "t": "img",
+   "src": "assets/images/gHInWbm2pT8Mh28RsOCsFdk.png",
+   "alt": ""
+  },
+  {
+   "t": "p",
+   "h": "During an exploration of Airbnb’s iconic design language and user experience principles, I embarked on a personal project to create <strong>VistaGo</strong>, a travel app aimed at helping users effortlessly discover, explore, and book destinations worldwide. This project was heavily inspired by Airbnb’s clean aesthetics, user-centric interfaces, and smooth navigation, while also incorporating fresh ideas tailored for modern mobile travel experiences."
+  },
+  {
+   "t": "img",
+   "src": "assets/images/cj2ZHl2OLgtHosUhzt3bpqNmBRw.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/MLNwsmePiqBeN8y2fzd1V1IlYo.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/myczGuHd3Ey4sBkVv6dcWico3A.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/mFoZfJpz8n8Bqsgdb0rOIQeTFwg.png",
+   "alt": ""
+  },
+  {
+   "t": "h2",
+   "h": "Personas"
+  },
+  {
+   "t": "h2",
+   "h": "Emma – The Curious Explorer"
+  },
+  {
+   "t": "p",
+   "h": "A young professional who loves spontaneous travels and exploring new destinations. Values quick access to personalized recommendations and clear, informative visuals. Prefers seamless booking flows without unnecessary distractions."
+  },
+  {
+   "t": "h2",
+   "h": "Liam – The Planner"
+  },
+  {
+   "t": "p",
+   "h": "An experienced traveler who carefully researches destinations and plans trips well in advance. Seeks detailed information, reviews, and flexible filters to tailor travel experiences to his preferences."
+  },
+  {
+   "t": "h2",
+   "h": "Sarah – The Casual Vacationer"
+  },
+  {
+   "t": "p",
+   "h": "Often looks for relaxing, convenient travel options with minimal decision fatigue. Appreciates visuals and easy-to-understand information summaries to help make quick choices."
+  },
+  {
+   "t": "h2",
+   "h": "Problem Statements"
+  },
+  {
+   "t": "p",
+   "h": "Users face overwhelming options with scattered information across travel apps, making destination discovery cumbersome.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Booking flows can be complicated or require multiple steps, causing dropout.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Visual inconsistencies and cluttered interfaces reduce user trust and engagement.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Lack of personalized exploratory tools for users who want quick suggestions based on interests or past activities.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Insufficient attention to accessibility and legibility in some travel apps affecting diverse user groups.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Design Reasoning"
+  },
+  {
+   "t": "p",
+   "h": "<strong>User-Centered Simplicity:</strong> Emulating Airbnb’s clean hierarchy and whitespace to reduce cognitive load and foster exploration.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Visual Storytelling:</strong> Large, vivid destination images create emotional appeal and immediate engagement.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Intuitive Navigation:</strong> A bottom tab bar with simple icons allows effortless switching between Home, Search, and Profile.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Efficient Filters &amp; Search:</strong> Clearly visible filters enable powerful destination refinement while staying out of the way until needed.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Actionable Details:</strong> Bold \"Book Now\" buttons and visible ratings provide clarity and instill confidence in booking decisions.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Accessibility Focus:</strong> High contrast between text and background, consistent font sizes, and touch-friendly elements ensure a broad reach.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Engaging Interactions:</strong> Parallax scrolling on images, subtle fade and scale animations on cards, and smooth page transitions create a premium feel.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "User Flow Highlights"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Landing on Home:</strong> Personalized greeting invites immediate exploration. Search bar and filters offer personalized control.",
+   "list": "ol"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Discovering Destinations:</strong> Scrollable cards allow browsing of popular places sorted by Most Viewed, Nearby, or Latest. Quick access to favorites via heart icons.",
+   "list": "ol"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Exploring Details:</strong> Tap a destination to see a full bleed image with overlaid name, price, and location info.",
+   "list": "ol"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Decision-Making:</strong> Users view concise trip details with icons indicating trip duration, temperature, and rating.",
+   "list": "ol"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Booking:</strong> Bold “Book Now” CTA is persistently available, streamlining conversion.",
+   "list": "ol"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Profile Management:</strong> Users can save favorites, view past trips, and manage preferences.",
+   "list": "ol"
+  },
+  {
+   "t": "h2",
+   "h": "Final Product Reference"
+  },
+  {
+   "t": "p",
+   "h": "The final design is implemented in Figma, closely following this structured and research-backed approach. It balances aesthetic appeal with functionality through a soft, rounded card style, consistent iconography, and a friendly, welcoming tone consistent with Airbnb’s design philosophy."
+  },
+  {
+   "t": "h2",
+   "h": "Conclusion"
+  },
+  {
+   "t": "p",
+   "h": "VistaGo is a culmination of my in-depth research into Airbnb’s design system married with a personal passion for travel and thoughtfully crafted mobile experiences. The project highlights the importance of minimalism, clarity, and emotional connection in travel apps. It also reinforces how strong design languages enhance usability and drive engagement across diverse user personas."
+  },
+  {
+   "t": "p",
+   "h": "This case study documents the motivation, personas, problem-solving strategies, and design rationale behind the VistaGo app, reflecting a modern, user-centric travel booking experience."
+  }
+ ],
+ "section": "other_works",
+ "slug": "vistago",
+ "tags": "Travel App",
+ "cover": "assets/images/gHInWbm2pT8Mh28RsOCsFdk.png"
+}

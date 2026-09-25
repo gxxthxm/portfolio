@@ -1,0 +1,201 @@
+{
+ "title": "Capella",
+ "category": "Redesign",
+ "blocks": [
+  {
+   "t": "img",
+   "src": "assets/images/eLrn5cXhASaVSvdWQo1BF2FKPas.png",
+   "alt": ""
+  },
+  {
+   "t": "p",
+   "h": "Capella is a recreation of an elevated e-commerce experience for fashion retail, delivered under NDA for a client seeking a visual overhaul and improved conversions. Tasked with replicating and enhancing an existing design, the project spanned brand identity creation, responsive UI design, and optimized user flows for shopping and checkout."
+  },
+  {
+   "t": "img",
+   "src": "assets/images/gfMuXqH0elNjs1F5XHmsTAVJU7s.png",
+   "alt": ""
+  },
+  {
+   "t": "h2",
+   "h": "Personas"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Erik, 28, Fashion Enthusiast:</strong> Values trend discovery, easy product comparison, and quick checkout.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Anna, 35, Busy Parent:</strong> Seeks frictionless mobile shopping, clear pricing, and accessible navigation.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Samira, 24, Student:</strong> Shops for sales, prefers visual browsing, and desires transparent delivery information.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Problem Statement"
+  },
+  {
+   "t": "p",
+   "h": "Shoppers were disengaging due to inconsistent visuals, confusing navigation, and a cumbersome checkout experience. The brand lacked distinct identity, and the prior mobile interface didn’t support rapid product discovery or efficient payment flows."
+  },
+  {
+   "t": "h2",
+   "h": "Research &amp; Insights"
+  },
+  {
+   "t": "p",
+   "h": "Extensive competitor benchmarking and user interviews highlighted these priorities:"
+  },
+  {
+   "t": "p",
+   "h": "Visual clarity and compelling product imagery encourage browsing.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Prominent calls-to-action (Add to Cart, Pay Now) improve conversions.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Trust signals like free shipping, ratings, and secure payment boost comfort.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Mobile-first, responsive layouts drive engagement and accessibility.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Clear categorization, filters, and straightforward cart management are essential for diverse user needs.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Design Solutions"
+  },
+  {
+   "t": "h2",
+   "h": "Brand Identity"
+  },
+  {
+   "t": "p",
+   "h": "Developed a recognizable logo, modern typography, and warm color palette (notably coral pink) to express the brand’s friendly, fashion-forward personality.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "All digital and offline materials leveraged consistent visuals to strengthen brand recall.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Navigation &amp; User Flows"
+  },
+  {
+   "t": "p",
+   "h": "Home screen prioritizes new collections, with category filters for effortless product discovery.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Product page spotlights the item with crisp imagery, price, detailed information, ratings, size/color selectors, and persuasive calls-to-action.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Cart and checkout flows are streamlined, summarizing selected items, transparent pricing, delivery info, and secure payment options for speed and reassurance.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>User Flow Example:</strong>",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Home → Browse Category → Select Product → View Details → Choose Size/Color → Add to Cart → View Cart → Confirm Details → Enter Payment → Pay Now",
+   "list": "ol"
+  },
+  {
+   "t": "h2",
+   "h": "Visual &amp; UX Optimizations"
+  },
+  {
+   "t": "p",
+   "h": "High-quality images highlight products and create emotional connections.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Microcopy and rating visuals motivate purchase decisions.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Accessibility and responsiveness ensure usability for all devices and reading levels.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Filters and sorting, quick cart management, and single-action checkout minimize friction.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Testing &amp; Refinement"
+  },
+  {
+   "t": "p",
+   "h": "Usability testing illuminated points of confusion, leading to revisions in filter placement, cart UI, and payment flow.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "User feedback confirmed increased satisfaction with browsing speed, checkout simplicity, and visual brand appeal.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Results"
+  },
+  {
+   "t": "p",
+   "h": "Branded consistency increased user trust and engagement.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Conversion rates improved through persuasive CTAs and a frictionless checkout.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Mobile usability and accessibility supported global expansion and inclusivity.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Efficient collaboration and adherence to best practices ensured timely, high-quality delivery.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Summary"
+  },
+  {
+   "t": "p",
+   "h": "The Capella e-commerce mobile app demonstrates the impact of user-centric design, cohesive branding, and best-in-class UI/UX on business outcomes. Smart navigation, clear visual hierarchy, and effortless checkout collectively enhance engagement, drive sales, and establish a strong, memorable brand presence."
+  }
+ ],
+ "section": "other_works",
+ "slug": "capella",
+ "tags": "Clothing App",
+ "cover": "assets/images/eLrn5cXhASaVSvdWQo1BF2FKPas.png"
+}

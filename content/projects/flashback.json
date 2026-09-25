@@ -1,0 +1,208 @@
+{
+ "title": "Flashback",
+ "category": "Redesign",
+ "blocks": [
+  {
+   "t": "img",
+   "src": "assets/images/hnu6Xc24iYYrVYE1uYCEhAEX3Nk.png",
+   "alt": ""
+  },
+  {
+   "t": "p",
+   "h": "The app <strong>Flashback</strong> was inspired as a personal homage to my earlier branding work with a local bakery in my hometown. The name \"Flashback\" signifies a nostalgic blast from my past experiences, blending the warmth and care I witnessed in that project into the digital world. With Flashback, the goal was to create a mobile app that reflects kindness, attention to detail, and the joyful spirit of victory associated with healthy gluten-free snacking.<br><br>"
+  },
+  {
+   "t": "p",
+   "h": "Full Prototype: <a href=\"https://dial-clever-86042597.figma.site\">https://dial-clever-86042597.figma.site</a>"
+  },
+  {
+   "t": "img",
+   "src": "assets/images/9yHHgMwreHGpY7KP5BpEeh04E.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/ukkmuozWx6x8S8OJNmyRoFZ7vw.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/wi194wfjplZlgQ2NToyvDryc8VA.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/FT9M26RnvQs2DGzmLo3yhxpTX0.png",
+   "alt": ""
+  },
+  {
+   "t": "h2",
+   "h": "Personas"
+  },
+  {
+   "t": "h4",
+   "h": "<strong>Nina, 25 – Fitness Enthusiast</strong>"
+  },
+  {
+   "t": "p",
+   "h": "An active young woman focused on maintaining her health and energy through nutritious gluten-free snacks. She values clear nutritional information and a smooth shopping experience."
+  },
+  {
+   "t": "h4",
+   "h": "<strong>Arjun, 22 – Budget-Conscious Student</strong>"
+  },
+  {
+   "t": "p",
+   "h": "Enjoys discovering new and tasty finger-food options without breaking the bank. Likes tracking offers, sharing favorites with friends, and using easy wishlist management."
+  },
+  {
+   "t": "h4",
+   "h": "<strong>Alicia, 30 – Social Planner</strong>"
+  },
+  {
+   "t": "p",
+   "h": "Organizes get-togethers and needs dependable, allergy-safe finger-food options. Prefers simple ways to build shopping lists and verify store availability."
+  },
+  {
+   "t": "h2",
+   "h": "Problem Statement"
+  },
+  {
+   "t": "p",
+   "h": "The market lacks engaging and friendly digital experiences for gluten-free snack shoppers.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Consumers want easy access to product details, availability, and personalized offers without cumbersome navigation.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Many existing apps do not connect the joy and kindness intrinsic to local bakery experiences with digital convenience.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Ensuring trustworthy, inclusive messaging and clear dietary info remains challenging.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Competitive Analysis"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Find Me Gluten Free:</strong> Strong on restaurant and food venue guidance but limited in product-based features or joyful brand personality.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Live Well Gluten Free:</strong> Robust dietary filtering with practical design, but less engaging and lacking community elements.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Popular Food Delivery Apps (Zomato, Uber Eats):</strong> Extensive catalogs and delivery-oriented, but not specialized for gluten-free snack discovery and retailer integration.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Bakery-specific apps:</strong> Usually focused on orders/delivery with less emphasis on lifestyle, festivity, and dietary inclusivity.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Solution &amp; Design Highlights"
+  },
+  {
+   "t": "p",
+   "h": "Homepage featuring seasonal and “Victory Picks” finger-foods with cheerful filtering options.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Detailed product pages with allergy info, ingredient stories, and local store availability maps.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Offers and Rewards containing student discounts, bundle deals, and loyalty points with animated celebrations.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Wishlist to track favorites and supply notifications for availability or promotions.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Profile page with personalized settings, dietary preference management, and purchase history.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Navigation:</strong>"
+  },
+  {
+   "t": "p",
+   "h": "Intuitive bottom tab bar for core features.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Hamburger menu with secondary settings like preferences, language, location, and accessibility options.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Visual Style:</strong>"
+  },
+  {
+   "t": "p",
+   "h": "Inspired by Airbnb: pastel palette with warm oranges, fresh greens, creamy neutrals, generous white space, and rounded UI components.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Friendly, approachable tone of voice imbuing kindness and accomplishment.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Design Philosophy"
+  },
+  {
+   "t": "p",
+   "h": "Translate bakery-inspired warmth and attention to detail into the digital realm.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Use playful and clear design elements to engage a young, health-conscious demographic.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Facilitate effortless product discovery, social sharing, and loyalty building.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Foster a strong sense of community and personal triumph through design and messaging.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Outcome"
+  },
+  {
+   "t": "p",
+   "h": "Flashback is designed as a joyful, inclusive, and reliable app that brings a blast-from-the-past charm to the modern gluten-free snack shopping experience. It balances detailed, trustworthy product info with friendly interfaces and festive rewards, empowering users to feel victorious about their food choices every day."
+  }
+ ],
+ "section": "other_works",
+ "slug": "flashback",
+ "tags": "Food and Beverages",
+ "cover": "assets/images/hnu6Xc24iYYrVYE1uYCEhAEX3Nk.png"
+}

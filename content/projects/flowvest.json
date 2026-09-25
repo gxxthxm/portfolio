@@ -1,0 +1,346 @@
+{
+ "title": "FlowVest",
+ "category": "Product",
+ "blocks": [
+  {
+   "t": "img",
+   "src": "assets/images/BHAilodDHXOo49W0R92kN03QFU.jpg",
+   "alt": ""
+  },
+  {
+   "t": "p",
+   "h": "Several years ago, I did freelance design for a bank and finance management company, creating a mobile app focused on managing personal transactions and investments. Recently, I revisited that work, leveraging today’s technologies and design trends. The opportunity to integrate AI for smarter financial analysis and recommendations inspired me to reimagine the app, now called <strong>FlowVest</strong>. My objective was to solve old usability pain points while elevating user experience for a new generation of finance app users."
+  },
+  {
+   "t": "img",
+   "src": "assets/images/oBB427aHFgKv4HPCpy4QPNzgzY.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/eqFt30q2T6NvJsAfbiNje3EfhE.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/3udMav6aGIrxxRUSiLlfBgG0ho.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/qsjGNvkEFX5qL53SDGNTdEWjNs.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/YqAOAFPwxYYK733ICfqA9FjMKg.jpg",
+   "alt": ""
+  },
+  {
+   "t": "h2",
+   "h": "Personas"
+  },
+  {
+   "t": "p",
+   "h": "<strong>1. Olivia – The Pragmatic Saver (28, Marketing Professional)</strong>"
+  },
+  {
+   "t": "p",
+   "h": "Manages day-to-day expenses, tracks purchases, and aims to save for travel and big purchases.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Wants a straightforward mobile overview of spending, savings, and recommendations to optimize budgets.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Finds traditional finance apps cluttered or “too technical.”",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>2. Raj – The Investing Explorer (40, Small Business Owner)</strong>"
+  },
+  {
+   "t": "p",
+   "h": "Active in stock and crypto trading, needs real-time insights and easy management of his portfolio.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Seeks timely trade recommendations and performance analytics without sifting through financial jargon.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Finds fragmented tools across banks, brokerages, and wallets confusing.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>3. Liam – The Early Adopter (23, Graduate Student)</strong>"
+  },
+  {
+   "t": "p",
+   "h": "Familiar with mobile wallets and fintech apps, wants to monitor transactions and learn how to invest.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Open to AI-driven forecasts and tips for stocks and crypto.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Difficulties understanding predictions or knowing when to trust an app’s advice.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Competitive Analysis &amp; Pain Points"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Existing Apps:</strong>"
+  },
+  {
+   "t": "p",
+   "h": "<em>Mint</em>: Great for categorizing spending, but lacks investment tracking and actionable AI insights. Overwhelming initial setup, and charts can feel dense.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<em>Revolut</em>: Combines banking, stocks, and crypto, but users report slow onboarding, confusing trade flows, and impersonal dashboard.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<em>Robinhood</em>: Clean interface and instant trades; weak budgeting, and crypto features are separated from stocks. Trade tips and AI insights remain limited.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<em>Coinbase</em>: Simple crypto UI, but little personalization; reports of high notification spam and difficulty understanding market moves.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Identified Pain Points:</strong>"
+  },
+  {
+   "t": "p",
+   "h": "Complicated onboarding and account connection processes.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Lack of consolidated overview—users must jump between tabs for finance, stocks, crypto.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Overuse of bright colors leading to eye fatigue; design feels “in your face.”",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Charts and reporting overwhelm non-technical users.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Inadequate context or rationale behind recommendations (“Why should I buy this?”).",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Too many irrelevant notifications.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Security concerns around connecting financial accounts.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "User Problems to Solve"
+  },
+  {
+   "t": "p",
+   "h": "Users want a holistic dashboard for all assets—cash, stocks, crypto—without switching apps.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Need for quick, clear transaction logs and simple budgeting tools.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Desire for actionable trade insights and forecasts, not just raw data.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Preference for visual calm and a gentle color palette to reduce cognitive load for frequent or long sessions.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Need for trust: context and transparency on AI predictions and privacy.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Demand for real-time, relevant notifications without spam.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Core User Flows"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Onboarding &amp; Account Linking</strong>"
+  },
+  {
+   "t": "p",
+   "h": "User downloads FlowVest and registers account.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Guided onboarding to securely connect bank, brokerage, and wallet accounts.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Simple privacy summary and selectable notification preferences.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Unified Financial Dashboard</strong>"
+  },
+  {
+   "t": "p",
+   "h": "After login, user lands on a personalized home screen, showing total balances, net worth, recent transactions, and summary cards for stocks/crypto.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Color-coded cards indicate daily/weekly asset changes—pastel blues, mint greens, gentle neutrals.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Tap any card for deeper details: spending trends, asset breakdown.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Transactions Review</strong>"
+  },
+  {
+   "t": "p",
+   "h": "User navigates to Transactions tab for detailed and filtered log.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Can tag, categorize, and search transactions.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Expenses chart gently highlights big outflows; individual items always editable.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Portfolio Management</strong>"
+  },
+  {
+   "t": "p",
+   "h": "Portfolio tab displays owned stocks and crypto with real-time prices, sparkline charts, allocations, and overall performance.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Tap any asset for granular history and simple buy/sell UI.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Add assets to watchlist for easy monitoring.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Forecast AI &amp; Recommendations</strong>"
+  },
+  {
+   "t": "p",
+   "h": "Forecast tab presents market predictions, confidence levels, and tailored trade moves.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Recommendations are explained clearly (e.g., “AI suggests buying Ethereum due to bullish sentiment and recent volume spikes”).",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "User can set risk profile for more personalized forecasts.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Recommendations always accompanied by rationale and impact summary.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Insights &amp; Reports</strong>"
+  },
+  {
+   "t": "p",
+   "h": "Rich progress reports visualize spending, income, investments, and forecasts for custom time ranges.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Gentle, modern charts make trends evident at a glance.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Profile &amp; Settings</strong>"
+  },
+  {
+   "t": "p",
+   "h": "User customizes notification settings, theme (light/pastel or soft dark mode), security login, and account sync.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "AI preferences allow audit of data used for training.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Outcome"
+  },
+  {
+   "t": "p",
+   "h": "FlowVest addresses common pain points found in legacy finance apps while capitalizing on AI-driven forecasting and recommendation features. The app’s soft color palette promotes comfort during extended use, and transparent AI tips empower confident financial decisions for all experience levels. By thoughtfully integrating modern tech and design, FlowVest provides holistic, actionable finance management with visual calm and clarity at every step."
+  }
+ ],
+ "section": "other_works",
+ "slug": "flowvest",
+ "tags": "Finance",
+ "cover": "assets/images/BHAilodDHXOo49W0R92kN03QFU.jpg"
+}

@@ -1,0 +1,193 @@
+{
+ "title": "Molasses",
+ "category": "Research and Design",
+ "blocks": [
+  {
+   "t": "img",
+   "src": "assets/images/P9C6ykMyUDqpJhBSqebEJnyTfVA.png",
+   "alt": ""
+  },
+  {
+   "t": "p",
+   "h": "This case study was developed after a conversation with a friend who works in the energy sector, which provided valuable insights into consumer pain points and industry challenges. Motivated by these learnings, I created <strong>Molasses</strong>, a green energy management app concept designed to simplify and promote sustainable energy use for homeowners and eco-conscious users."
+  },
+  {
+   "t": "p",
+   "h": "The full interactive prototype can be explored here: <a href=\"https://formal-chair-18918614.figma.site/\">https://formal-chair-18918614.figma.site/</a>"
+  },
+  {
+   "t": "img",
+   "src": "assets/images/YZex4RxuHQajZRfE0xHAfVUpo.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/X1Z4lvoSyjTWOZwC1JWXgWtmIc.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/lu065FnPujeJTKoSt1lpyvvYN4.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/e9DDfIoD2HTGIbiZod2X185vt4.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/3sbJdiSyPaMoUU8MmZ7IgsKsSQU.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/sMMRjPNvdAuAKnuKTodg2Wbnw.png",
+   "alt": ""
+  },
+  {
+   "t": "h2",
+   "h": "Personas"
+  },
+  {
+   "t": "h2",
+   "h": "Olivia – The Eco-Conscious Homeowner"
+  },
+  {
+   "t": "p",
+   "h": "A detail-oriented professional focused on reducing her household’s carbon footprint. Olivia needs clear, accessible data on energy consumption and actionable advice that fits her busy lifestyle."
+  },
+  {
+   "t": "h2",
+   "h": "Alex – The Tech Enthusiast"
+  },
+  {
+   "t": "p",
+   "h": "An early adopter of smart home technology, Alex monitors and controls multiple energy devices and values real-time analytics and integration with renewable energy sources."
+  },
+  {
+   "t": "h2",
+   "h": "Maria – The Budget Saver"
+  },
+  {
+   "t": "p",
+   "h": "Family-oriented and practical, Maria is mindful of utility costs and appreciates transparency and notifications that help her optimize energy usage to save money."
+  },
+  {
+   "t": "h2",
+   "h": "Problem Statement"
+  },
+  {
+   "t": "p",
+   "h": "Users struggle with opaque energy consumption data and complicated tariff structures.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Lack of easy eco-friendly energy monitoring tools that combine device integration, billing transparency, and actionable insights.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Existing solutions fail to engage users with meaningful incentives for green behavior.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Support systems are often slow or limited in languages, reducing user confidence.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Competitive Analysis"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Ostrom App</strong> – Strong regional green energy focus and dynamic pricing but complex for a global user base.<br><strong>Emporia Energy</strong> – Detailed device tracking and gamification, yet UI can be overwhelming.<br><strong>Sense Energy Monitor</strong> – Deep hardware integration but expensive and less focused on tariffs or billing.<br><strong>Google Nest</strong> – Seamless device control but limited cross-platform support and data transparency."
+  },
+  {
+   "t": "h2",
+   "h": "Molasses Solution"
+  },
+  {
+   "t": "p",
+   "h": "Molasses synthesizes the best industry elements with fresh user-centric design:"
+  },
+  {
+   "t": "p",
+   "h": "Friendly, green-themed UI blending data clarity and warmth.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Real-time dashboards combining cost, usage, and ecological impact.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Simple device management for smart meters, EV chargers, and solar energy.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Transparent tariff selection and billing with flexibility and clear cost breakdowns.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Community challenges, rewards, and in-app eco-tips to encourage sustainable habits.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Rapid, multi-channel customer support with detailed help resources.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Design &amp; User Flows"
+  },
+  {
+   "t": "p",
+   "h": "Clear signup with automated provider switching and green plan selection.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Intuitive home dashboard showing usage stats, environmental impact, and actionable savings tips.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Device control panels seamlessly manage energy load and optimize green consumption.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Transparent plans page with side-by-side tariff comparisons, usage forecasts, and cost visuals.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Payment portal with invoice history and flexible options.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Support system with live chat, searchable knowledge base, and push notifications for energy alerts and community updates.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Outcome"
+  },
+  {
+   "t": "p",
+   "h": "Molasses empowers users to confidently manage their energy footprint with transparency and ease, combining rich functionality with a friendly, green-centric visual identity. This project reflects deep industry insights translated into a tech-forward, inviting experience that supports greener lifestyle choices."
+  }
+ ],
+ "section": "other_works",
+ "slug": "molasses",
+ "tags": "Energy Management",
+ "cover": "assets/images/P9C6ykMyUDqpJhBSqebEJnyTfVA.png"
+}
