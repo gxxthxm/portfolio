@@ -1,0 +1,178 @@
+{
+ "hero": "assets/images/Sh75LzQGCyDBQQ72JqebXZ18k.png",
+ "visit": "https://app.hpappen.se",
+ "overview": [
+  "HP-appen 2.0 is an upgraded version of the digital platform that helps students prepare for Sweden’s högskoleprovet (university entrance exam). Built in response to user feedback, the new version introduces improved user flows, enhanced learning features, and a more personalized practice experience. I led the end-to-end design of this release across web and mobile, focusing on turning user insights into actionable design improvements. These refinements elevated engagement, optimized usability, and strengthened HP-appen’s position as a leading platform in the Swedish EdTech market.<br><br>This is a work in progress."
+ ],
+ "gallery": [
+  "assets/images/XaQ4Xlt4I2iKTeLNhgnO6ntF9ZI.png",
+  "assets/images/TOLsfkFDWF7J4iLGMEuOfqI7S8A.png",
+  "assets/images/sxpjL4LCz145GnHDuXgqEx0CU.png"
+ ],
+ "blocks": [
+  {
+   "t": "h2",
+   "h": "My Role"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Founding Product Designer</strong><br>Built and led the design and product function from scratch — shaping the brand, experience, and technical design foundation that took HP‑appen from concept to <strong>market leadership within six months</strong>."
+  },
+  {
+   "t": "h2",
+   "h": "Overview"
+  },
+  {
+   "t": "p",
+   "h": "As the founding designer, I worked end‑to‑end across research, strategy, design systems, and execution. My focus was to create a platform that could deliver measurable learning impact <strong>while scaling user growth and retention</strong>."
+  },
+  {
+   "t": "p",
+   "h": "<strong>Impact Highlights</strong>"
+  },
+  {
+   "t": "p",
+   "h": "Conversion uplift <strong>3% → 24%</strong>, growing seasonal revenue to <strong>~3M SEK per learning cycle</strong>",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Sprint delivery time reduced by <strong>&gt; 50%</strong> through AI‑assisted design workflows",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Full‑stack design system adoption across product, web, and growth surfaces",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<em>(Visual cue: Add an infographic showing growth metrics — conversion, revenue, and delivery speed improvements.)</em>"
+  },
+  {
+   "t": "h2",
+   "h": "Building the Foundation"
+  },
+  {
+   "t": "p",
+   "h": "I collaborated with engineering and growth teams to turn high‑level goals into user‑centric solutions. My approach balanced <strong>strategic product thinking</strong> with <strong>hands‑on execution</strong>, ensuring each release delivered quantifiable business value."
+  },
+  {
+   "t": "p",
+   "h": "To support velocity at scale, I built a <strong>unified design language and reusable component library</strong>, paired with an <strong>AI‑augmented design workflow</strong> (Claude AI + Figma MCP + Lovable). This setup <strong>accelerated design‑to‑dev handoff</strong> and standardized design quality across launches."
+  },
+  {
+   "t": "p",
+   "h": "Beyond execution, I served as a <strong>strategic design partner to founders</strong>, mentoring designers on AI‑driven workflows and co‑shaping roadmap decisions that pushed both product usability and business growth."
+  },
+  {
+   "t": "p",
+   "h": "<em>(Visual cue: Screenshot of design system structure, component hierarchy, or workflow automation setup.)</em>"
+  },
+  {
+   "t": "h2",
+   "h": "Homepage 0 → 1: From Insight to Launch"
+  },
+  {
+   "t": "p",
+   "h": "I led the <strong>end‑to‑end homepage creation</strong> — from discovery to deployment."
+  },
+  {
+   "t": "p",
+   "h": "<strong>Key activities:</strong>"
+  },
+  {
+   "t": "p",
+   "h": "Researched target learner mental models through interviews and surveys",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Conducted competitive analysis to identify differentiating UX and messaging gaps",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Defined a clear narrative: communicate value fast, lower cognitive load, and drive a single conversion path",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "The result: a homepage optimized for clarity and conversion, refined post‑launch via analytics (bounce, scroll depth, CTA CTR) and qualitative insights."
+  },
+  {
+   "t": "p",
+   "h": "<em>(Visual cue: Before/after layout comparison or annotated homepage flow.)</em>"
+  },
+  {
+   "t": "h2",
+   "h": "Designing AI‑Integrated Learning Experiences"
+  },
+  {
+   "t": "p",
+   "h": "To enhance learning engagement, I co‑designed <strong>AI‑powered lectures and exercises</strong> that adapted automatically to learner performance."
+  },
+  {
+   "t": "p",
+   "h": "Personalized question sets and instant feedback loops",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Dynamic difficulty and adaptive pacing tied to learning outcomes",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "User‑tested flows that reinforced trust and continuous skill growth",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "These AI‑enhanced flows became the platform’s <strong>core retention engine</strong>, tying directly to improved session duration and daily active learner growth."
+  },
+  {
+   "t": "p",
+   "h": "<em>(Visual cue: Flow diagram showing adaptive feedback loop or AI integration sketch.)</em>"
+  },
+  {
+   "t": "h2",
+   "h": "The AI Coach — Always‑On Exam Companion"
+  },
+  {
+   "t": "p",
+   "h": "Currently leading design for the <strong>AI coach</strong>, an assistant that guides learners through study planning, exam strategy, and in‑app navigation."
+  },
+  {
+   "t": "p",
+   "h": "<strong>Process:</strong>"
+  },
+  {
+   "t": "p",
+   "h": "Analyzed support data, usage logs, and interview transcripts to map user confusion points",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Defined conversational flows and tone of voice aligned with trust and guidance principles",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Iteratively measured usefulness, trust, and engagement metrics via structured feedback loops",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "As adoption grows, the AI Coach is emerging as a differentiating feature — a <strong>continuously learning, always‑available companion</strong> that increases engagement, confidence, and retention."
+  }
+ ],
+ "employer": "HP-appen",
+ "domain": "Product",
+ "section": "professional_works",
+ "slug": "hp-appen-2-0",
+ "title": "HP-appen 2.0",
+ "category": "Product",
+ "tags": "Ed-tech | B2C | SaaS",
+ "cover": "assets/images/Sh75LzQGCyDBQQ72JqebXZ18k.png"
+}

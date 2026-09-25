@@ -1,0 +1,152 @@
+{
+ "hero": "assets/images/U7OuUlq6cpaZ2nQq44H1ktyOlOE.png",
+ "visit": "https://lnu.diva-portal.org/smash/record.jsf?aq2=%5B%5B%5D%5D&c=2&af=%5B%5D&searchType=SIMPLE&sortOrder2=title_sort_asc&query=H%C3%B6gskoleprovet+&language=en&pid=diva2%3A1949235&aq=%5B%5B%5D%5D&sf=all&aqe=%5B%5D&sortOrder=author_sort_asc&onlyFullText=false&noOfRows=50&dswid=-4780",
+ "overview": [
+  "For my Master's thesis in Media Technology, I collaborated with <strong>HP-appen</strong>, a Swedish EdTech company preparing students for the <em>högskoleprovet</em> (Sweden’s university entrance exam). The aim was to explore and evaluate how gamification could enhance motivation, retention, and learning outcomes on a digital education platform.",
+  "I was responsible for conducting in-depth user research and translating those insights into actionable design improvements. The research shaped the creation of interactive gamified features such as <strong>streaks, levels, badges, leaderboards</strong>, and <strong>challenges</strong>, all geared toward improving learner engagement while preserving educational value."
+ ],
+ "gallery": [
+  "assets/images/M5Nf4oevvazcdtWMHUpVcWr48M.png",
+  "assets/images/5jzWYIzzMXj5LzYAE29ws9aoeaY.png"
+ ],
+ "blocks": [
+  {
+   "t": "h1",
+   "h": "Research Strategy"
+  },
+  {
+   "t": "p",
+   "h": "I adopted a <strong>mixed-methods approach</strong>, combining both qualitative and quantitative research to validate design decisions and ensure alignment with user expectations and platform goals."
+  },
+  {
+   "t": "h2",
+   "h": "Qualitative Methods:"
+  },
+  {
+   "t": "p",
+   "h": "<strong>User Interviews</strong> with students to identify motivations, learning challenges, and feedback on early concepts",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Workshops</strong> with stakeholders to synthesize user pain points and ideate design solutions",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Proto-persona Development</strong> based on interview patterns and user segmentation",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>User Journey Mapping</strong> to visualize learner behaviors and emotional touchpoints",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Quantitative Methods:"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Surveys</strong> to measure learner attitudes toward gamification, perceived value, and usability",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Pirate Metrics (AARRR)</strong> to track user behavior: acquisition, activation, retention, referral, and revenue",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>SWOT Analysis</strong> to benchmark HP-appen against competitors and identify areas of opportunity",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Feature Prioritization Matrix</strong> to identify which gamification elements to keep, refine, or discard",
+   "list": "ul"
+  },
+  {
+   "t": "h3",
+   "h": "Design Process:"
+  },
+  {
+   "t": "p",
+   "h": "The research insights were translated into iterative design outputs across the following stages:"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Wireframing &amp; User Flow Mapping</strong> to define structural and behavioral patterns",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Mid- and High-Fidelity Prototypes</strong> created in Figma",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Interactive Testing Sessions</strong> with actual users to validate interaction and motivation design",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Feedback Loop Integration</strong> to continuously refine the experience based on data and interviews",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Designs prioritized <strong>accessibility</strong> (guided by WCAG guidelines), visual clarity, and gamified learning mechanisms that did not distract from core educational goals."
+  },
+  {
+   "t": "h3",
+   "h": "Predicted Outcomes:"
+  },
+  {
+   "t": "p",
+   "h": "The thesis and implementation are expected to reveal a strong theoretical correlation between well-balanced gamification and potential improvements in learner motivation, participation, and retention. Anticipated key outcomes include:"
+  },
+  {
+   "t": "p",
+   "h": "Increased Time-on-Platform driven by gamified engagement loops",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Higher Daily Active Users (DAU) encouraged through streak and challenge mechanics",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Identification of clear user preference trends that inform the removal of non-performing features",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Enhanced student feedback on clarity, usability, and motivation resulting from game-inspired UI elements",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Development of a framework for integrating gamification without compromising educational depth",
+   "list": "ul"
+  },
+  {
+   "t": "h3",
+   "h": "Reflections:"
+  },
+  {
+   "t": "p",
+   "h": "This project strengthened my ability to combine <strong>user-centered research, data analysis, and creative design</strong> into a cohesive product strategy. It gave me hands-on experience applying gamification theory in real-world product development and taught me how to balance innovation with usability and purpose."
+  }
+ ],
+ "employer": "Linnaeus University | HP-appen",
+ "domain": "Research and Analysis",
+ "section": "professional_works",
+ "slug": "thesis-work",
+ "visitLabel": "Read Thesis",
+ "title": "Thesis Work",
+ "category": "Research and Analysis",
+ "tags": "Ed-tech",
+ "cover": "assets/images/U7OuUlq6cpaZ2nQq44H1ktyOlOE.png"
+}

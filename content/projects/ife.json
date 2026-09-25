@@ -1,0 +1,304 @@
+{
+ "title": "IFE Case Study",
+ "category": "Research and Design",
+ "blocks": [
+  {
+   "t": "img",
+   "src": "assets/images/ykHNxc11A6EtHuNASKX1Ly7llo.png",
+   "alt": ""
+  },
+  {
+   "t": "p",
+   "h": "This case study explores the design and development of a dark mode in-flight infotainment system (IFE) tailored for flight cabin monitors. The system is an infotainment hub delivering real-time flight information, diverse media and music content, and detailed arrival location information. The UI is crafted to offer an intuitive, visually comfortable, and accessible experience suitable for low-light aircraft cabin environments, enhancing passenger comfort and engagement during flights."
+  },
+  {
+   "t": "img",
+   "src": "assets/images/PsSnhBVgu6tnvAw2Zpi1cNUm8CE.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/S3EMHGMtWKQCVssQwxcUrowduE.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/kUY1OaGxwvjUdDsVznXWvqo7wws.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/rk7ai9mJ3jAvJTabJGOahJYag.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/Hz5bnJ9VSFX2ajpq57ffGiqaXQ.png",
+   "alt": ""
+  },
+  {
+   "t": "h2",
+   "h": "User Personas"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Emma, 32 – Leisure Traveler:</strong><br>Emma flies frequently for vacations and leisure. She values an engaging media library to watch movies and listen to music. She prefers using dark mode in low light to reduce eye strain and wants the interface to be intuitive with personalized content suggestions."
+  },
+  {
+   "t": "p",
+   "h": "<strong>Raj, 45 – Business Traveler:</strong><br>Raj travels for work with tight schedules. His priority is quick access to accurate flight details and local time information. He appreciates a clean, distraction-free interface that allows him to monitor flight progress efficiently without getting overwhelmed."
+  },
+  {
+   "t": "p",
+   "h": "<strong>Mia, 19 – First-Time Flyer:</strong><br>Mia is anxious about flying for the first time. She needs clear, simple visualizations of flight progress and step-by-step arrival info. Guided onboarding or tooltips help her understand how to navigate the infotainment system to alleviate anxiety."
+  },
+  {
+   "t": "h2",
+   "h": "Problem Statements"
+  },
+  {
+   "t": "p",
+   "h": "Existing inflight entertainment systems often lack a true dark mode, causing discomfort and eye strain in dimly lit cabins.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Navigation between flight data, entertainment, and arrival info can be convoluted and unintuitive, especially for new users.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Many systems have limited personalization, leading to reduced content engagement.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Accessibility features are often minimal or absent, locking out passengers with visual, motor, or cognitive impairments.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Passengers new to flying find it difficult to comprehend flight progress and system navigation without clear onboarding.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Goals and Objectives"
+  },
+  {
+   "t": "p",
+   "h": "Deliver a comfortable, visually appealing dark mode UI optimized for airplane cabin lighting.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Ensure highly intuitive user flow for seamless switching between flight info, entertainment, music, and destination details.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Incorporate personalized media recommendations based on passenger preferences.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Provide clear, real-time flight updates with engaging visualizations.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Ensure full accessibility compliance: legible fonts, proper contrast, ease of interaction, and assistive technology support.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Simplify onboarding for inexperienced users with tutorial hints and clear labeling.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "User Flow"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Welcome Screen &amp; Onboarding:</strong><br>Passengers are greeted upon boarding with a personalized welcome and an optional brief tutorial to familiarize them with system navigation.",
+   "list": "ol"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Persistent Navigation Bar:</strong><br>A bottom or side navigation allows one-tap access to main sections: Flight Information, Media, Music, Arrival Info, and Settings.",
+   "list": "ol"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Flight Information:</strong><br>Displays real-time data such as altitude, speed, time to arrival, and distance remaining. An interactive flight path map visualizes the journey, including local times and weather updates at origin and destination, gate info, and flight announcements.",
+   "list": "ol"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Media Section:</strong><br>Passengers browse movies, TV shows, and documentaries by genre or personalized recommendations through swipeable cards and search features.",
+   "list": "ol"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Music Section:</strong><br>Includes playlists, genres, albums, podcasts, and radio stations with user-friendly audio controls optimized for touch interaction.",
+   "list": "ol"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Arrival Location Details:</strong><br>Provides destination weather, local time, transportation options, tourist attractions, and safety advisories to help passengers prepare for arrival.",
+   "list": "ol"
+  },
+  {
+   "t": "p",
+   "h": "<strong>In-Flight Notifications:</strong><br>Subtle, non-intrusive alerts keep passengers informed of flight updates or cabin announcements without disrupting current activities.",
+   "list": "ol"
+  },
+  {
+   "t": "h2",
+   "h": "Design Details"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Palette:</strong> Uses soft dark gray backgrounds (#121212 instead of pure black to prevent eye strain, with light gray text at varied opacity for visual hierarchy and in-dark visibility.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Accent Colors:</strong> Desaturated blues, teals, and purples highlight interactive elements, icons, and controls.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Typography:</strong> Clean sans-serif fonts with ample size and spacing ensure readability and comfort.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Iconography:</strong> Simple, consistent icons complement the dark theme and aid in intuitive navigation.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Touch Targets:</strong> Large tap areas (minimum 48x48 dp) for usability on touch-enabled cabin screens.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Animations:</strong> Minimal, smooth transitions enhance experience without distracting.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Layout:</strong> Generous negative space avoids clutter and enhances focus.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Accessibility:</strong> High contrast ratios, adjustable text sizes, screen reader compatibility, and visible focus indicators ensure inclusivity.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Competitive Analysis"
+  },
+  {
+   "t": "p",
+   "h": "Several leading airline IFE systems informed the design approach:"
+  },
+  {
+   "t": "p",
+   "h": "Emirates ICE system offers a rich media library and intuitive flight mapping but lacks an optimized dark mode, making night usage uncomfortable.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Delta Studio excels in mobile integration and content depth but features a complex navigation hierarchy challenging for casual users.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Lufthansa FlyNet provides reliable flight data and connectivity but offers limited entertainment content and lacks UI optimization for low-light use.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Panasonic eX3 presents high-quality displays but does not fully address accessibility or provide consistent dark mode support.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Air France RAVE delivers clear flight visuals and multilingual support yet suffers from a busy interface with dense text, which can overwhelm passengers.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "This system synthesizes the strengths and remedies the weaknesses of these platforms by delivering a clean, accessible, and engaging dark mode UI tailored for flight cabin monitors."
+  },
+  {
+   "t": "h2",
+   "h": "Accessibility Considerations"
+  },
+  {
+   "t": "p",
+   "h": "All text and UI components maintain contrast ratios of at least 4.5:1 to comply with WCAG AA guidelines in dark mode.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Base font sizes of at least 16px with options for resizing accommodate visual impairments.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Interactive elements respect minimum sizing guidelines for touch.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "The interface is compatible with aircraft-embedded screen readers, with clear labeling and logical navigation structure.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Focus indicators ensure visibility for keyboard and d-pad navigation methods.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Color choices avoid problematic contrasts for colorblind users, using shapes and text to complement color cues.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Motion sensitivities are addressed by offering reduced or disabled animations for susceptible passengers.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Multilingual support covers wide passenger demographics without sacrificing accessibility.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Onboarding assists first-time or less tech-savvy users with contextual tips and simple language.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Impact and Insights"
+  },
+  {
+   "t": "p",
+   "h": "Adoption of this dark mode IFE system significantly enhances passenger comfort during night flights by reducing glare and eye fatigue. Intuitive navigation and clear visual hierarchy lowered cognitive load, boosting passenger engagement with entertainment and informational content. Personalization features increased media consumption and satisfaction. Onboarding aids alleviated first-timers' anxiety, fostering a positive flying experience. Accessibility optimizations ensured inclusivity across diverse passenger needs, aligning with global aviation standards and modern user expectations."
+  },
+  {
+   "t": "p",
+   "h": "For future adding a light/dark switcher would be optimal for day and night usage."
+  }
+ ],
+ "section": "other_works",
+ "slug": "ife",
+ "tags": "In Flight Entertainment",
+ "cover": "assets/images/ykHNxc11A6EtHuNASKX1Ly7llo.png"
+}

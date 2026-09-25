@@ -1,0 +1,211 @@
+{
+ "title": "FlightTracker",
+ "category": "Design and AI",
+ "blocks": [
+  {
+   "t": "img",
+   "src": "assets/images/T1e38QwQmKAtaHg5guREqO0tgLA.png",
+   "alt": ""
+  },
+  {
+   "t": "button",
+   "label": "Visit Site",
+   "href": "https://stick-skirr-17915144.figma.site"
+  },
+  {
+   "t": "h5",
+   "h": "Click the button above to view the full website ⬆"
+  },
+  {
+   "t": "p",
+   "h": "This project was a take-home design task for an interview a few months ago which I was given permission to share. The challenge was to create a visually engaging, interactive one-page landing page for an airline information application that effectively showcased the app’s core features, built user trust, and drove app downloads. A key requirement was to build the entire design directly within Figma using AI-powered design tools—without relying too much on traditional Figma designing. This case study details my end-to-end process from research to delivering a fully AI-assisted, interactive prototype."
+  },
+  {
+   "t": "img",
+   "src": "assets/images/uOvZ3iaBBbGHAMIwUR0TB9KjXg.png",
+   "alt": ""
+  },
+  {
+   "t": "h2",
+   "h": "Problem Statement"
+  },
+  {
+   "t": "p",
+   "h": "Travellers often struggle with fragmented sources for flight updates, real-time tracking, and comprehensive airline information. The challenge was to design a landing page that clearly communicates the app’s benefits, engages users with interactive elements, and encourages app downloads without overwhelming them."
+  },
+  {
+   "t": "h2",
+   "h": "Goals"
+  },
+  {
+   "t": "p",
+   "h": "Design a clean, attractive landing page aligned with air travel themes.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Highlight core features through meaningful animations and interactions.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Guide users seamlessly from discovery to conversion (download and sign-up).",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Build a responsive UI delivering smooth micro-interactions and optimized for multiple devices.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Deliver the final product fully designed and built in Figma using AI-powered automation and native prototyping.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Research &amp; Insights"
+  },
+  {
+   "t": "p",
+   "h": "<strong>User pain points:</strong> Reliance on multiple platforms for flight info, late alerts, lack of centralized access.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Competitor analysis:</strong> Studied airline apps and flight trackers for UI patterns, animation best practices, and onboarding flows.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Design inspiration:</strong> Sky and flight visuals evoking trust, calm, and excitement. Subtle animation and motion to enhance engagement.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Design Process"
+  },
+  {
+   "t": "h2",
+   "h": "Ideation &amp; Wireframing"
+  },
+  {
+   "t": "p",
+   "h": "Created initial layout sketches focusing on a single-page scroll experience with hero, features, demo, testimonials, and CTA sections.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Prioritized bold above-the-fold messaging with clear CTAs for immediate engagement.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Planned an interactive flight tracker demo as a core visual experience.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "AI-Driven Design Execution in Figma"
+  },
+  {
+   "t": "p",
+   "h": "The company specified that the landing page must be built entirely within <strong>Figma</strong> without using traditional external tools. Through Figma Make’s AI-powered capabilities and plugins, I:"
+  },
+  {
+   "t": "p",
+   "h": "Generated polished layouts, iconography, and illustrations in Figma efficiently without manual drawing or external editing tools.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Utilized AI automation for style token management, component creation, and responsive layout adjustments.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Built and prototyped complex animations, hover effects, and micro-interactions natively within Figma.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Iterated rapidly with feedback cycles using Figma’s collaboration features.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "This approach accelerated the design process and demonstrated how AI-assisted workflows can elevate quality and consistency in UI/UX design."
+  },
+  {
+   "t": "h2",
+   "h": "Visual &amp; Interaction Design"
+  },
+  {
+   "t": "p",
+   "h": "Chose a clean sky-inspired color palette with blues and warm accent gradients to convey reliability and energy.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Used rounded sans-serif typography for readability and a friendly tone.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Combined immersive hero video backgrounds with lightweight, animated icons and illustrations for focus and performance.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Developed scroll-triggered animations (fade-ins, slide-ins), micro-interactions (rippling buttons, bouncing pins), and parallax effects for depth and engagement.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Prototype &amp; Testing"
+  },
+  {
+   "t": "p",
+   "h": "Delivered a fully interactive prototype showcasing key animations, hover states, and responsive behavior across desktop and mobile.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Conducted informal usability testing sessions with peers, optimizing animation timing and ensuring clarity.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Ensured accessibility with good contrast, distinct focus styles, and appropriately sized interactive touch areas.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Outcome &amp; Learnings"
+  },
+  {
+   "t": "p",
+   "h": "Successfully delivered a visually rich, interactive landing page prototype meeting all client requirements.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Gained firsthand experience working entirely within an AI-driven design environment, pushing workflow efficiency and design innovation.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Learned to balance rich motion design with clarity and performance considerations.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Enhanced skills in micro-interactions, responsive layouts, and aviation-themed visual storytelling.",
+   "list": "ul"
+  }
+ ],
+ "section": "other_works",
+ "slug": "flighttracker",
+ "tags": "Landing Page",
+ "cover": "assets/images/T1e38QwQmKAtaHg5guREqO0tgLA.png"
+}

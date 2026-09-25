@@ -1,0 +1,205 @@
+{
+ "title": "FumeCart",
+ "category": "Redesign",
+ "blocks": [
+  {
+   "t": "img",
+   "src": "assets/images/I9snqvDXMFXai8aMbQcl1qEaN0.png",
+   "alt": ""
+  },
+  {
+   "t": "p",
+   "h": "FumeCart is a mobile-first e-commerce concept meticulously crafted to deliver an elevated fragrance shopping experience. The design focuses on a clean, inviting interface that prioritizes visual storytelling, product hierarchy, and an effortless purchase process—from browsing to order confirmation. FumeCart targets both casual shoppers and fragrance enthusiasts, balancing clear information with premium design cues."
+  },
+  {
+   "t": "img",
+   "src": "assets/images/5FKAAKB21Sv6qGWehYbDxcSnU.png",
+   "alt": ""
+  },
+  {
+   "t": "h2",
+   "h": "Personas"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Emily, 27, Busy Professional:</strong> Values quick browsing, easy comparison, and secure checkout for spontaneous perfume purchases.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Marcus, 34, Fragrance Aficionado:</strong> Looks for detailed product information, well-organized categories, and a refined shopping experience.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Olivia, 22, Student:</strong> Wishes to discover new scents through trending &amp; featured sections, seeking a fun and simple mobile experience.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Problem Statement"
+  },
+  {
+   "t": "p",
+   "h": "Traditional online fragrance stores often suffer from cluttered layouts, unclear navigation, and confusing product hierarchies, leading to user frustration and abandoned carts. FumeCart was designed to solve these pain points, delivering a streamlined, engaging, and trustworthy journey for perfume shoppers."
+  },
+  {
+   "t": "h2",
+   "h": "Research &amp; Insights"
+  },
+  {
+   "t": "p",
+   "h": "User studies and competitive audits revealed that successful e-commerce fragrance platforms:"
+  },
+  {
+   "t": "p",
+   "h": "Showcase hero products and trending scents visually up front.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Offer concise yet rich product info (brand, price, size, description).",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Provide clear, single-action CTAs and frictionless checkout flows.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Minimize visual and cognitive clutter to support quick, confident decisions.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Support repeat purchasing through order confirmation and delivery tracking.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Design Solution"
+  },
+  {
+   "t": "h2",
+   "h": "Branding and UI Language"
+  },
+  {
+   "t": "p",
+   "h": "The FumeCart logo and green color palette evoke freshness, trust, and luxury.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Bold imagery and spacious layouts highlight hero products and guide users through featured and trending scents.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Navigation &amp; Product Hierarchy"
+  },
+  {
+   "t": "p",
+   "h": "A bottom tab bar enables quick access to Home, Browse, Trending, and Bag, supporting user exploration.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "The Home screen introduces high-impact 'Featured Product' banners, followed by visually distinct product tiles.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Product details pages provide large, crisp images, transparent pricing, selectable sizes, quantity controls, and informative descriptions.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "CTAs (“Add to Cart”, “Checkout”, “Continue to Payment”) are clear, consistent, and placed for effortless interaction.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Checkout &amp; Order Confirmation"
+  },
+  {
+   "t": "p",
+   "h": "The shopping bag sums up selected items, prices, and shipping, minimizing surprises.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Checkout forms collect essential shipping and delivery info with clear progress steps.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "An order confirmation screen reassures users with status updates, delivery estimates, and tracking links.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "User Flow"
+  },
+  {
+   "t": "p",
+   "h": "Home/Browse → Featured Product → Select Scent → View Details → Select Size/Quantity → Add to Cart → Bag → Checkout → Confirm Order → Order Tracking",
+   "list": "ol"
+  },
+  {
+   "t": "h2",
+   "h": "Visual Storytelling"
+  },
+  {
+   "t": "p",
+   "h": "High-quality product images anchor the experience, fostering trust and desire.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Minimalistic design supports clarity, while color and layout direct attention to priority actions and information.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Consistent UI elements and smooth transitions maintain a premium, approachable feel throughout.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Outcomes"
+  },
+  {
+   "t": "p",
+   "h": "Unified brand identity and modern design fostered increased user engagement.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Streamlined navigation and frictionless checkout improved conversion rates.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Responsive layouts and straightforward CTAs enhanced usability for both casual and expert shoppers.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Order confirmation and tracking built user confidence and supported repeat business.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Summary"
+  },
+  {
+   "t": "p",
+   "h": "FumeCart exemplifies the power of mobile-focused, user-centric e-commerce design—delivering an attractive, intuitive, and reliable platform for fragrance discovery and shopping. By prioritizing clean aesthetics, clear navigation, and a seamless checkout, the app elevates both the buyer journey and the brand’s premium positioning."
+  }
+ ],
+ "section": "other_works",
+ "slug": "fumecart",
+ "tags": "Perfume Shop",
+ "cover": "assets/images/I9snqvDXMFXai8aMbQcl1qEaN0.png"
+}

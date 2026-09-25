@@ -1,0 +1,235 @@
+{
+ "title": "Medi Connect",
+ "category": "Product",
+ "blocks": [
+  {
+   "t": "img",
+   "src": "assets/images/kGgsicrPbqKRGRcjwXlYhlwkddE.png",
+   "alt": ""
+  },
+  {
+   "t": "p",
+   "h": "To create a simple, accessible, and trustworthy mobile app enabling older adults to find, book, and consult with doctors remotely through video calls and chat. The app addresses usability challenges faced by seniors and middle-aged users while leveraging digital healthcare trends in Northern Ireland."
+  },
+  {
+   "t": "img",
+   "src": "assets/images/TwY5Jjh4lWntOmTYaSeOVpufgGY.png",
+   "alt": ""
+  },
+  {
+   "t": "img",
+   "src": "assets/images/CYyTl2D0KbD2JNdFnJrUeFSdPE.png",
+   "alt": ""
+  },
+  {
+   "t": "h2",
+   "h": "Problem Statement"
+  },
+  {
+   "t": "p",
+   "h": "Accessing timely and convenient healthcare is a challenge for many older adults across Northern Ireland, especially those with mobility or transport limitations, or living in rural areas with limited clinic access. While digital health services are growing, many apps are not optimized for the usability needs of older adults, such as simple navigation, clear text, and low cognitive load. MediConnect aims to bridge this gap by offering a seamless, accessible mobile app for booking doctor consultations and video appointments tailored specifically for this demographic."
+  },
+  {
+   "t": "h2",
+   "h": "User Personas"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Mary, 67</strong><br>Retired, lives in rural County Antrim, moderate tech user, managing multiple chronic conditions.<br>Needs: Easy app navigation, large text, appointment reminders, accessible video calls.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>John, 55</strong><br>Works full-time, caring for elderly parents, limited free time.<br>Needs: Quick doctor search, simple booking, reliable video consults, secure prescription sharing.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Eileen, 72</strong><br>Lives alone in Belfast, moderate digital literacy, prefers in-home care consultations.<br>Needs: Simple chat and video options, personalized doctor recommendations, voice assistance.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Regional Context: Northern Ireland"
+  },
+  {
+   "t": "p",
+   "h": "Increasing adoption of digital health, yet broadband in rural areas lags, requiring offline-friendly features.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Growing government initiatives (e.g., My Care patient portal) supporting digital records and patient empowerment.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Aging population with increasing chronic health conditions needing accessible telehealth options.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Competitive Analysis"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Doctor Care Anywhere (UK)</strong><br>Strengths: Strong NHS partnerships, 24/7 GP services.<br>Weaknesses: Interface focused on younger adults, complex UI.<br>Opportunities: Simplify UI for seniors, focus on Northern Ireland region.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>WebDoctor Ireland</strong><br>Strengths: Easy video consults, good service coverage.<br>Weaknesses: Few senior-friendly features.<br>Opportunities: Add accessibility features, appointment reminders.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Vesta Elder Care</strong><br>Strengths: Home visits, specialized elderly care, simple app.<br>Weaknesses: Limited to certain medical specialties.<br>Opportunities: Combine virtual and in-home consults with personalized UX.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "<strong>Babylon Health</strong><br>Strengths: AI triage, diagnostic tools.<br>Weaknesses: Overwhelming for less tech-savvy users.<br>Opportunities: Focused usability for older adults, minimal cognitive load.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Key Features for Older Adults"
+  },
+  {
+   "t": "p",
+   "h": "Large, readable text and buttons with high-contrast colors",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Simple onboarding with voice and illustrative guides",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Easy doctor search with clear filters (location, specialty, availability)",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "One-tap appointment booking and calendar integration",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Video consultation with large call controls and optional floating patient video",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Consultation summaries with clear medication/prescription info",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Push notifications and SMS reminders for appointments",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "UX/UI Highlights"
+  },
+  {
+   "t": "p",
+   "h": "White background with navy blue, soft blue accents for clarity and calmness",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Rounded cards and buttons to create a friendly feel",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Bottom navigation bar with four icons: Home, Appointments, Messages, Profile",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Clear icons supplemented with text labels",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Micro-interactions: button ripple effects, smooth swipe transitions",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Horizontal carousel for appointment date selection with snap-to-center",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Slide-up filter drawer for specialization/location filters",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Accessible color contrast and large tap areas for all major actions",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Interaction and Animation Summary"
+  },
+  {
+   "t": "p",
+   "h": "Onboarding slides use horizontal swipe with fade transitions",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Doctor cards scale gently on scroll to draw attention",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Booking confirmation modal with checkmark animation and confetti burst",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Video call screen includes pulse animation while connecting and draggable video window",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "End-of-call fades smoothly into consultation summary screen",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Impact &amp; Benefits"
+  },
+  {
+   "t": "p",
+   "h": "MediConnect addresses accessibility challenges older adults face with digital health apps.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Enables timely healthcare access without travel, especially beneficial in rural Northern Ireland.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Builds trust through clear information, reminders, and simple navigation.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Supports caregivers like John who coordinate care for aging family members.",
+   "list": "ul"
+  }
+ ],
+ "section": "other_works",
+ "slug": "mediconnect",
+ "tags": "Health",
+ "cover": "assets/images/kGgsicrPbqKRGRcjwXlYhlwkddE.png"
+}

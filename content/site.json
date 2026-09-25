@@ -1,0 +1,211 @@
+{
+ "name": "Gauthem Krishna",
+ "title": "Gauthem's Portfolio",
+ "links": {
+  "linkedin": "https://www.linkedin.com/in/gauthemkrishna",
+  "resume": "https://drive.google.com/file/d/18rahDcLZO-l0BYReqU1t07BIm2hrR2fA/view?usp=sharing",
+  "calendly": "https://calendly.com/gauthemk99"
+ },
+ "email": "gauthemk99@gmail.com",
+ "phones": [
+  "+46 734858199",
+  "+91 7012112762"
+ ],
+ "skills": [
+  "Product Design",
+  "User Experience",
+  "Usability Testing",
+  "R & D",
+  "Data Analysis",
+  "Project Leading"
+ ],
+ "intro": "Innovative Product Designer with a proven record accelerating platform growth and user engagement in SaaS, B2B, and B2C. Expert in building accessible, high-impact design systems and leading teams to deliver measurable business results. Expert in sprint management and integrating AI and research-driven design to create world-class user experiences.",
+ "contactBlurb": "Experienced Designer skilled in end-to-end product development, from research to prototyping, with experience leading teams and delivering user-focused solutions.",
+ "bio": "I am Gauthem, a Designer with extensive experience driving projects from discovery to inception to completion and overseeing all stages of product development. My expertise spans User Research and Analysis, Wireframing, lo-fi, mid-fi, and hi-fi production, Prototyping, and post-design analysis. Throughout my career, I have held both junior and senior roles, including leading multiple design teams, where I have consistently delivered innovative and user-centric solutions.",
+ "experience": [
+  {
+   "period": "2022 - Present",
+   "role": "Lead Designer - UX and Product",
+   "place": "HP-appen, Stockholm, Sweden"
+  },
+  {
+   "period": "2014 - 2022 (Intermittently)",
+   "role": "Freelance - Product/UX/Graphics/Motion Designer",
+   "place": "Self employed and under an agency, Multiple Locations"
+  },
+  {
+   "period": "2021 - 2021",
+   "role": "Marketing/UI Designer",
+   "place": "Zomato, Gurgaon, India"
+  },
+  {
+   "period": "2020- 2021",
+   "role": "Design Lead - UI/UX, Product and Marketing",
+   "place": "Agrivator, Kerala, India"
+  },
+  {
+   "period": "2018- 2020",
+   "role": "Designer(UI/UX/Communication)",
+   "place": "IEEE, Kerala, India"
+  }
+ ],
+ "stack": [
+  {
+   "name": "Figma",
+   "icon": "assets/images/P2xz36ihRHutPZXwUQcLuL7Egpk.png"
+  },
+  {
+   "name": "Framer",
+   "icon": "assets/images/ywtpT4NB7jjIOgC17g6nPT3MA.png"
+  },
+  {
+   "name": "Cursor",
+   "icon": "assets/images/bMkfgN1MGxz5Hq1acAUx9R6hhc.png"
+  },
+  {
+   "name": "Webflow",
+   "icon": "assets/images/OZLuenwDnf4zTeEdhvJouotnnpw.png"
+  },
+  {
+   "name": "Adobe CC",
+   "icon": "assets/images/PIL1U1nHWpl6n3zVNzUJwxZU.png"
+  },
+  {
+   "name": "Zeplin",
+   "icon": "assets/images/Yax9AKFyCdGRi5RVTg0RaILlqv0.png"
+  },
+  {
+   "name": "Lovable",
+   "icon": "assets/images/5GAHfuLF3hLl6xiFJ5g7XfUlDDg.png"
+  },
+  {
+   "name": "Claude",
+   "icon": "assets/images/q9zQfo7rnPcB7CmbHloZyktGlo.png"
+  },
+  {
+   "name": "Miro",
+   "icon": "assets/images/i6UyeINtlGUR8NPekyOHiPx8IFA.png"
+  },
+  {
+   "name": "Jira",
+   "icon": "assets/images/YLx6OnAdRR1TnWT0Eprdmh6bbeM.png"
+  },
+  {
+   "name": "Trello",
+   "icon": "assets/images/zkQ4xNQuFDZlsENc6DdKlz6cz6c.png"
+  },
+  {
+   "name": "Notion",
+   "icon": "assets/images/eIDifEepcllMTSnFfdMm68QyzI.png"
+  }
+ ],
+ "services": [
+  {
+   "title": "Product Design",
+   "text": "I design digital products that are intuitive, scalable, and aligned with real user needs. From early concept development and stakeholder collaboration to prototyping and testing, I guide products through each stage of the design process with a focus on clarity, functionality, and business impact. My approach blends strategic thinking with hands-on design execution—ensuring that every product is not only visually cohesive but also technically feasible and ready to deliver value. I work closely with cross-functional teams to turn ideas into usable, effective solutions that users love.",
+   "items": [
+    "Research and Analysis",
+    "Scalable Product Design",
+    "Product Launch Support",
+    "Minimum Viable Product Creation (MVP)"
+   ]
+  },
+  {
+   "title": "UI/UX Design",
+   "text": "I help bring ideas to life through thoughtful, end-to-end product design that balances user needs, business goals, and technical constraints. With experience leading design efforts from concept to launch, I specialize in creating scalable, user-centric products that solve real problems. My process includes product discovery, stakeholder collaboration, user research, ideation, wireframing, prototyping, and testing—ensuring every feature has a purpose and every interaction feels natural. Whether it’s a web app, mobile platform, or internal tool, I design products that are not only beautiful but also functional, measurable, and ready for development.",
+   "items": [
+    "Storyboard and Sketches",
+    "Wireframe (lo-fi designs)",
+    "Testing phase (mid-fi and A/B testing)",
+    "Final Design and Prototyping"
+   ]
+  },
+  {
+   "title": "User Testing and Analysis",
+   "text": "I specialize in uncovering user needs and behaviors through deep research and data-driven analysis. My Master's in Media Technology focused heavily on user experience research and data interpretation, with my thesis exploring user behavior in gamified systems. I apply both qualitative and quantitative methods—such as interviews, surveys, usability testing, and metric analysis—to inform design decisions and ensure product relevance. From proto-personas to Pirate Metrics and SWOT analysis, I turn insights into clear, actionable strategies that drive better user experiences and measurable results.",
+   "items": [
+    "Discovery Phase",
+    "Usability Testing",
+    "Heuristic Evaluation",
+    "Affinity Mapping"
+   ]
+  },
+  {
+   "title": "Development Assistance",
+   "text": "With a Bachelor’s degree in Computer Science, I bring a strong technical foundation to the design process—ensuring smooth collaboration between design and development. I actively support implementation by using modern AI-powered tools like Cursor, Lovable, and Google Jules to convert design elements into clean, scalable code. My approach focuses on creating development-friendly designs that align with technical constraints while maintaining design integrity. This combination of design expertise and technical understanding allows me to bridge the gap efficiently and help teams ship high-quality products faster.",
+   "items": [
+    "Smooth Handover",
+    "UI Components Creation",
+    "Basic Functionalities",
+    "Full-Stack Development"
+   ]
+  },
+  {
+   "title": "Hierarchy and IA",
+   "text": "I design clear, intuitive user flows and layouts by applying strong principles of information architecture and visual hierarchy. With a deep understanding of how users navigate and process content, I structure interfaces to guide attention, reduce cognitive load, and support seamless interaction. My work involves organizing complex content into logical, accessible systems—whether it's a single-page app or a multi-layered platform. From sitemaps and navigation models to layout grids and content grouping, I ensure that every element serves a purpose and supports a smooth user experience.",
+   "items": [
+    "Typography and Component Hierarchy",
+    "Sitemap Creation",
+    "Taxonomy Design",
+    "User Journey Mapping"
+   ]
+  },
+  {
+   "title": "Team Management",
+   "text": "With experience leading both in-house and remote design teams, I bring a collaborative and structured approach to team management. I’ve guided cross-functional teams through complex product lifecycles—ensuring alignment between design, development, and business goals. From setting clear design standards and mentoring junior designers to managing workflows with tools like Jira, Trello, and Miro, I create an environment where creativity and efficiency thrive. My leadership style balances autonomy with accountability, fostering strong communication and delivering consistent, high-quality outcomes.",
+   "items": [
+    "Cross-functional Collaboration",
+    "Design Leadership",
+    "Agile & Scrum",
+    "Stakeholder Communication"
+   ]
+  }
+ ],
+ "home": [
+  "hp-appen-2-0",
+  "hpappen",
+  "thesis-work",
+  "ieee",
+  "zomato",
+  "flashback",
+  "molasses",
+  "minfit",
+  "flowvest",
+  "spearay",
+  "vistago",
+  "mediconnect",
+  "ife",
+  "ghub",
+  "autopulse",
+  "capella",
+  "flighttracker",
+  "fumecart",
+  "limelight",
+  "brandingworks"
+ ],
+ "professional": [
+  "hp-appen-2-0",
+  "hpappen",
+  "agrivator",
+  "zomato",
+  "ieee",
+  "thesis-work"
+ ],
+ "other": [
+  "flashback",
+  "molasses",
+  "minfit",
+  "flowvest",
+  "spearay",
+  "vistago",
+  "mediconnect",
+  "ife",
+  "ghub",
+  "autopulse",
+  "capella",
+  "flighttracker",
+  "fumecart",
+  "limelight",
+  "brandingworks"
+ ]
+}

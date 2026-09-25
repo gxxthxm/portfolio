@@ -1,0 +1,177 @@
+{
+ "hero": "assets/images/9MhGtiYRGDAiB1vpCpG1wkY70.png",
+ "visit": "https://www.hpappen.se",
+ "overview": [
+  "HP-appen is a digital platform designed to support students preparing for Sweden's högskoleprovet (university entrance exam). The app offers personalized practice, gamified learning experiences, and real-time progress tracking to boost motivation and performance. I led the design of both web and mobile interfaces, focusing on user research, intuitive UX, and data-driven improvements that helped grow the company from a new company to a leading market competitor in under a year."
+ ],
+ "gallery": [
+  "assets/images/r9cRw8NqLHo1pKHqAjm7JuEUFY.png",
+  "assets/images/U2BxQ4nybo5espJb6kRDtIbdiig.png",
+  "assets/images/6jH0ohYPv66b70xDfRkHTr023oE.png"
+ ],
+ "blocks": [
+  {
+   "t": "h1",
+   "h": "Challenges"
+  },
+  {
+   "t": "p",
+   "h": "HP-appen entered a competitive market dominated by HPguiden, with no existing user base. The challenge was to create a highly usable, visually appealing platform that would attract and retain thousands of new learners, differentiating HP-appen clearly from competitors."
+  },
+  {
+   "t": "h2",
+   "h": "Research and Analysis:"
+  },
+  {
+   "t": "p",
+   "h": "I applied Pirate Metrics (AARRR) and conducted a SWOT analysis to identify user pain points and market gaps because the platform needed clear differentiation and data-driven priorities.<br><br>",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "I organized and facilitated workshops that brought together both qualitative and quantitative insights because I wanted to validate assumptions quickly and build consensus on which features mattered most.<br><br>",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "To guide our design strategy, I mapped out user acquisition, activation, retention, referral, and revenue flows, ensuring the effort was focused where it would have the most business and user impact.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Persona Example"
+  },
+  {
+   "t": "p",
+   "h": "Name: Sara, 19<br>Profile: High school student preparing for högskoleprovet<br>Needs: Reliable revision platform, simple navigation, affordable premium content, on-the-go access, abundance of questions readily available."
+  },
+  {
+   "t": "h3",
+   "h": "User Problem Statement"
+  },
+  {
+   "t": "p",
+   "h": "I recognized from research that students like Sara struggled to find tools that balanced ease of use, accessibility, and high-quality content. Most alternatives were either visually cluttered or excluded learners with disabilities. I focused on designing for clarity, accessibility, and inclusivity to solve these issues and reduce user frustration"
+  },
+  {
+   "t": "h2",
+   "h": "Design, Prototyping and Testing :"
+  },
+  {
+   "t": "p",
+   "h": "Developed multiple UI prototypes aligned with a unified UX flow to explore and refine design directions early.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Led usability testing sessions with real users (remote and in-person) to identify friction points and gather actionable feedback.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Conducted <strong>A/B tests</strong> on CTAs, navigation, and onboarding flows, optimizing for click-through rates and retention.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Partnered with developers for responsive, performance-optimized implementation.",
+   "list": "ul"
+  },
+  {
+   "t": "h3",
+   "h": "AI Integration :"
+  },
+  {
+   "t": "p",
+   "h": "Leveraging AI tools like Cursor and Lovable accelerated prototype validation and insights extraction. AI-assisted handoff enhanced design fidelity and sped up front-end development, reducing revision cycles significantly."
+  },
+  {
+   "t": "h3",
+   "h": "Product Launch Support :"
+  },
+  {
+   "t": "p",
+   "h": "Designed subscription flows and pricing tiers based on user segmentation and competitor research to maximize premium upgrades.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Streamlined subscription UI featuring clear communication of value propositions, increasing upgrade rates while maintaining user trust.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Supported launch strategies and post-launch iterations to ensure stable adoption and continuous improvement.",
+   "list": "ul"
+  },
+  {
+   "t": "h3",
+   "h": "Accessibility and inclusivity focus :"
+  },
+  {
+   "t": "p",
+   "h": "Enforced <strong>WCAG 2.1 AA compliance</strong> across all user flows with manual and automated accessibility testing.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Focused on contrast, keyboard navigation, and simplified layouts to support users with visual and motor impairments.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Developed features addressing dyslexia and other needs, earning positive user feedback for clarity and comfort.",
+   "list": "ul"
+  },
+  {
+   "t": "h3",
+   "h": "Developer Collaboration &amp; AI-Driven Handoff:"
+  },
+  {
+   "t": "p",
+   "h": "Maintained close collaboration with frontend developers using AI-powered tools (Cursor) to enhance design-to-code fidelity and reduce revision cycles.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Generated reusable code snippets and debugged components directly in Figma handoffs, significantly improving team velocity and quality.",
+   "list": "ul"
+  },
+  {
+   "t": "h1",
+   "h": "Results/Conclusion"
+  },
+  {
+   "t": "p",
+   "h": "Took the  platform from launch to market leadership within 6 months through strategic design initiatives and roadmap development.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Increased seasonal revenue from zero to 1.7 million Swedish Kronor within one year while boosting conversion rates from 3% to 24% and significantly improving user retention by introducing innovative subscription models, AI-powered user flows, and tutor integration, and launching WCAG-compliant interfaces—all validated through Mixpanel, Stripe Dashboard,  and Google Analytics.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Significantly improved sprint cycles and accelerated design handover by leveraging AI tools—including Claude AI and Lovable—which streamlined front-end development.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Worked closely with stakeholders to translate the vision into a market-leading product through strategic collaboration and alignment.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "By combining rigorous research, AI-augmentation, and close team collaboration, I drove HP-appen’s transformation from an idea to a thriving, competitive learning platform, positioned as a genuine alternative to HPguiden. By accelerating design and development cycles with AI, I enabled faster shipping without sacrificing quality—showing how empathic design and cross-functional teamwork can deliver meaningful growth and user satisfaction."
+  }
+ ],
+ "employer": "HP-appen",
+ "domain": "Product",
+ "section": "professional_works",
+ "slug": "hpappen",
+ "title": "HP-appen 1.0",
+ "category": "Product",
+ "tags": "Ed-tech | B2C | SaaS",
+ "cover": "assets/images/9MhGtiYRGDAiB1vpCpG1wkY70.png"
+}

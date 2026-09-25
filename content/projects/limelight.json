@@ -1,0 +1,184 @@
+{
+ "title": "Limelight",
+ "category": "Redesign",
+ "blocks": [
+  {
+   "t": "img",
+   "src": "assets/images/cCaxILzpcNdaWZiUftYvKeysIx8.png",
+   "alt": ""
+  },
+  {
+   "t": "p",
+   "h": "LimeLight is a cross-platform music player app designed to deliver an intuitive and visually engaging experience that balances aesthetics with flawless functionality. The project focused on creating a seamless user journey for browsing, discovering, and playing music with a modern dark-themed interface enhanced by dynamic visual elements. This interface was built for both mobile and web platforms, emphasizing consistency, accessibility, and high performance."
+  },
+  {
+   "t": "img",
+   "src": "assets/images/FZE2xdy7Ush4zIv4pfDG06IFw.jpg",
+   "alt": ""
+  },
+  {
+   "t": "h1",
+   "h": "Challenges"
+  },
+  {
+   "t": "p",
+   "h": "The goal was to build a music player that stands out visually and functionally in a competitive market. Users needed to effortlessly navigate through their music library, discover new drops, and control playback without friction. The interface had to be visually immersive yet accessible, supporting both casual listeners and power users."
+  },
+  {
+   "t": "h2",
+   "h": "Research and Insights :"
+  },
+  {
+   "t": "p",
+   "h": "Through user research and competitive analysis, key insights included:"
+  },
+  {
+   "t": "p",
+   "h": "Users desire easy navigation between playlists, favorites, and new music.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Visual comfort is critical for long listening sessions, favoring dark themes that reduce eye strain.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Clear content hierarchy and strong branding enhance user trust and engagement.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Accessibility features and touch-friendly controls improve usability across devices.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Dynamic visuals and animations increase user delight.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Design Overview"
+  },
+  {
+   "t": "p",
+   "h": "A sleek black background paired with a vibrant green accent color forms the core brand identity.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "The LimeLight logo reinforces a fresh, modern look.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Dark theme supports visibility of dynamic album art and UI elements.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Navigation and Layout"
+  },
+  {
+   "t": "p",
+   "h": "Bottom bar navigation organizes key sections: Home, Browse, Library, Connect.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Content is segmented into “Best of your collection,” “New drops,” and “Recommended for you” for easy discovery.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Album artwork is prominently displayed to create an immersive browsing experience.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Player Interface"
+  },
+  {
+   "t": "p",
+   "h": "Central playback controls feature large buttons for accessibility.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Dynamic visualizer arcs around album art add motion and engagement.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Essential features like shuffle, repeat, volume, favorites, and lyrics are seamlessly integrated.",
+   "list": "ul"
+  },
+  {
+   "t": "h2",
+   "h": "Responsiveness"
+  },
+  {
+   "t": "p",
+   "h": "Design is optimized for mobile and web, ensuring consistent experience and rapid performance.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Grid layouts and scalable assets support different screen sizes.",
+   "list": "ul"
+  },
+  {
+   "t": "h3",
+   "h": "Possible Outcomes"
+  },
+  {
+   "t": "p",
+   "h": "Enhanced user retention and session length attributed to intuitive navigation and immersive visuals.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Positive feedback on aesthetics, particularly the dark mode’s comfort and modern feel.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Improved accessibility with clear, touch-friendly controls.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Scalable design system facilitates future feature expansion.",
+   "list": "ul"
+  },
+  {
+   "t": "h3",
+   "h": "Future Scopes"
+  },
+  {
+   "t": "p",
+   "h": "Implement gesture shortcuts for faster control.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Leverage AI for personalized playlist and music recommendations.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Integrate social features enabling playlist sharing and artist follow.",
+   "list": "ul"
+  },
+  {
+   "t": "p",
+   "h": "Expand visual animations and interactive backgrounds during music playback.",
+   "list": "ul"
+  }
+ ],
+ "section": "other_works",
+ "slug": "limelight",
+ "tags": "Music Player",
+ "cover": "assets/images/cCaxILzpcNdaWZiUftYvKeysIx8.png"
+}
