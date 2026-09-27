@@ -13,14 +13,17 @@
  ],
  "skills": [
   "Product Design",
-  "User Experience",
+  "Mobile & Web UX/UI",
+  "Design Systems",
+  "AI-native Workflows",
+  "User Research",
+  "0 → 1 Products",
   "Usability Testing",
-  "R & D",
   "Data Analysis",
-  "Project Leading"
+  "Team Leadership"
  ],
  "intro": "Product designer with 8+ years of experience in end-to-end mobile and web UX/UI across iOS and Android, design systems, and AI-native design workflows. Increased conversion from 3% to 24% and drove approximately 10M SEK in revenue through research-led consumer products. Founding-designer experience taking products from 0 to 1 and accelerating design-to-development cycles by over 50% in close partnership with product management and engineering.",
- "contactBlurb": "Experienced Designer skilled in end-to-end product development, from research to prototyping, with experience leading teams and delivering user-focused solutions.",
+ "contactBlurb": "Product designer with 8+ years of experience taking products from 0 to 1 — research, mobile and web UX/UI, design systems and AI-native workflows.",
  "bio": "I’m Gauthem — a product designer who has spent 8+ years taking products from zero to one. I own the full journey: research and problem framing, flows and wireframes, high-fidelity UI, design systems and hand-off, with AI-native workflows that shorten the path from concept to production. I’ve led design teams, mentored designers and partnered closely with product and engineering to ship work that moves real numbers.",
  "experience": [
   {
@@ -134,7 +137,7 @@
  "services": [
   {
    "title": "Product Design",
-   "text": "I design digital products that are intuitive, scalable, and aligned with real user needs. From early concept development and stakeholder collaboration to prototyping and testing, I guide products through each stage of the design process with a focus on clarity, functionality, and business impact. My approach blends strategic thinking with hands-on design execution—ensuring that every product is not only visually cohesive but also technically feasible and ready to deliver value. I work closely with cross-functional teams to turn ideas into usable, effective solutions that users love.",
+   "text": "I design digital products that are intuitive, scalable, and aligned with real user needs — with founding-designer experience taking products from 0 to 1 across iOS, Android and web. From early concept development and stakeholder collaboration to prototyping and testing, I guide products through each stage of the design process with a focus on clarity, functionality, and business impact. My approach blends strategic thinking with hands-on design execution—ensuring that every product is not only visually cohesive but also technically feasible and ready to deliver value. I work closely with cross-functional teams to turn ideas into usable, effective solutions that users love.",
    "items": [
     "Research and Analysis",
     "Scalable Product Design",
@@ -147,9 +150,9 @@
    "text": "I help bring ideas to life through thoughtful, end-to-end product design that balances user needs, business goals, and technical constraints. With experience leading design efforts from concept to launch, I specialize in creating scalable, user-centric products that solve real problems. My process includes product discovery, stakeholder collaboration, user research, ideation, wireframing, prototyping, and testing—ensuring every feature has a purpose and every interaction feels natural. Whether it’s a web app, mobile platform, or internal tool, I design products that are not only beautiful but also functional, measurable, and ready for development.",
    "items": [
     "Storyboard and Sketches",
-    "Wireframe (lo-fi designs)",
-    "Testing phase (mid-fi and A/B testing)",
-    "Final Design and Prototyping"
+    "Wireframes (lo-fi)",
+    "Testing (mid-fi and A/B)",
+    "Design Systems and Prototyping"
    ]
   },
   {
@@ -164,7 +167,7 @@
   },
   {
    "title": "Development Assistance",
-   "text": "With a Bachelor’s degree in Computer Science, I bring a strong technical foundation to the design process—ensuring smooth collaboration between design and development. I actively support implementation by using modern AI-powered tools like Cursor, Lovable, and Google Jules to convert design elements into clean, scalable code. My approach focuses on creating development-friendly designs that align with technical constraints while maintaining design integrity. This combination of design expertise and technical understanding allows me to bridge the gap efficiently and help teams ship high-quality products faster.",
+   "text": "With a Bachelor’s degree in Computer Science, I bring a strong technical foundation to the design process—ensuring smooth collaboration between design and development. I actively support implementation by using AI-native tools like Figma MCP, Claude, Lovable and Cursor to convert design elements into clean, scalable code. My approach focuses on creating development-friendly designs that align with technical constraints while maintaining design integrity. This combination of design expertise and technical understanding allows me to bridge the gap efficiently and help teams ship high-quality products faster.",
    "items": [
     "Smooth Handover",
     "UI Components Creation",
@@ -184,7 +187,7 @@
   },
   {
    "title": "Team Management",
-   "text": "With experience leading both in-house and remote design teams, I bring a collaborative and structured approach to team management. I’ve guided cross-functional teams through complex product lifecycles—ensuring alignment between design, development, and business goals. From setting clear design standards and mentoring junior designers to managing workflows with tools like Jira, Trello, and Miro, I create an environment where creativity and efficiency thrive. My leadership style balances autonomy with accountability, fostering strong communication and delivering consistent, high-quality outcomes.",
+   "text": "As Head of Product and a former design lead, with experience leading both in-house and remote design teams, I bring a collaborative and structured approach to team management. I’ve guided cross-functional teams through complex product lifecycles—ensuring alignment between design, development, and business goals. From setting clear design standards and mentoring junior designers to managing workflows with tools like Jira, Trello, and Miro, I create an environment where creativity and efficiency thrive. My leadership style balances autonomy with accountability, fostering strong communication and delivering consistent, high-quality outcomes.",
    "items": [
     "Cross-functional Collaboration",
     "Design Leadership",
