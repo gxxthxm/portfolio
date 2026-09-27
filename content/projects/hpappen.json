@@ -83,7 +83,7 @@
   },
   {
    "t": "p",
-   "h": "Leveraging AI tools like Cursor and Lovable accelerated prototype validation and insights extraction. AI-assisted handoff enhanced design fidelity and sped up front-end development, reducing revision cycles significantly."
+   "h": "Leveraging AI-native tools like Figma MCP, Lovable and Claude accelerated prototype validation and insights extraction. AI-assisted handoff enhanced design fidelity and sped up front-end development, reducing revision cycles significantly."
   },
   {
    "t": "h3",
@@ -129,7 +129,7 @@
   },
   {
    "t": "p",
-   "h": "Maintained close collaboration with frontend developers using AI-powered tools (Cursor) to enhance design-to-code fidelity and reduce revision cycles.",
+   "h": "Maintained close collaboration with frontend developers using AI-native tools (Figma MCP and Claude) to enhance design-to-code fidelity and reduce revision cycles.",
    "list": "ul"
   },
   {
@@ -148,12 +148,12 @@
   },
   {
    "t": "p",
-   "h": "Increased seasonal revenue from zero to 1.7 million Swedish Kronor within one year while boosting conversion rates from 3% to 24% and significantly improving user retention by introducing innovative subscription models, AI-powered user flows, and tutor integration, and launching WCAG-compliant interfaces—all validated through Mixpanel, Stripe Dashboard,  and Google Analytics.",
+   "h": "Grew seasonal revenue from zero to approximately 10M SEK while boosting conversion rates from 3% to 24% and significantly improving user retention by introducing innovative subscription models, AI-powered user flows, and tutor integration, and launching WCAG-compliant interfaces—all validated through Mixpanel, Stripe Dashboard,  and Google Analytics.",
    "list": "ul"
   },
   {
    "t": "p",
-   "h": "Significantly improved sprint cycles and accelerated design handover by leveraging AI tools—including Claude AI and Lovable—which streamlined front-end development.",
+   "h": "Reduced sprint cycles by more than 50% and accelerated design handover by leveraging AI tools—including Claude AI and Lovable—which streamlined front-end development.",
    "list": "ul"
   },
   {
@@ -173,5 +173,7 @@
  "title": "HP-appen 1.0",
  "category": "Product",
  "tags": "Ed-tech | B2C | SaaS",
- "cover": "assets/images/9MhGtiYRGDAiB1vpCpG1wkY70.png"
+ "cover": "assets/images/9MhGtiYRGDAiB1vpCpG1wkY70.png",
+ "role": "Founding Designer · UX Lead",
+ "period": "Dec 2022 — Present"
 }

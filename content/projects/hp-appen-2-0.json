@@ -2,7 +2,7 @@
  "hero": "assets/images/Sh75LzQGCyDBQQ72JqebXZ18k.png",
  "visit": "https://app.hpappen.se",
  "overview": [
-  "HP-appen 2.0 is an upgraded version of the digital platform that helps students prepare for Sweden’s högskoleprovet (university entrance exam). Built in response to user feedback, the new version introduces improved user flows, enhanced learning features, and a more personalized practice experience. I led the end-to-end design of this release across web and mobile, focusing on turning user insights into actionable design improvements. These refinements elevated engagement, optimized usability, and strengthened HP-appen’s position as a leading platform in the Swedish EdTech market.<br><br>This is a work in progress."
+  "HP-appen 2.0 is an upgraded version of the digital platform that helps students prepare for Sweden’s högskoleprovet (university entrance exam). Built in response to user feedback, the new version introduces improved user flows, enhanced learning features, and a more personalized practice experience. As founding designer and now Head of Product, I led the end-to-end design of this release across web and mobile, focusing on turning user insights into actionable design improvements. These refinements elevated engagement, optimized usability, and strengthened HP-appen’s position as a leading platform in the Swedish EdTech market."
  ],
  "gallery": [
   "assets/images/XaQ4Xlt4I2iKTeLNhgnO6ntF9ZI.png",
@@ -16,7 +16,7 @@
   },
   {
    "t": "p",
-   "h": "<strong>Founding Product Designer</strong><br>Built and led the design and product function from scratch — shaping the brand, experience, and technical design foundation that took HP‑appen from concept to <strong>market leadership within six months</strong>."
+   "h": "<strong>Head of Product</strong> (UX Lead / Founding Designer until Dec 2025)<br>Built and led the design and product function from scratch — shaping the brand, experience, and technical design foundation that took HP‑appen from concept to <strong>market leadership within six months</strong>."
   },
   {
    "t": "h2",
@@ -32,22 +32,18 @@
   },
   {
    "t": "p",
-   "h": "Conversion uplift <strong>3% → 24%</strong>, growing seasonal revenue to <strong>~3M SEK per learning cycle</strong>",
+   "h": "Conversion uplift <strong>3% → 24%</strong>, generating approximately <strong>10M SEK in seasonal revenue</strong>",
    "list": "ul"
   },
   {
    "t": "p",
-   "h": "Sprint delivery time reduced by <strong>&gt; 50%</strong> through AI‑assisted design workflows",
+   "h": "Sprint delivery time reduced by <strong>&gt; 50%</strong> through AI‑assisted design workflows",
    "list": "ul"
   },
   {
    "t": "p",
-   "h": "Full‑stack design system adoption across product, web, and growth surfaces",
+   "h": "Full‑stack design system and component library adopted across product, web, and growth surfaces",
    "list": "ul"
-  },
-  {
-   "t": "p",
-   "h": "<em>(Visual cue: Add an infographic showing growth metrics — conversion, revenue, and delivery speed improvements.)</em>"
   },
   {
    "t": "h2",
@@ -59,19 +55,15 @@
   },
   {
    "t": "p",
-   "h": "To support velocity at scale, I built a <strong>unified design language and reusable component library</strong>, paired with an <strong>AI‑augmented design workflow</strong> (Claude AI + Figma MCP + Lovable). This setup <strong>accelerated design‑to‑dev handoff</strong> and standardized design quality across launches."
+   "h": "To support velocity at scale, I built a <strong>unified design language and reusable component library</strong>, paired with an <strong>AI‑augmented design workflow</strong> (Claude AI + Figma MCP + Lovable). This setup <strong>accelerated design‑to‑dev handoff</strong> and standardized design quality across launches."
   },
   {
    "t": "p",
    "h": "Beyond execution, I served as a <strong>strategic design partner to founders</strong>, mentoring designers on AI‑driven workflows and co‑shaping roadmap decisions that pushed both product usability and business growth."
   },
   {
-   "t": "p",
-   "h": "<em>(Visual cue: Screenshot of design system structure, component hierarchy, or workflow automation setup.)</em>"
-  },
-  {
    "t": "h2",
-   "h": "Homepage 0 → 1: From Insight to Launch"
+   "h": "Homepage 0 → 1: From Insight to Launch"
   },
   {
    "t": "p",
@@ -101,10 +93,6 @@
    "h": "The result: a homepage optimized for clarity and conversion, refined post‑launch via analytics (bounce, scroll depth, CTA CTR) and qualitative insights."
   },
   {
-   "t": "p",
-   "h": "<em>(Visual cue: Before/after layout comparison or annotated homepage flow.)</em>"
-  },
-  {
    "t": "h2",
    "h": "Designing AI‑Integrated Learning Experiences"
   },
@@ -130,10 +118,6 @@
   {
    "t": "p",
    "h": "These AI‑enhanced flows became the platform’s <strong>core retention engine</strong>, tying directly to improved session duration and daily active learner growth."
-  },
-  {
-   "t": "p",
-   "h": "<em>(Visual cue: Flow diagram showing adaptive feedback loop or AI integration sketch.)</em>"
   },
   {
    "t": "h2",
@@ -174,5 +158,7 @@
  "title": "HP-appen 2.0",
  "category": "Product",
  "tags": "Ed-tech | B2C | SaaS",
- "cover": "assets/images/Sh75LzQGCyDBQQ72JqebXZ18k.png"
+ "cover": "assets/images/Sh75LzQGCyDBQQ72JqebXZ18k.png",
+ "role": "Head of Product · Founding Designer",
+ "period": "Dec 2022 — Present"
 }

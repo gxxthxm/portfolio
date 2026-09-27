@@ -224,11 +224,11 @@ def stats():
 
 def feature_row(p, i, base):
     tags = "".join(f"<li>{escape(t)}</li>" for t in tags_of(p))
-    meta = " · ".join(x for x in [p.get("employer"), p.get("domain") or p.get("category")] if x)
+    meta = " · ".join(x for x in [p.get("employer"), p.get("period")] if x)
     return f"""<article class="feature reveal">
   <a class="feature-link spot" href="{url_for(p, base)}">
     <span class="badge">{i:02d}</span>
-    <span class="feature-corner">{escape(p.get("domain") or p.get("category", ""))}</span>
+    <span class="feature-corner">{escape(p.get("role") or p.get("domain") or p.get("category", ""))}</span>
     <div class="feature-media">{img(p["cover"], base, p["title"])}</div>
     <div class="feature-body">
       <p class="feature-meta">{escape(meta)}</p>
@@ -538,6 +538,10 @@ def project_page(p):
     meta = []
     if p.get("employer"):
         meta.append(("Employer", escape(p["employer"])))
+    if p.get("role"):
+        meta.append(("Role", escape(p["role"])))
+    if p.get("period"):
+        meta.append(("Timeline", escape(p["period"])))
     meta.append(("Domain", escape(p.get("domain") or p.get("category", ""))))
     if tags_of(p):
         meta.append(("Industry", escape(", ".join(tags_of(p)))))
