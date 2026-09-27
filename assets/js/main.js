@@ -57,15 +57,6 @@
     });
   });
 
-  // ---------- Cursor spotlight on cards ----------
-  document.querySelectorAll(".spot").forEach(function (el) {
-    el.addEventListener("pointermove", function (e) {
-      var r = el.getBoundingClientRect();
-      el.style.setProperty("--mx", (e.clientX - r.left) + "px");
-      el.style.setProperty("--my", (e.clientY - r.top) + "px");
-    });
-  });
-
   // ---------- Glowing ribbons (background canvas) ----------
   var canvas = document.querySelector(".glow-canvas");
   var scrollY = window.scrollY;
@@ -78,7 +69,7 @@
       { rgb: "208,85,90", y: 0.30, amp: 0.16, freq: 1.6, speed: 0.00022, phase: 0.0, strands: 26, spread: 1.2, alpha: 0.26 },
       { rgb: "164,40,64", y: 0.62, amp: 0.20, freq: 1.2, speed: 0.00016, phase: 2.1, strands: 30, spread: 1.5, alpha: 0.28 },
       { rgb: "255,200,169", y: 0.45, amp: 0.10, freq: 2.2, speed: 0.00028, phase: 4.2, strands: 16, spread: 0.8, alpha: 0.16 },
-      { rgb: "120,70,190", y: 0.80, amp: 0.14, freq: 1.0, speed: 0.00012, phase: 1.3, strands: 20, spread: 1.7, alpha: 0.20 }
+      { rgb: "120,128,160", y: 0.80, amp: 0.14, freq: 1.0, speed: 0.00012, phase: 1.3, strands: 20, spread: 1.7, alpha: 0.20 }
     ];
 
     var resize = function () {
@@ -122,11 +113,6 @@
           ctx.strokeStyle = "rgba(" + r.rgb + "," + (r.alpha * edge).toFixed(3) + ")";
           ctx.lineWidth = s % 5 === 0 ? 1.6 : 0.8;
           ctx.stroke();
-          if (s % 4 === 0) {            // soft glow around every fourth strand
-            ctx.strokeStyle = "rgba(" + r.rgb + "," + (r.alpha * edge * 0.18).toFixed(3) + ")";
-            ctx.lineWidth = 10;
-            ctx.stroke();
-          }
         }
       });
       ctx.globalCompositeOperation = "source-over";

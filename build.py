@@ -140,7 +140,7 @@ def page(title, active, base, body, description=None, body_class=""):
 <script>document.documentElement.classList.add("js")</script>
 </head>
 <body class="{body_class}">
-<div class="loader" aria-hidden="true"><div class="loader-rings"><span></span><span></span><span></span><span></span><span></span></div><p class="loader-name">{escape(SITE["name"]).upper()}</p></div>
+<div class="loader" aria-hidden="true"><p class="loader-name">{escape(SITE["name"]).upper()}</p><span class="loader-line"></span></div>
 <canvas class="glow-canvas" aria-hidden="true"></canvas>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
@@ -214,7 +214,7 @@ def section_head(label, title, aside=""):
 
 
 def ticker():
-    items = "".join(f'<span>{escape(s)}</span><span class="star" aria-hidden="true">✦</span>' for s in SITE["skills"])
+    items = "".join(f'<span>{escape(s)}</span><span class="sep" aria-hidden="true">/</span>' for s in SITE["skills"])
     return f"""<div class="ticker" aria-label="Skills"><div class="ticker-track">{items * 4}</div></div>"""
 
 
@@ -228,7 +228,7 @@ def feature_row(p, i, base):
     tags = "".join(f"<li>{escape(t)}</li>" for t in tags_of(p))
     meta = " · ".join(x for x in [p.get("employer"), p.get("period")] if x)
     return f"""<article class="feature reveal">
-  <a class="feature-link spot" href="{url_for(p, base)}">
+  <a class="feature-link" href="{url_for(p, base)}">
     <span class="badge">{i:02d}</span>
     <span class="feature-corner">{escape(p.get("role") or p.get("domain") or p.get("category", ""))}</span>
     <div class="feature-media">{img(p["cover"], base, p["title"])}</div>
@@ -245,7 +245,7 @@ def feature_row(p, i, base):
 
 def work_card(p, base, show_tags=True):
     tag = escape(tags_of(p)[0]) if show_tags and tags_of(p) else ""
-    return f"""<a class="work-card spot reveal" href="{url_for(p, base)}" data-category="{escape(p.get("category", ""))}">
+    return f"""<a class="work-card reveal" href="{url_for(p, base)}" data-category="{escape(p.get("category", ""))}">
   <div class="work-media">{img(p["cover"], base, p["title"])}<span class="work-arrow">{icon("arrow-ur")}</span></div>
   <div class="work-info">
     <div><h3>{escape(p["title"])}</h3><p>{escape(p.get("category", ""))}</p></div>
@@ -384,7 +384,7 @@ def home():
     features = "".join(feature_row(p, i + 1, base) for i, p in enumerate(prof))
     body = f"""<section class="hero">
   <div class="wrap hero-inner">
-    <p class="eyebrow eyebrow-avatar reveal"><img src="{base}{SITE["avatar"]}" alt="{escape(SITE["name"])}" width="28" height="28"><span>{escape(SITE["role"])}</span><span class="dot"></span></p>
+    <p class="eyebrow eyebrow-avatar reveal"><img src="{base}{SITE["avatar"]}" alt="{escape(SITE["name"])}" width="28" height="28"><span>{escape(SITE["role"])}</span></p>
     <h1 class="hero-title reveal">I design products that <em>grow</em> — <br class="br-lg">from first insight to shipped pixel.</h1>
     <p class="hero-meta reveal"><span>Product Designer</span><i></i><span>{escape(SITE["stats"][0][0])} Years of Experience</span><i></i><span>{escape(SITE["location"])}</span><i></i><span>{escape(SITE["relocation"])}</span></p>
     <div class="hero-actions reveal">
@@ -394,34 +394,33 @@ def home():
     </div>
     <p class="hero-lede reveal">{escape(SITE["intro"])}</p>
   </div>
-  <a class="scroll-cue" href="#highlights"><span class="scroll-line"></span>Scroll down</a>
 </section>
 {ticker()}
 {stats()}
 <section class="section wrap" id="work">
-  {section_head("01 · Selected work", "Work that <em>shipped.</em>", "Founding, lead and senior design roles across ed-tech, agri-tech, food delivery and research — measured by real outcomes.")}
+  {section_head("Professional work", "Selected case studies", "Founding, lead and senior design roles across ed-tech, agri-tech, food delivery and research — measured by real outcomes.")}
   <div class="features">{features}</div>
   <div class="center reveal"><a class="pill-btn pill-lg" href="{base}professional_works/">Check all works {icon("arrow-r")}</a></div>
 </section>
 <section class="section wrap" id="other">
-  {section_head("02 · Explorations", "Side projects &amp; <em>redesigns.</em>", "Self-initiated products, concept redesigns and research studies — where I try new ideas, tools and AI-assisted workflows.")}
+  {section_head("Explorations", "Side projects and redesigns", "Self-initiated products, concept redesigns and research studies — where I try new ideas, tools and AI-assisted workflows.")}
   {filters(other)}
   <div class="work-grid" data-filter-grid>{"".join(work_card(p, base) for p in other)}</div>
 </section>
 <section class="section wrap split">
   <div class="split-side">
-    {section_head("03 · Career", "Where I’ve made an <em>impact.</em>")}
+    {section_head("Career", "Experience")}
     <p class="muted reveal">{escape(SITE["bio"])}</p>
     <a class="text-link reveal" href="{base}about/">More about me {icon("arrow-r")}</a>
   </div>
   {experience_list()}
 </section>
 <section class="section wrap">
-  {section_head("04 · What I do", "How I can <em>help.</em>", f'<a class="pill-btn" href="{base}service/">Service details {icon("arrow-r")}</a>')}
+  {section_head("What I do", "How I can help", f'<a class="pill-btn" href="{base}service/">Service details {icon("arrow-r")}</a>')}
   <div class="services-grid">{service_cards(full=False)}</div>
 </section>
 <section class="section wrap">
-  {section_head("05 · Toolkit", "Tools of the <em>trade.</em>")}
+  {section_head("Toolkit", "Tools I use")}
   <ul class="toolkit">{toolkit(base)}</ul>
 </section>
 {cta(base)}"""
@@ -431,7 +430,7 @@ def home():
 def page_hero(label, title, lede="", portrait=None, compact=False):
     lede_html = f'<p class="page-lede reveal">{lede}</p>' if lede else ""
     text = f"""<div class="page-hero-text">
-    <p class="eyebrow reveal"><span class="dot"></span> {label}</p>
+    <p class="eyebrow reveal">{label}</p>
     <h1 class="page-title reveal">{title}</h1>
     {lede_html}
   </div>"""
@@ -441,7 +440,7 @@ def page_hero(label, title, lede="", portrait=None, compact=False):
     return f"""<section class="page-hero">
   <div class="wrap page-hero-split">
   {text}
-  <figure class="{cls} reveal"><img src="{portrait}" alt="{escape(SITE["name"])}" loading="eager"><figcaption><span class="dot"></span> {escape(SITE["location"])} · {escape(SITE["relocation"])}</figcaption></figure>
+  <figure class="{cls} reveal"><img src="{portrait}" alt="{escape(SITE["name"])}" loading="eager"><figcaption>{escape(SITE["location"])} · {escape(SITE["relocation"])}</figcaption></figure>
   </div>
 </section>"""
 
@@ -467,7 +466,7 @@ def about():
     base = "../"
     body = page_hero("About", "Founding designer, researcher &amp; <em>product lead.</em>", escape(SITE["bio"]), portrait=base + SITE["photo"])
     body += f"""<section class="section wrap split">
-  <div class="split-side">{section_head("Career", "Work <em>history.</em>")}
+  <div class="split-side">{section_head("Career", "Work history")}
     <div class="reveal about-actions">
       {ext(resume(base), icon("file") + " Download resume", "btn btn-accent")}
       <a class="btn btn-ghost" href="{base}contact/">Get in touch</a>
@@ -476,7 +475,7 @@ def about():
   {experience_list(detailed=True)}
 </section>
 <section class="section wrap">
-  {section_head("Learning", "Education &amp; <em>certificates.</em>")}
+  {section_head("Learning", "Education and certificates")}
   <ul class="edu-grid">{education_list()}</ul>
 </section>
 <section class="section wrap">
@@ -582,7 +581,7 @@ def project_page(p):
 <section class="case-hero">
   <div class="wrap">
     <a class="back-link reveal" href="{base}{p["section"]}/">{icon("arrow-l")} {section_title}</a>
-    <p class="eyebrow reveal"><span class="dot"></span> Case study · {escape(p.get("category", ""))}</p>
+    <p class="eyebrow reveal">Case study / {escape(p.get("category", ""))}</p>
     <h1 class="case-title reveal">{escape(p["title"])}</h1>
     <dl class="case-meta reveal">{meta_html}</dl>
   </div>
@@ -598,7 +597,7 @@ def project_page(p):
   </article>
 </section>
 <section class="wrap next-wrap">
-  <a class="next-card spot reveal" href="{url_for(nxt, base)}">
+  <a class="next-card reveal" href="{url_for(nxt, base)}">
     <div class="next-text"><p class="label">Next project</p><h2>{escape(nxt["title"])}</h2><p class="muted">{escape(nxt.get("category", ""))}</p>
       <span class="text-link">View case study {icon("arrow-r")}</span></div>
     <div class="next-media">{img(nxt["cover"], base, nxt["title"])}</div>
