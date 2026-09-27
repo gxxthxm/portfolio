@@ -3,41 +3,61 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FlightTracker - Gauthem&#x27;s Portfolio</title>
-<meta name="description" content="This project was a take-home design task for an interview a few months ago which I was given permission to share. The challenge was to create a visually engagin">
-<meta property="og:title" content="FlightTracker - Gauthem&#x27;s Portfolio">
-<meta property="og:description" content="This project was a take-home design task for an interview a few months ago which I was given permission to share. The challenge was to create a visually engagin">
-<meta name="theme-color" content="#000000">
+<title>FlightTracker — Gauthem Krishna</title>
+<meta name="description" content="This project was a take-home design task for an interview a few months ago which I was given permission to share. The challenge was to create a visually…">
+<meta property="og:title" content="FlightTracker — Gauthem Krishna">
+<meta property="og:description" content="This project was a take-home design task for an interview a few months ago which I was given permission to share. The challenge was to create a visually…">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0a0a0b">
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/style.css">
 <script>document.documentElement.classList.add("js")</script>
 </head>
-<body>
-<header class="nav-wrap">
-  <nav class="nav" aria-label="Main">
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
-    <div class="nav-links"><a href="../../" class="">Home</a><a href="../../professional_works/" class="">Professional Works</a><a href="../../other_works/" class="active">Other Works</a><a href="../../about/" class="">About</a><a href="../../service/" class="">Services</a><a href="../../contact/" class="">Contact</a></div>
-  </nav>
+<body class="case">
+<div class="loader" aria-hidden="true"><div class="loader-rings"><span></span><span></span><span></span><span></span><span></span></div><p class="loader-name">GAUTHEM KRISHNA</p></div>
+<canvas class="glow-canvas" aria-hidden="true"></canvas>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../../" aria-label="Gauthem Krishna — home">
+      <span class="brand-mark">G</span><span class="brand-name">Gauthem Krishna</span><span class="brand-role">— Product designer</span>
+    </a>
+    <nav class="nav" aria-label="Main"><a href="../../professional_works/">Work</a><a href="../../other_works/" aria-current="page">Other Works</a><a href="../../about/">About</a><a href="../../service/">Services</a><a href="../../contact/">Contact</a></nav>
+    <a class="btn btn-accent btn-sm header-cta" href="https://calendly.com/gauthemk99" target="_blank" rel="noopener">Let’s talk <svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../../">Home</a><a href="../../professional_works/">Work</a><a href="../../other_works/" aria-current="page">Other Works</a><a href="../../about/">About</a><a href="../../service/">Services</a><a href="../../contact/">Contact</a>
+    <a class="btn btn-accent" href="https://calendly.com/gauthemk99" target="_blank" rel="noopener">Let’s talk <svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+  </div>
 </header>
-<main>
-<div class="container narrow">
-<a class="back-link" href="../../other_works/">&larr; Other Works</a>
-<header class="case-head">
-  <h1>FlightTracker</h1>
-  <p>Design and AI</p>
-</header>
-<article class="prose case-body">
-<figure class="shot"><img class="" src="../../assets/images/T1e38QwQmKAtaHg5guREqO0tgLA.png" alt="" loading="lazy" decoding="async"></figure>
-<p class="btn-row"><a class="btn-solid" href="https://stick-skirr-17915144.figma.site" target="_blank" rel="noopener">Visit Site</a></p>
-<h6 class="note">Click the button above to view the full website ⬆</h6>
+<main id="main">
+<div class="progress" aria-hidden="true"><span></span></div>
+<section class="case-hero">
+  <div class="wrap">
+    <a class="back-link reveal" href="../../other_works/"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Other works</a>
+    <p class="eyebrow reveal"><span class="dot"></span> Case study · Design and AI</p>
+    <h1 class="case-title reveal">FlightTracker</h1>
+    <dl class="case-meta reveal"><div><dt>Domain</dt><dd>Design and AI</dd></div><div><dt>Industry</dt><dd>Landing Page</dd></div></dl>
+  </div>
+</section>
+<div class="wrap">
+  <figure class="case-cover reveal"><img class="" src="../../assets/images/T1e38QwQmKAtaHg5guREqO0tgLA.png" alt="FlightTracker"></figure>
+</div>
+<section class="wrap case-layout">
+  <aside class="case-aside"><nav class="toc" aria-label="On this page"><p class="label">On this page</p><ol><li><a href="#problem-statement">Problem Statement</a></li><li><a href="#goals">Goals</a></li><li><a href="#research-insights">Research &amp; Insights</a></li><li><a href="#design-process">Design Process</a></li><li><a href="#ideation-wireframing">Ideation &amp; Wireframing</a></li><li><a href="#ai-driven-design-execution-in-figma">AI-Driven Design Execution in Figma</a></li><li><a href="#visual-interaction-design">Visual &amp; Interaction Design</a></li><li><a href="#prototype-testing">Prototype &amp; Testing</a></li><li><a href="#outcome-learnings">Outcome &amp; Learnings</a></li></ol></nav></aside>
+  <article class="prose">
+    
+    <p><a class="btn btn-accent" href="https://stick-skirr-17915144.figma.site" target="_blank" rel="noopener">Visit Site <svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></p>
+<h5 class="note">Click the button above to view the full website ⬆</h5>
 <p>This project was a take-home design task for an interview a few months ago which I was given permission to share. The challenge was to create a visually engaging, interactive one-page landing page for an airline information application that effectively showcased the app’s core features, built user trust, and drove app downloads. A key requirement was to build the entire design directly within Figma using AI-powered design tools—without relying too much on traditional Figma designing. This case study details my end-to-end process from research to delivering a fully AI-assisted, interactive prototype.</p>
-<figure class="shot"><img class="" src="../../assets/images/uOvZ3iaBBbGHAMIwUR0TB9KjXg.png" alt="" loading="lazy" decoding="async"></figure>
-<h3>Problem Statement</h3>
+<figure class="shot reveal"><img class="" src="../../assets/images/uOvZ3iaBBbGHAMIwUR0TB9KjXg.png" alt="" loading="lazy" decoding="async"></figure>
+<h2 id="problem-statement">Problem Statement</h2>
 <p>Travellers often struggle with fragmented sources for flight updates, real-time tracking, and comprehensive airline information. The challenge was to design a landing page that clearly communicates the app’s benefits, engages users with interactive elements, and encourages app downloads without overwhelming them.</p>
-<h3>Goals</h3>
+<h2 id="goals">Goals</h2>
 <ul>
 <li>Design a clean, attractive landing page aligned with air travel themes.</li>
 <li>Highlight core features through meaningful animations and interactions.</li>
@@ -45,20 +65,20 @@
 <li>Build a responsive UI delivering smooth micro-interactions and optimized for multiple devices.</li>
 <li>Deliver the final product fully designed and built in Figma using AI-powered automation and native prototyping.</li>
 </ul>
-<h3>Research &amp; Insights</h3>
+<h2 id="research-insights">Research &amp; Insights</h2>
 <ul>
 <li><strong>User pain points:</strong> Reliance on multiple platforms for flight info, late alerts, lack of centralized access.</li>
 <li><strong>Competitor analysis:</strong> Studied airline apps and flight trackers for UI patterns, animation best practices, and onboarding flows.</li>
 <li><strong>Design inspiration:</strong> Sky and flight visuals evoking trust, calm, and excitement. Subtle animation and motion to enhance engagement.</li>
 </ul>
-<h3>Design Process</h3>
-<h3>Ideation &amp; Wireframing</h3>
+<h2 id="design-process">Design Process</h2>
+<h2 id="ideation-wireframing">Ideation &amp; Wireframing</h2>
 <ul>
 <li>Created initial layout sketches focusing on a single-page scroll experience with hero, features, demo, testimonials, and CTA sections.</li>
 <li>Prioritized bold above-the-fold messaging with clear CTAs for immediate engagement.</li>
 <li>Planned an interactive flight tracker demo as a core visual experience.</li>
 </ul>
-<h3>AI-Driven Design Execution in Figma</h3>
+<h2 id="ai-driven-design-execution-in-figma">AI-Driven Design Execution in Figma</h2>
 <p>The company specified that the landing page must be built entirely within <strong>Figma</strong> without using traditional external tools. Through Figma Make’s AI-powered capabilities and plugins, I:</p>
 <ul>
 <li>Generated polished layouts, iconography, and illustrations in Figma efficiently without manual drawing or external editing tools.</li>
@@ -67,37 +87,77 @@
 <li>Iterated rapidly with feedback cycles using Figma’s collaboration features.</li>
 </ul>
 <p>This approach accelerated the design process and demonstrated how AI-assisted workflows can elevate quality and consistency in UI/UX design.</p>
-<h3>Visual &amp; Interaction Design</h3>
+<h2 id="visual-interaction-design">Visual &amp; Interaction Design</h2>
 <ul>
 <li>Chose a clean sky-inspired color palette with blues and warm accent gradients to convey reliability and energy.</li>
 <li>Used rounded sans-serif typography for readability and a friendly tone.</li>
 <li>Combined immersive hero video backgrounds with lightweight, animated icons and illustrations for focus and performance.</li>
 <li>Developed scroll-triggered animations (fade-ins, slide-ins), micro-interactions (rippling buttons, bouncing pins), and parallax effects for depth and engagement.</li>
 </ul>
-<h3>Prototype &amp; Testing</h3>
+<h2 id="prototype-testing">Prototype &amp; Testing</h2>
 <ul>
 <li>Delivered a fully interactive prototype showcasing key animations, hover states, and responsive behavior across desktop and mobile.</li>
 <li>Conducted informal usability testing sessions with peers, optimizing animation timing and ensuring clarity.</li>
 <li>Ensured accessibility with good contrast, distinct focus styles, and appropriately sized interactive touch areas.</li>
 </ul>
-<h3>Outcome &amp; Learnings</h3>
+<h2 id="outcome-learnings">Outcome &amp; Learnings</h2>
 <ul>
 <li>Successfully delivered a visually rich, interactive landing page prototype meeting all client requirements.</li>
 <li>Gained firsthand experience working entirely within an AI-driven design environment, pushing workflow efficiency and design innovation.</li>
 <li>Learned to balance rich motion design with clarity and performance considerations.</li>
 <li>Enhanced skills in micro-interactions, responsive layouts, and aviation-themed visual storytelling.</li>
 </ul>
-</article>
-<nav class="pager" aria-label="Project navigation"><a href="../../other_works/capella/">&lsaquo; Capella</a><a href="../../other_works/fumecart/">FumeCart &rsaquo;</a></nav>
-</div>
-<div class="container"><section class="cta card">
-  <h4>Let’s Work Together</h4>
-  <a class="cta-link" href="https://calendly.com/gauthemk99" target="_blank" rel="noopener">Let's chat <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-</section></div>
+  </article>
+</section>
+<section class="wrap next-wrap">
+  <a class="next-card spot reveal" href="../../other_works/fumecart/">
+    <div class="next-text"><p class="label">Next project</p><h2>FumeCart</h2><p class="muted">Redesign</p>
+      <span class="text-link">View case study <svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+    <div class="next-media"><img class="" src="../../assets/images/I9snqvDXMFXai8aMbQcl1qEaN0.png" alt="FumeCart" loading="lazy" decoding="async"></div>
+  </a>
+</section>
+<section class="cta wrap">
+  <div class="cta-card reveal">
+    <div class="cta-glow" aria-hidden="true"></div>
+    <p class="label">Have a project in mind?</p>
+    <h2>Let’s build something <em>people love</em> to use.</h2>
+    <div class="cta-actions">
+      <a class="btn btn-accent btn-lg" href="https://calendly.com/gauthemk99" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> Book a call</a>
+      <a class="btn btn-ghost btn-lg" href="mailto:gauthemk99@gmail.com"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg> gauthemk99@gmail.com</a>
+    </div>
+  </div>
+</section>
 </main>
 <footer class="site-footer">
-  <span>&copy; <span data-year></span> Gauthem Krishna</span>
-  <span><a href="mailto:gauthemk99@gmail.com">gauthemk99@gmail.com</a></span>
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand" href="../../"><span class="brand-mark">G</span><span class="brand-name">Gauthem Krishna</span></a>
+      <p class="muted footer-blurb">Experienced Designer skilled in end-to-end product development, from research to prototyping, with experience leading teams and delivering user-focused solutions.</p>
+    </div>
+    <div>
+      <h2 class="label">Pages</h2>
+      <ul class="footer-links">
+        <li><a href="../../professional_works/">Professional works</a></li>
+        <li><a href="../../other_works/">Other works</a></li>
+        <li><a href="../../about/">About</a></li>
+        <li><a href="../../service/">Services</a></li>
+        <li><a href="../../contact/">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="label">Elsewhere</h2>
+      <ul class="footer-links">
+        <li><a class="" href="https://www.linkedin.com/in/gauthemkrishna" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a class="" href="../../assets/Resume_Gauthem.pdf" target="_blank" rel="noopener">Resume</a></li>
+        <li><a class="" href="https://calendly.com/gauthemk99" target="_blank" rel="noopener">Book a call</a></li>
+        <li><a href="mailto:gauthemk99@gmail.com">gauthemk99@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>&copy; <span data-year>2026</span> Gauthem Krishna</span>
+    <a href="#main" class="to-top">Back to top ↑</a>
+  </div>
 </footer>
 <script src="../../assets/js/main.js" defer></script>
 </body>

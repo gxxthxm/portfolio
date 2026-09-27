@@ -7,11 +7,12 @@ root so the site can be served directly by GitHub Pages.
 
 Usage: python3 build.py
 """
+import datetime
 import json
 import os
 import re
 import shutil
-from html import escape
+from html import escape, unescape
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SITE = json.load(open(os.path.join(ROOT, "content", "site.json"), encoding="utf-8"))
@@ -21,56 +22,103 @@ for name in os.listdir(os.path.join(ROOT, "content", "projects")):
         p = json.load(open(os.path.join(ROOT, "content", "projects", name), encoding="utf-8"))
         PROJECTS[p["slug"]] = p
 
+YEAR = datetime.date.today().year
+
 NAV = [
-    ("Home", "", "home"),
-    ("Professional Works", "professional_works/", "professional_works"),
+    ("Work", "professional_works/", "professional_works"),
     ("Other Works", "other_works/", "other_works"),
     ("About", "about/", "about"),
     ("Services", "service/", "service"),
     ("Contact", "contact/", "contact"),
 ]
 
-ARROW_UP_RIGHT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
-ARROW_RIGHT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'
-CHECK = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="m7.5 12.2 3 3 6-6.2" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
-MAIL = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m3.5 6 8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>'
-PHONE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5h2.8l1.4 4.2-2 1.3a11 11 0 0 0 6.2 6.2l1.3-2 4.2 1.4v2.8a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>'
+
+def icon(name):
+    paths = {
+        "arrow-ur": '<path d="M7 17 17 7M8 7h9v9"/>',
+        "arrow-r": '<path d="M5 12h14M13 6l6 6-6 6"/>',
+        "arrow-l": '<path d="M19 12H5M11 6l-6 6 6 6"/>',
+        "check": '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
+        "mail": '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/>',
+        "phone": '<path d="M6.6 3.5h2.8l1.4 4.2-2 1.3a11 11 0 0 0 6.2 6.2l1.3-2 4.2 1.4v2.8a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/>',
+        "calendar": '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+        "linkedin": '<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/>',
+        "file": '<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/>',
+        "pin": '<path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>',
+    }
+    return f'<svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">{paths[name]}</svg>'
+
 
 SERVICE_ICONS = [
-    # atom, browser, glasses, code, hierarchy, people
-    '<svg viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="currentColor" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)" fill="none" stroke="currentColor" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/></svg>',
-    '<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M3 9h18" stroke="currentColor" stroke-width="1.5"/></svg>',
-    '<svg viewBox="0 0 24 24"><circle cx="6.5" cy="15" r="3.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="15" r="3.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 15h4M3 15l2-8h3M21 15l-2-8h-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
-    '<svg viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-    '<svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="16" width="6" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="15" y="16" width="6" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v4M6 16v-4h12v4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>',
-    '<svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.2a6.5 6.5 0 0 1 3.5 5.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
+    '<ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/>',
+    '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/>',
+    '<circle cx="6.5" cy="15" r="3.5"/><circle cx="17.5" cy="15" r="3.5"/><path d="M10 15h4M3 15l2-8h3M21 15l-2-8h-3"/>',
+    '<path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/>',
+    '<rect x="9" y="3" width="6" height="5" rx="1"/><rect x="3" y="16" width="6" height="5" rx="1"/><rect x="15" y="16" width="6" height="5" rx="1"/><path d="M12 8v4M6 16v-4h12v4"/>',
+    '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.2a6.5 6.5 0 0 1 3.5 5.8"/>',
 ]
 
 
-def ext_link(href, label, cls=""):
+def text(html):
+    return unescape(re.sub(r"<[^>]+>", "", html)).strip()
+
+
+def slugify(s):
+    return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+
+
+def ext(href, label, cls=""):
     return f'<a class="{cls}" href="{escape(href)}" target="_blank" rel="noopener">{label}</a>'
 
 
+def resume(base):
+    return base + SITE["links"]["resume"]
+
+
 def fix_links(html, base):
-    """Rewrite Framer-relative links (./molasses), open external links in a new tab, trim stray <br>s."""
+    """Rewrite Framer-relative links, open external links in a new tab, trim stray <br>s."""
     html = re.sub(r"^(\s*<br>\s*)+|(\s*<br>\s*)+$", "", html)
-    html = re.sub(r'href="\./([a-z0-9\-]+)"', lambda m: f'href="{base}other_works/{m.group(1)}/"' if m.group(1) in PROJECTS and PROJECTS[m.group(1)]["section"] == "other_works" else f'href="{base}professional_works/{m.group(1)}/"', html)
+
+    def local(m):
+        s = m.group(1)
+        sec = PROJECTS[s]["section"] if s in PROJECTS else "other_works"
+        return f'href="{base}{sec}/{s}/"'
+
+    html = re.sub(r'href="\./([a-z0-9\-]+)"', local, html)
     html = re.sub(r'<a href="(https?://[^"]+)">', r'<a href="\1" target="_blank" rel="noopener">', html)
     return html
 
 
-def img(src, base, alt="", cls="", lazy=True):
-    loading = ' loading="lazy" decoding="async"' if lazy else ""
+def img(src, base, alt="", cls="", eager=False):
+    loading = "" if eager else ' loading="lazy" decoding="async"'
     return f'<img class="{cls}" src="{base}{escape(src)}" alt="{escape(alt)}"{loading}>'
 
 
-def page(title, active, base, body, description=None):
+def tags_of(p):
+    return [t.strip() for t in p.get("tags", "").split("|") if t.strip()]
+
+
+def url_for(p, base):
+    return f'{base}{p["section"]}/{p["slug"]}/'
+
+
+def excerpt(p, n=190):
+    src = (p.get("overview") or [b["h"] for b in p["blocks"] if b["t"] == "p" and "list" not in b] or [""])[0]
+    t = text(src)
+    return t if len(t) <= n else t[: n].rsplit(" ", 1)[0] + "…"
+
+
+# ---------- layout ----------
+
+def page(title, active, base, body, description=None, body_class=""):
+    current = ' aria-current="page"'
     nav = "".join(
-        f'<a href="{base}{href}" class="{"active" if key == active else ""}">{label}</a>'
+        f'<a href="{base}{href}"{current if key == active else ""}>{label}</a>'
         for label, href, key in NAV
     )
     desc = escape(description or SITE["intro"])
-    full_title = escape(title + " - " + SITE["title"] if title else SITE["title"])
+    full_title = escape(f'{title} — {SITE["name"]}' if title else f'{SITE["name"]} — Product & UX Designer')
+    L = SITE["links"]
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -80,99 +128,206 @@ def page(title, active, base, body, description=None):
 <meta name="description" content="{desc}">
 <meta property="og:title" content="{full_title}">
 <meta property="og:description" content="{desc}">
-<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0a0a0b">
 <link rel="icon" href="{base}assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{base}assets/css/style.css">
 <script>document.documentElement.classList.add("js")</script>
 </head>
-<body>
-<header class="nav-wrap">
-  <nav class="nav" aria-label="Main">
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
-    <div class="nav-links">{nav}</div>
-  </nav>
+<body class="{body_class}">
+<div class="loader" aria-hidden="true"><div class="loader-rings"><span></span><span></span><span></span><span></span><span></span></div><p class="loader-name">{escape(SITE["name"]).upper()}</p></div>
+<canvas class="glow-canvas" aria-hidden="true"></canvas>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="{base}" aria-label="{escape(SITE["name"])} — home">
+      <span class="brand-mark">G</span><span class="brand-name">{escape(SITE["name"])}</span><span class="brand-role">— Product designer</span>
+    </a>
+    <nav class="nav" aria-label="Main">{nav}</nav>
+    {ext(L["calendly"], "Let’s talk " + icon("arrow-ur"), "btn btn-accent btn-sm header-cta")}
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="{base}">Home</a>{nav}
+    {ext(L["calendly"], "Let’s talk " + icon("arrow-ur"), "btn btn-accent")}
+  </div>
 </header>
-<main>
+<main id="main">
 {body}
 </main>
-<footer class="site-footer">
-  <span>&copy; <span data-year></span> {escape(SITE["name"])}</span>
-  <span><a href="mailto:{SITE["email"]}">{SITE["email"]}</a></span>
-</footer>
+{footer(base)}
 <script src="{base}assets/js/main.js" defer></script>
 </body>
 </html>
 """
 
 
-# ---------- shared components ----------
-
-def social_buttons():
+def footer(base):
     L = SITE["links"]
-    return f"""<section class="social">
-  {ext_link(L["linkedin"], "Linkedin", "btn-ghost")}
-  {ext_link(L["resume"], "Resume", "btn-ghost")}
-</section>"""
-
-
-def marquee():
-    items = "".join(
-        f'<span class="skill{" accent" if i % 2 else ""}">{escape(s)}</span><span class="dot" aria-hidden="true"></span>'
-        for i, s in enumerate(SITE["skills"])
-    )
-    return f"""<section class="marquee" aria-label="Skills">
-  <div class="marquee-track">{items}{items}{items}{items}</div>
-</section>"""
-
-
-def cta():
-    return f"""<section class="cta card">
-  <h4>Let’s Work Together</h4>
-  {ext_link(SITE["links"]["calendly"], "Let's chat " + ARROW_RIGHT, "cta-link")}
-</section>"""
-
-
-def url_for(p, base):
-    return f'{base}{p["section"]}/{p["slug"]}/'
-
-
-def project_card(p, base, size="md", subtitle="category"):
-    sub = p.get(subtitle) or p.get("category", "")
-    return f"""<a class="project-card card size-{size} reveal" href="{url_for(p, base)}">
-  <div class="project-card-head">
+    return f"""<footer class="site-footer">
+  <div class="wrap footer-grid">
     <div>
-      <h3>{escape(p["title"])}</h3>
-      <p>{escape(sub)}</p>
+      <a class="brand" href="{base}"><span class="brand-mark">G</span><span class="brand-name">{escape(SITE["name"])}</span></a>
+      <p class="muted footer-blurb">{escape(SITE["contactBlurb"])}</p>
     </div>
-    <span class="arrow-btn" aria-hidden="true">{ARROW_UP_RIGHT}</span>
+    <div>
+      <h2 class="label">Pages</h2>
+      <ul class="footer-links">
+        <li><a href="{base}professional_works/">Professional works</a></li>
+        <li><a href="{base}other_works/">Other works</a></li>
+        <li><a href="{base}about/">About</a></li>
+        <li><a href="{base}service/">Services</a></li>
+        <li><a href="{base}contact/">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="label">Elsewhere</h2>
+      <ul class="footer-links">
+        <li>{ext(L["linkedin"], "LinkedIn")}</li>
+        <li>{ext(resume(base), "Resume")}</li>
+        <li>{ext(L["calendly"], "Book a call")}</li>
+        <li><a href="mailto:{SITE["email"]}">{SITE["email"]}</a></li>
+      </ul>
+    </div>
   </div>
-  <div class="project-card-media">{img(p["cover"], base, p["title"])}</div>
+  <div class="wrap footer-bottom">
+    <span>&copy; <span data-year>{YEAR}</span> {escape(SITE["name"])}</span>
+    <a href="#main" class="to-top">Back to top ↑</a>
+  </div>
+</footer>"""
+
+
+# ---------- components ----------
+
+def section_head(label, title, aside=""):
+    if aside and not aside.lstrip().startswith("<"):
+        aside = f'<p class="section-desc">{aside}</p>'
+    return f"""<div class="section-head reveal">
+  <div><p class="label">{label}</p><h2 class="section-title">{title}</h2></div>
+  {aside}
+</div>"""
+
+
+def ticker():
+    items = "".join(f'<span>{escape(s)}</span><span class="star" aria-hidden="true">✦</span>' for s in SITE["skills"])
+    return f"""<div class="ticker" aria-label="Skills"><div class="ticker-track">{items * 4}</div></div>"""
+
+
+def stats():
+    rows = SITE["stats"]
+    cells = "".join(f'<div class="stat reveal"><strong>{v}</strong><span>{escape(l)}</span></div>' for v, l in rows)
+    return f'<section class="stats wrap" id="highlights" aria-label="Highlights">{cells}</section>'
+
+
+def feature_row(p, i, base):
+    tags = "".join(f"<li>{escape(t)}</li>" for t in tags_of(p))
+    meta = " · ".join(x for x in [p.get("employer"), p.get("domain") or p.get("category")] if x)
+    return f"""<article class="feature reveal">
+  <a class="feature-link spot" href="{url_for(p, base)}">
+    <span class="badge">{i:02d}</span>
+    <span class="feature-corner">{escape(p.get("domain") or p.get("category", ""))}</span>
+    <div class="feature-media">{img(p["cover"], base, p["title"])}</div>
+    <div class="feature-body">
+      <p class="feature-meta">{escape(meta)}</p>
+      <h3>{escape(p["title"])}</h3>
+      <ul class="chips">{tags}</ul>
+      <p class="feature-excerpt">{escape(excerpt(p, 150))}</p>
+      <span class="pill-btn">View case study {icon("arrow-r")}</span>
+    </div>
+  </a>
+</article>"""
+
+
+def work_card(p, base, show_tags=True):
+    tag = escape(tags_of(p)[0]) if show_tags and tags_of(p) else ""
+    return f"""<a class="work-card spot reveal" href="{url_for(p, base)}" data-category="{escape(p.get("category", ""))}">
+  <div class="work-media">{img(p["cover"], base, p["title"])}<span class="work-arrow">{icon("arrow-ur")}</span></div>
+  <div class="work-info">
+    <div><h3>{escape(p["title"])}</h3><p>{escape(p.get("category", ""))}</p></div>
+    {f'<span class="pill">{tag}</span>' if tag else ""}
+  </div>
 </a>"""
 
 
-def works_preview(base):
-    def strip(slugs):
-        return "".join(f'<div class="thumb">{img(PROJECTS[s]["cover"], base, PROJECTS[s]["title"])}</div>' for s in slugs)
-    return f"""<section class="works-preview">
-  <a class="card preview reveal" href="{base}professional_works/">
-    <div class="project-card-head"><h5>Professional Works</h5><span class="arrow-btn" aria-hidden="true">{ARROW_UP_RIGHT}</span></div>
-    <div class="thumb-row">{strip(SITE["professional"][:3])}</div>
-  </a>
-  <a class="card preview reveal" href="{base}other_works/">
-    <div class="project-card-head"><h5>Other Works</h5><span class="arrow-btn" aria-hidden="true">{ARROW_UP_RIGHT}</span></div>
-    <div class="thumb-row">{strip(SITE["other"][:3])}</div>
-  </a>
+def filters(projects):
+    cats = []
+    for p in projects:
+        c = p.get("category", "")
+        if c and c not in cats:
+            cats.append(c)
+    btns = '<button class="filter is-active" data-filter="all" aria-pressed="true">All <span>{}</span></button>'.format(len(projects))
+    for c in cats:
+        n = sum(1 for p in projects if p.get("category") == c)
+        btns += f'<button class="filter" data-filter="{escape(c)}" aria-pressed="false">{escape(c)} <span>{n}</span></button>'
+    return f'<div class="filters" role="group" aria-label="Filter projects">{btns}</div>'
+
+
+def experience_list(detailed=False):
+    rows = ""
+    for e in SITE["experience"]:
+        note = f' · {escape(e["note"])}' if e.get("note") else ""
+        points = e["points"] if detailed else e["points"][:1]
+        pts = "".join(f"<li>{escape(x)}</li>" for x in points)
+        rows += f"""<li class="exp reveal"><span class="exp-period">{escape(e["period"])}</span><span class="exp-role">{escape(e["role"])}</span><span class="exp-place">{escape(e["org"])}{note}</span><ul class="exp-points">{pts}</ul></li>"""
+    return f'<ol class="exp-list">{rows}</ol>'
+
+
+def education_list():
+    return "".join(
+        f"""<li class="edu reveal"><span class="label">{escape(x["kind"])} · {escape(x["year"])}</span><strong>{escape(x["title"])}</strong><span class="muted">{escape(x["org"])}</span></li>"""
+        for x in SITE["education"]
+    )
+
+
+def service_cards(full=True):
+    out = ""
+    for i, s in enumerate(SITE["services"]):
+        items = "".join(f"<li>{icon('check')}{escape(it)}</li>" for it in s["items"])
+        body = f'<p>{escape(s["text"])}</p>' if full else ""
+        out += f"""<article class="service reveal">
+  <div class="service-top"><span class="index">{i + 1:02d}</span><svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">{SERVICE_ICONS[i % len(SERVICE_ICONS)]}</svg></div>
+  <h3>{escape(s["title"])}</h3>
+  {body}
+  <ul class="checks">{items}</ul>
+</article>"""
+    return out
+
+
+def toolkit(base):
+    return "".join(
+        f'<li class="tool reveal">{img(t["icon"], base, "")}<span>{escape(t["name"])}</span></li>' for t in SITE["stack"]
+    )
+
+
+def cta(base):
+    L = SITE["links"]
+    return f"""<section class="cta wrap">
+  <div class="cta-card reveal">
+    <div class="cta-glow" aria-hidden="true"></div>
+    <p class="label">Have a project in mind?</p>
+    <h2>Let’s build something <em>people love</em> to use.</h2>
+    <div class="cta-actions">
+      {ext(L["calendly"], icon("calendar") + " Book a call", "btn btn-accent btn-lg")}
+      <a class="btn btn-ghost btn-lg" href="mailto:{SITE["email"]}">{icon("mail")} {SITE["email"]}</a>
+    </div>
+  </div>
 </section>"""
 
 
 # ---------- rich-text blocks ----------
 
-def render_blocks(blocks, base):
+def heading_shift(blocks):
+    levels = [int(b["t"][1]) for b in blocks if b["t"] in ("h1", "h2", "h3")]
+    return (min(levels) if levels else 2) - 2
+
+
+def render_blocks(blocks, base, toc=None):
     out = []
     list_open = None
+    shift = heading_shift(blocks)
     for b in blocks:
         t = b["t"]
         lst = b.get("list")
@@ -180,18 +335,31 @@ def render_blocks(blocks, base):
             out.append(f"</{list_open}>")
             list_open = None
         if t == "img":
-            out.append(f'<figure class="shot">{img(b["src"], base, b.get("alt", ""))}</figure>')
+            out.append(f'<figure class="shot reveal">{img(b["src"], base, b.get("alt", ""))}</figure>')
         elif t == "button":
-            out.append(f'<p class="btn-row">{ext_link(b["href"], escape(b["label"]), "btn-solid")}</p>')
+            out.append(f'<p>{ext(b["href"], escape(b["label"]) + " " + icon("arrow-ur"), "btn btn-accent")}</p>')
         elif lst:
             if not list_open:
                 out.append(f"<{lst}>")
                 list_open = lst
             out.append(f'<li>{fix_links(b["h"], base)}</li>')
+        elif t in ("h1", "h2", "h3", "h4", "h5", "h6"):
+            lvl = int(t[1])
+            if lvl <= 3:
+                lvl = max(2, lvl - shift)
+            else:
+                lvl = min(6, max(4, lvl))
+            inner = fix_links(b["h"], base)
+            if lvl == 2 and toc is not None:
+                label = text(inner).rstrip(" :")
+                hid = slugify(label) or f"s{len(toc)}"
+                toc.append((hid, label))
+                out.append(f'<h2 id="{hid}">{inner}</h2>')
+            else:
+                cls = ' class="note"' if t in ("h5", "h6") else ""
+                out.append(f"<h{lvl}{cls}>{inner}</h{lvl}>")
         else:
-            tag = {"h1": "h2", "h2": "h3", "h3": "h4", "h4": "h5", "h5": "h6", "h6": "h6"}.get(t, "p")
-            cls = f' class="note"' if t == "h5" else ""
-            out.append(f"<{tag}{cls}>{fix_links(b['h'], base)}</{tag}>")
+            out.append(f"<p>{fix_links(b['h'], base)}</p>")
     if list_open:
         out.append(f"</{list_open}>")
     return "\n".join(out)
@@ -201,180 +369,223 @@ def render_blocks(blocks, base):
 
 def home():
     base = ""
-    order = [PROJECTS[s] for s in SITE["home"]]
-    cards = [project_card(p, base, "lg") for p in order[:2]]
-    cards += [project_card(p, base, "sm") for p in order[2:5]]
-    cards += [project_card(p, base, "md") for p in order[5:]]
-    body = f"""<div class="container">
-{social_buttons()}
-</div>
-{marquee()}
-<div class="container">
-<section class="hero card">
-  <h1>Hi, I'm Gauthem :)</h1>
-  <p>{escape(SITE["intro"])}</p>
+    L = SITE["links"]
+    prof = [PROJECTS[s] for s in SITE["professional"]]
+    other = [PROJECTS[s] for s in SITE["other"]]
+    features = "".join(feature_row(p, i + 1, base) for i, p in enumerate(prof))
+    body = f"""<section class="hero">
+  <div class="wrap hero-inner">
+    <p class="eyebrow reveal"><span class="dot"></span> {escape(SITE["role"])}</p>
+    <h1 class="hero-title reveal">I design products that <em>grow</em> — <br class="br-lg">from first insight to shipped pixel.</h1>
+    <p class="hero-meta reveal"><span>Product Designer</span><i></i><span>{escape(SITE["stats"][0][0])} Years of Experience</span><i></i><span>{escape(SITE["location"])}</span></p>
+    <div class="hero-actions reveal">
+      <a class="btn btn-accent btn-lg" href="#work">View selected work {icon("arrow-r")}</a>
+      {ext(resume(base), icon("file") + " Resume", "btn btn-ghost btn-lg")}
+      {ext(L["linkedin"], icon("linkedin") + '<span class="sr-only">LinkedIn</span>', "btn btn-ghost btn-lg btn-icon")}
+    </div>
+    <p class="hero-lede reveal">{escape(SITE["intro"])}</p>
+  </div>
+  <a class="scroll-cue" href="#highlights"><span class="scroll-line"></span>Scroll down</a>
 </section>
-<section class="projects">
-  <h2 class="section-title">Projects</h2>
-  <div class="grid grid-2">{"".join(cards[:2])}</div>
-  <div class="grid grid-3">{"".join(cards[2:5])}</div>
-  <div class="grid grid-2">{"".join(cards[5:])}</div>
+{ticker()}
+{stats()}
+<section class="section wrap" id="work">
+  {section_head("01 · Selected work", "Work that <em>shipped.</em>", "Founding, lead and senior design roles across ed-tech, agri-tech, food delivery and research — measured by real outcomes.")}
+  <div class="features">{features}</div>
+  <div class="center reveal"><a class="pill-btn pill-lg" href="{base}professional_works/">Check all works {icon("arrow-r")}</a></div>
 </section>
-{cta()}
-</div>"""
-    return page("", "home", base, body)
+<section class="section wrap" id="other">
+  {section_head("02 · Explorations", "Side projects &amp; <em>redesigns.</em>", "Self-initiated products, concept redesigns and research studies — where I try new ideas, tools and AI-assisted workflows.")}
+  {filters(other)}
+  <div class="work-grid" data-filter-grid>{"".join(work_card(p, base) for p in other)}</div>
+</section>
+<section class="section wrap split">
+  <div class="split-side">
+    {section_head("03 · Career", "Where I’ve made an <em>impact.</em>")}
+    <p class="muted reveal">{escape(SITE["bio"])}</p>
+    <a class="text-link reveal" href="{base}about/">More about me {icon("arrow-r")}</a>
+  </div>
+  {experience_list()}
+</section>
+<section class="section wrap">
+  {section_head("04 · What I do", "How I can <em>help.</em>", f'<a class="pill-btn" href="{base}service/">Service details {icon("arrow-r")}</a>')}
+  <div class="services-grid">{service_cards(full=False)}</div>
+</section>
+<section class="section wrap">
+  {section_head("05 · Toolkit", "Tools of the <em>trade.</em>")}
+  <ul class="toolkit">{toolkit(base)}</ul>
+</section>
+{cta(base)}"""
+    return page("", "home", base, body, body_class="home")
+
+
+def page_hero(label, title, lede=""):
+    lede_html = f'<p class="page-lede reveal">{lede}</p>' if lede else ""
+    return f"""<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow reveal"><span class="dot"></span> {label}</p>
+    <h1 class="page-title reveal">{title}</h1>
+    {lede_html}
+  </div>
+</section>"""
 
 
 def listing(section):
     base = "../"
-    slugs = SITE["professional" if section == "professional_works" else "other"]
-    cards = "".join(project_card(PROJECTS[s], base, "sm", "tags") for s in slugs)
-    title = "Professional Works" if section == "professional_works" else "Other Works"
-    body = f"""<div class="container">
-<section class="listing">
-  <h1 class="section-title">{title}</h1>
-  <div class="grid grid-3">{cards}</div>
-</section>
-{cta()}
-{social_buttons()}
-</div>"""
-    return page(title, section, base, body)
+    if section == "professional_works":
+        prof = [PROJECTS[s] for s in SITE["professional"]]
+        body = page_hero("Professional works", "Work that shipped, <em>measured</em> by real outcomes.",
+                         "Founding, lead and senior design roles across ed-tech, agri-tech, food delivery and non-profit — from research and strategy to launch.")
+        body += f'<section class="section wrap"><div class="features">{"".join(feature_row(p, i + 1, base) for i, p in enumerate(prof))}</div></section>'
+        title = "Professional Works"
+    else:
+        other = [PROJECTS[s] for s in SITE["other"]]
+        body = page_hero("Other works", "Explorations, redesigns &amp; <em>side projects</em>.",
+                         "Self-initiated products, concept redesigns and research studies — where I try new ideas, tools and AI-assisted workflows.")
+        body += f'<section class="section wrap">{filters(other)}<div class="work-grid" data-filter-grid>{"".join(work_card(p, base) for p in other)}</div></section>'
+        title = "Other Works"
+    return page(title, section, base, body + cta(base))
 
 
 def about():
     base = "../"
-    exp = "".join(
-        f"""<li><span class="period">{escape(e["period"])}</span><strong>{escape(e["role"])}</strong><span class="place">{escape(e["place"])}</span></li>"""
-        for e in SITE["experience"]
-    )
-    stack = "".join(
-        f'<div class="tool card">{img(t["icon"], base, "")}<h6>{escape(t["name"])}</h6></div>' for t in SITE["stack"]
-    )
-    body = f"""<div class="container">
-<section class="card about">
-  <p class="bio">{escape(SITE["bio"])}</p>
-  <h2 class="eyebrow">Experience</h2>
-  <ul class="timeline">{exp}</ul>
-  <a class="btn-solid wide" href="{base}contact/">Get in touch</a>
+    body = page_hero("About", "Founding designer, researcher &amp; <em>product lead.</em>", escape(SITE["bio"]))
+    body += f"""<section class="section wrap split">
+  <div class="split-side">{section_head("Career", "Work <em>history.</em>")}
+    <div class="reveal about-actions">
+      {ext(resume(base), icon("file") + " Download resume", "btn btn-accent")}
+      <a class="btn btn-ghost" href="{base}contact/">Get in touch</a>
+    </div>
+  </div>
+  {experience_list(detailed=True)}
 </section>
-<section class="card stack">
-  <h3 class="section-title">My Tech Stack</h3>
-  <div class="grid grid-2 tools">{stack}</div>
+<section class="section wrap">
+  {section_head("Learning", "Education &amp; <em>certificates.</em>")}
+  <ul class="edu-grid">{education_list()}</ul>
 </section>
-{works_preview(base)}
-{cta()}
-</div>"""
+<section class="section wrap">
+  {section_head("Toolkit", "My tech stack")}
+  <ul class="toolkit">{toolkit(base)}</ul>
+</section>
+<section class="section wrap">
+  {section_head("Recent work", "Featured projects", f'<a class="text-link" href="{base}professional_works/">View all {icon("arrow-r")}</a>')}
+  <div class="work-grid">{"".join(work_card(PROJECTS[s], base) for s in SITE["professional"][:3])}</div>
+</section>
+{cta(base)}"""
     return page("About", "about", base, body, SITE["bio"])
 
 
 def services():
     base = "../"
-    cards = ""
-    for i, s in enumerate(SITE["services"]):
-        items = "".join(f"<li>{CHECK}<span>{escape(it)}</span></li>" for it in s["items"])
-        cards += f"""<article class="service card">
-  <header><h3>{escape(s["title"])}</h3><span class="service-icon" aria-hidden="true">{SERVICE_ICONS[i % len(SERVICE_ICONS)]}</span></header>
-  <p>{escape(s["text"])}</p>
-  <ul class="checks">{items}</ul>
-</article>"""
-    body = f"""<div class="container">
-<section class="card services-wrap">
-  <h1 class="section-title">Services</h1>
-  <div class="grid grid-2">{cards}</div>
-</section>
-{works_preview(base)}
-{cta()}
-{social_buttons()}
-</div>"""
+    body = page_hero("Services", "End-to-end design, from <em>first question</em> to shipped product.",
+                     "Research, product strategy, interface design, testing and hands-on development support — for teams that want measurable results.")
+    body += f"""<section class="section wrap"><div class="services-grid full">{service_cards(full=True)}</div></section>
+{cta(base)}"""
     return page("Services", "service", base, body)
 
 
 def contact():
     base = "../"
-    phones = " | ".join(f'<a href="tel:{p.replace(" ", "")}">{escape(p)}</a>' for p in SITE["phones"])
-    body = f"""<div class="container">
-{social_buttons()}
-<section class="grid grid-2 contact-cards">
-  <div class="card contact-me">
-    <h3>{escape(SITE["name"])}</h3>
-    <p>{escape(SITE["contactBlurb"])}</p>
-    <a class="btn-solid wide" href="mailto:{SITE["email"]}">Get in touch</a>
+    L = SITE["links"]
+    phones = "".join(f'<a href="tel:{p.replace(" ", "")}">{escape(p)}</a>' for p in SITE["phones"])
+    body = page_hero("Contact", "Let’s <em>talk</em>.", escape(SITE["contactBlurb"]))
+    body += f"""<section class="section wrap contact-grid">
+  <a class="contact-card reveal" href="mailto:{SITE["email"]}">
+    {icon("mail")}<span class="label">Email</span><strong>{SITE["email"]}</strong>
+  </a>
+  <a class="contact-card reveal" href="{escape(L["calendly"])}" target="_blank" rel="noopener">
+    {icon("calendar")}<span class="label">Book a call</span><strong>calendly.com/gauthemk99</strong>
+  </a>
+  <div class="contact-card reveal">
+    {icon("phone")}<span class="label">Phone</span><strong class="phones">{phones}</strong>
   </div>
-  <div class="card contact-info">
-    <h3>Let’s Work Together</h3>
-    <p>{MAIL}<a href="mailto:{SITE["email"]}">{SITE["email"]}</a></p>
-    <p>{PHONE}<span>{phones}</span></p>
+  <a class="contact-card reveal" href="{escape(L["linkedin"])}" target="_blank" rel="noopener">
+    {icon("linkedin")}<span class="label">LinkedIn</span><strong>in/gauthemkrishna</strong>
+  </a>
+  <a class="contact-card reveal" href="{escape(resume(base))}" target="_blank" rel="noopener">
+    {icon("file")}<span class="label">Resume</span><strong>Download PDF</strong>
+  </a>
+  <div class="contact-card reveal">
+    {icon("pin")}<span class="label">Based in</span><strong>{escape(SITE["location"])}</strong>
   </div>
 </section>
-{works_preview(base)}
-</div>"""
+<section class="section wrap">
+  {section_head("While you’re here", "Selected work")}
+  <div class="work-grid">{"".join(work_card(PROJECTS[s], base) for s in SITE["professional"][:3])}</div>
+</section>"""
     return page("Contact", "contact", base, body)
 
 
 def project_page(p):
     base = "../../"
-    section_title = "Professional Works" if p["section"] == "professional_works" else "Other Works"
-    back = f'<a class="back-link" href="{base}{p["section"]}/">&larr; {section_title}</a>'
-    if p["section"] == "professional_works":
-        visit = ""
-        if p.get("visit"):
-            visit = ext_link(p["visit"], escape(p.get("visitLabel", "Visit Site")), "btn-solid")
-        overview = "".join(f"<p>{fix_links(o, base)}</p>" for o in p.get("overview", []))
-        gallery = ""
-        if p.get("gallery"):
-            gallery = '<section class="gallery">' + "".join(
-                f'<figure class="shot">{img(g, base, p["title"])}</figure>' for g in p["gallery"]
-            ) + "</section>"
-        more = [PROJECTS[s] for s in SITE["professional"] if s != p["slug"]]
-        body = f"""<div class="container">
-{back}
-<figure class="hero-shot">{img(p["hero"], base, p["title"], lazy=False)}</figure>
-<section class="overview">
-  <aside class="meta">
-    <h1 class="visually-hidden">{escape(p["title"])}</h1>
-    <h6>Employer :</h6><p class="meta-value">{escape(p.get("employer", ""))}</p>
-    <h6>Domain :</h6><p class="meta-value">{escape(p.get("domain", ""))}</p>
-    {visit}
-  </aside>
-  <div class="prose">
-    <h2>Overview</h2>
-    {overview}
+    prof = p["section"] == "professional_works"
+    section_title = "Professional works" if prof else "Other works"
+    order = SITE["professional" if prof else "other"]
+    nxt = PROJECTS[order[(order.index(p["slug"]) + 1) % len(order)]]
+    toc = []
+
+    body_blocks = p["blocks"]
+    lead = ""
+    if prof:
+        lead = "".join(f"<p>{fix_links(o, base)}</p>" for o in p.get("overview", []))
+        cover = p["hero"]
+    else:
+        cover = p["cover"]
+        # the first image of an "other works" page is the cover; skip it in the body
+        if body_blocks and body_blocks[0]["t"] == "img" and body_blocks[0]["src"] == cover:
+            body_blocks = body_blocks[1:]
+
+    meta = []
+    if p.get("employer"):
+        meta.append(("Employer", escape(p["employer"])))
+    meta.append(("Domain", escape(p.get("domain") or p.get("category", ""))))
+    if tags_of(p):
+        meta.append(("Industry", escape(", ".join(tags_of(p)))))
+    if p.get("visit"):
+        meta.append(("Link", ext(p["visit"], escape(p.get("visitLabel", "Visit site")) + " " + icon("arrow-ur"), "text-link")))
+    meta_html = "".join(f'<div><dt>{k}</dt><dd>{v}</dd></div>' for k, v in meta)
+
+    gallery = ""
+    if p.get("gallery"):
+        gallery = "".join(f'<figure class="shot reveal">{img(g, base, p["title"])}</figure>' for g in p["gallery"])
+
+    content = render_blocks(body_blocks, base, toc)
+    if lead:
+        toc.insert(0, ("overview", "Overview"))
+        lead = f'<h2 id="overview">Overview</h2>{lead}{gallery}'
+    toc_html = ""
+    if len(toc) > 1:
+        toc_html = '<nav class="toc" aria-label="On this page"><p class="label">On this page</p><ol>' + "".join(
+            f'<li><a href="#{h}">{escape(l)}</a></li>' for h, l in toc) + "</ol></nav>"
+
+    body = f"""<div class="progress" aria-hidden="true"><span></span></div>
+<section class="case-hero">
+  <div class="wrap">
+    <a class="back-link reveal" href="{base}{p["section"]}/">{icon("arrow-l")} {section_title}</a>
+    <p class="eyebrow reveal"><span class="dot"></span> Case study · {escape(p.get("category", ""))}</p>
+    <h1 class="case-title reveal">{escape(p["title"])}</h1>
+    <dl class="case-meta reveal">{meta_html}</dl>
   </div>
 </section>
-{gallery}
-<article class="prose case-body">
-{render_blocks(p["blocks"], base)}
-</article>
-<section class="more">
-  <h2 class="section-title">More Professional Works</h2>
-  <div class="grid grid-3">{"".join(project_card(m, base, "sm") for m in more[:3])}</div>
-</section>
-{cta()}
-{social_buttons()}
-</div>"""
-    else:
-        order = SITE["other"]
-        i = order.index(p["slug"])
-        prev_p = PROJECTS[order[i - 1]] if i > 0 else None
-        next_p = PROJECTS[order[i + 1]] if i + 1 < len(order) else None
-        pager = '<nav class="pager" aria-label="Project navigation">'
-        pager += f'<a href="{url_for(prev_p, base)}">&lsaquo; {escape(prev_p["title"])}</a>' if prev_p else "<span></span>"
-        pager += f'<a href="{url_for(next_p, base)}">{escape(next_p["title"])} &rsaquo;</a>' if next_p else "<span></span>"
-        pager += "</nav>"
-        body = f"""<div class="container narrow">
-{back}
-<header class="case-head">
-  <h1>{escape(p["title"])}</h1>
-  <p>{escape(p.get("category", ""))}</p>
-</header>
-<article class="prose case-body">
-{render_blocks(p["blocks"], base)}
-</article>
-{pager}
+<div class="wrap">
+  <figure class="case-cover reveal">{img(cover, base, p["title"], eager=True)}</figure>
 </div>
-<div class="container">{cta()}</div>"""
-    desc = re.sub("<[^>]+>", "", (p.get("overview") or [next((b["h"] for b in p["blocks"] if b["t"] == "p"), "")])[0])[:160]
-    return page(p["title"], p["section"], base, body, desc)
+<section class="wrap case-layout{" no-toc" if not toc_html else ""}">
+  <aside class="case-aside">{toc_html}</aside>
+  <article class="prose">
+    {lead}
+    {content}
+  </article>
+</section>
+<section class="wrap next-wrap">
+  <a class="next-card spot reveal" href="{url_for(nxt, base)}">
+    <div class="next-text"><p class="label">Next project</p><h2>{escape(nxt["title"])}</h2><p class="muted">{escape(nxt.get("category", ""))}</p>
+      <span class="text-link">View case study {icon("arrow-r")}</span></div>
+    <div class="next-media">{img(nxt["cover"], base, nxt["title"])}</div>
+  </a>
+</section>
+{cta(base)}"""
+    return page(p["title"], p["section"], base, body, excerpt(p, 160), body_class="case")
 
 
 # ---------- write ----------
