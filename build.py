@@ -384,7 +384,7 @@ def home():
   <div class="wrap hero-inner">
     <p class="eyebrow reveal"><span class="dot"></span> {escape(SITE["role"])}</p>
     <h1 class="hero-title reveal">I design products that <em>grow</em> — <br class="br-lg">from first insight to shipped pixel.</h1>
-    <p class="hero-meta reveal"><span>Product Designer</span><i></i><span>{escape(SITE["stats"][0][0])} Years of Experience</span><i></i><span>{escape(SITE["location"])}</span></p>
+    <p class="hero-meta reveal"><span>Product Designer</span><i></i><span>{escape(SITE["stats"][0][0])} Years of Experience</span><i></i><span>{escape(SITE["location"])}</span><i></i><span>{escape(SITE["relocation"])}</span></p>
     <div class="hero-actions reveal">
       <a class="btn btn-accent btn-lg" href="#work">View selected work {icon("arrow-r")}</a>
       {ext(resume(base), icon("file") + " Resume", "btn btn-ghost btn-lg")}
@@ -513,7 +513,7 @@ def contact():
     {icon("file")}<span class="label">Resume</span><strong>Download PDF</strong>
   </a>
   <div class="contact-card reveal">
-    {icon("pin")}<span class="label">Based in</span><strong>{escape(SITE["location"])}</strong>
+    {icon("pin")}<span class="label">Based in</span><strong>{escape(SITE["location"])}</strong><span class="muted">{escape(SITE["relocation"])}</span>
   </div>
 </section>
 <section class="section wrap">
