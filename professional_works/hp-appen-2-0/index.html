@@ -48,7 +48,7 @@
   <figure class="case-cover reveal"><img class="" src="../../assets/media/hpappen/dashboard-mockup.jpg" alt="HP-appen 2.0"></figure>
 </div>
 <section class="wrap case-layout">
-  <aside class="case-aside"><nav class="toc" aria-label="On this page"><p class="label">On this page</p><ol><li><a href="#overview">Overview</a></li><li><a href="#my-role">My Role</a></li><li><a href="#impact-highlights">Impact Highlights</a></li><li><a href="#leading-design-and-frontend-as-one-team">Leading Design and Frontend as One Team</a></li><li><a href="#hands-on-building-features-with-claude-code">Hands-On: Building Features with Claude Code</a></li><li><a href="#a-design-system-built-to-scale">A Design System Built to Scale</a></li><li><a href="#the-dashboard-am-i-on-track">The Dashboard: “Am I on Track?”</a></li><li><a href="#practice-exams-and-analysis">Practice, Exams and Analysis</a></li><li><a href="#features-that-make-studying-stick">Features That Make Studying Stick</a></li><li><a href="#growth-loops">Growth Loops</a></li><li><a href="#hpappen-se-the-landing-page-0-1">hpappen.se — The Landing Page, 0 → 1</a></li><li><a href="#designing-ai-integrated-learning-experiences">Designing AI-Integrated Learning Experiences</a></li><li><a href="#the-ai-coach-always-on-exam-companion">The AI Coach — Always-On Exam Companion</a></li><li><a href="#in-progress-native-apps-for-ios-and-android">In Progress: Native Apps for iOS and Android</a></li></ol></nav></aside>
+  <aside class="case-aside"><nav class="toc" aria-label="On this page"><p class="label">On this page</p><ol><li><a href="#overview">Overview</a></li><li><a href="#my-role">My Role</a></li><li><a href="#impact-highlights">Impact Highlights</a></li><li><a href="#leading-design-and-frontend-as-one-team">Leading Design and Frontend as One Team</a></li><li><a href="#hands-on-building-features-with-claude-code">Hands-On: Building Features with Claude Code</a></li><li><a href="#a-design-system-built-to-scale">A Design System Built to Scale</a></li><li><a href="#the-dashboard-am-i-on-track">The Dashboard: “Am I on Track?”</a></li><li><a href="#practice-exams-and-analysis">Practice, Exams and Analysis</a></li><li><a href="#features-that-make-studying-stick">Features That Make Studying Stick</a></li><li><a href="#growth-loops">Growth Loops</a></li><li><a href="#the-full-feature-map">The Full Feature Map</a></li><li><a href="#hpappen-se-the-landing-page-0-1">hpappen.se — The Landing Page, 0 → 1</a></li><li><a href="#designing-ai-integrated-learning-experiences">Designing AI-Integrated Learning Experiences</a></li><li><a href="#the-ai-coach-always-on-exam-companion">The AI Coach — Always-On Exam Companion</a></li><li><a href="#in-progress-native-apps-for-ios-and-android">In Progress: Native Apps for iOS and Android</a></li></ol></nav></aside>
   <article class="prose">
     <h2 id="overview">Overview</h2><p>HP-appen 2.0 is the rebuilt platform that helps students prepare for Sweden’s högskoleprovet (university entrance exam). Built from user feedback and usage data, it introduces a new dashboard, a complete practise-simulate-analyse study loop, AI-powered help and community features — across desktop and mobile. As Head of Product, I led design and the frontend development team for every feature, turning user insights into shipped, measurable improvements that strengthened HP-appen’s position as a leading platform in the Swedish EdTech market.</p>
     <h2 id="my-role">My Role</h2>
@@ -71,7 +71,7 @@
 <li><strong>Mentoring:</strong> I set design and code standards, reviewed work and coached designers and developers on AI-assisted workflows.</li>
 </ul>
 <h2 id="hands-on-building-features-with-claude-code">Hands-On: Building Features with Claude Code</h2>
-<p>Leading the frontend team didn’t mean stepping away from the code. Using <strong>Claude Code</strong>, I designed and built a number of features end to end myself — from the Figma flow to production components, state management, edge cases and automated tests — and shipped them through the same review process as the rest of the team.</p>
+<p>Leading the frontend team didn’t mean stepping away from the code. Using <strong>Claude Code</strong>, I designed and built many features end to end myself — including the leaderboard, profile, word training and speed reading — from the Figma flow to production components, state management, edge cases and automated tests — and shipped them through the same review process as the rest of the team.</p>
 <h3>Leaderboard</h3>
 <ul>
 <li>Two rankings with different motivations: <strong>Streakmästare</strong> for the longest daily study streaks, with streak milestones, and <strong>Pluggmaskiner</strong> for the most correct answers over the last 30 days.</li>
@@ -83,6 +83,19 @@
 <li><strong>Avatars</strong> — upload a custom picture or pick a preset — saved to the account and synced across devices, with graceful fallbacks if an image can’t load.</li>
 <li>An <strong>anonymous display name</strong> and <strong>privacy toggles</strong> for the community, built to stay in sync even when settings are changed rapidly.</li>
 <li>Self-service account controls: <strong>reset all study data</strong> for a fresh start before a new exam, and <strong>delete account</strong>.</li>
+</ul>
+<h3>Word Training (ORD)</h3>
+<figure class="shot reveal"><img class="" src="../../assets/media/hpappen/mockup-ord.jpg" alt="HP-appen word training chat" loading="lazy" decoding="async"><figcaption>Word training — an AI tutor teaches six words at a time and checks the student’s own sentences.</figcaption></figure>
+<ul>
+<li>A conversational way to learn vocabulary: the AI tutor introduces each word with its meaning and an example, then asks the student to <strong>use it correctly in three sentences of their own</strong>.</li>
+<li>Words come in <strong>lists of six</strong> with clear progress (1/3 → 2/3 → 3/3 per word), a word list to jump between, and a celebratory finish before offering six new words.</li>
+<li>Students can add <strong>their own words</strong> to practise, and answer by typing or by voice.</li>
+</ul>
+<h3>Speed Reading (Läsning)</h3>
+<ul>
+<li>Timed reading sessions with <strong>freshly generated passages</strong> and comprehension questions, built to raise reading pace for LÄS and ELF.</li>
+<li>Students can regenerate a passage within a <strong>fair-use quota</strong>; when it runs out, a live “try again in X minutes” countdown replaces the button instead of an error.</li>
+<li>Answers are checked on the server, so the answer key never ships to the browser.</li>
 </ul>
 <p>Building features myself kept me close to the real constraints of the codebase, made my design specs sharper, and let the team ship noticeably faster.</p>
 <h2 id="a-design-system-built-to-scale">A Design System Built to Scale</h2>
@@ -105,18 +118,25 @@
 </ul>
 <h2 id="practice-exams-and-analysis">Practice, Exams and Analysis</h2>
 <p>The core study loop is practise → simulate → analyse → focus, and each step got its own purpose-built experience.</p>
+<figure class="shot reveal"><img class="" src="../../assets/media/hpappen/mockup-practice.jpg" alt="HP-appen exams, exercise and score" loading="lazy" decoding="async"><figcaption>Past exams, an exercise with the teacher’s explanation, and the normalised score with a goal set by dream programme.</figcaption></figure>
 <ul>
 <li><strong>Exercises:</strong> single- and multi-question modes with instant grading and a teacher’s worked explanation — video or text — for every question.</li>
-<li><strong>Exam simulation:</strong> every past exam with real timing, printable paper exam sheets for pen-and-paper practice, and automatic normalisation to the 0.0–2.0 scale straight after.</li>
-<li><strong>Analysis:</strong> per-section results and trends so students know exactly what to study next.</li>
-<li><strong>Study material:</strong> video lectures with progress tracking and structured study material for each section.</li>
+<li><strong>Exam simulation:</strong> every past exam since 2011 with real timing, custom exams from the weakest sections, printable paper exam sheets for pen-and-paper practice, and automatic normalisation to the 0.0–2.0 scale straight after.</li>
+</ul>
+<figure class="shot reveal"><img class="" src="../../assets/media/hpappen/mockup-exams.jpg" alt="HP-appen past exam reading view" loading="lazy" decoding="async"><figcaption>Past exams in the app — reading passages, question navigation and progress through each provpass.</figcaption></figure>
+<ul>
+<li><strong>Personal analysis:</strong> “Coach Jens” turns each student’s training data into a written analysis and a day-by-day plan — the first unfinished step is highlighted, and completing the day is celebrated. Goals are set on the 0.0–2.0 scale, with reference scores for dream programmes like medicine or engineering.</li>
+<li><strong>Courses and lessons:</strong> section-by-section courses from award-winning teachers — video and text lessons with progress tracking, bookmarks, ratings and a “next lesson” flow that keeps momentum.</li>
+</ul>
+<figure class="shot reveal"><img class="" src="../../assets/media/hpappen/mockup-lessons.jpg" alt="HP-appen course and lesson screens" loading="lazy" decoding="async"><figcaption>Course overview for XYZ and the lesson-complete screen with rating and next lesson.</figcaption></figure>
+<ul>
 <li><strong>Focus timer:</strong> a small, persistent timer that keeps running as students move between practice, material and the forum.</li>
 </ul>
 <h2 id="features-that-make-studying-stick">Features That Make Studying Stick</h2>
 <ul>
 <li><strong>AI tutor:</strong> a chat tutor students can type or talk to, with voice input and transcription, for help the moment they get stuck.</li>
-<li><strong>Word training:</strong> focused vocabulary practice for ORD — the most-practised section — including students’ own word lists.</li>
-<li><strong>Speed reading:</strong> timed reading sessions with fresh texts and comprehension checks to build pace for LÄS and ELF.</li>
+<li><strong>Word training:</strong> an AI-guided vocabulary chat for ORD (built by me — see above).</li>
+<li><strong>Speed reading:</strong> timed sessions with generated passages for LÄS and ELF (built by me — see above).</li>
 <li><strong>Leaderboards:</strong> streak and study rankings that turn daily practice into friendly competition (built by me with Claude Code — see above).</li>
 <li><strong>Survival mode (in development):</strong> a fast, game-like run of questions in Mixed, Verbal or Quantitative mode that ends on the first mistake.</li>
 <li><strong>Community:</strong> a forum with discussion areas, mentions and reactions, plus private messaging — built so user content is never rendered as HTML, keeping it safe by design.</li>
@@ -127,6 +147,50 @@
 <li><strong>Trials and checkout:</strong> free-trial invites and a Stripe checkout designed to make upgrading a clear, low-friction decision.</li>
 <li><strong>Referrals:</strong> a referral programme with its own dashboard so students bring their friends.</li>
 <li><strong>Onboarding:</strong> sign-up with Google, Apple or email in a single step.</li>
+</ul>
+<h2 id="the-full-feature-map">The Full Feature Map</h2>
+<p>Every feature below was designed and shipped by the team I led — together they make HP-appen a complete preparation platform rather than a question bank.</p>
+<h3>Learning</h3>
+<ul>
+<li>Home dashboard with continue-where-you-left-off, recommended courses and tips</li>
+<li>Section pages for all eight subtests with study material, formula sheets and guides</li>
+<li>Video and text lessons, exercise lessons, bookmarks and lesson ratings</li>
+<li>Single- and multi-question practice with instant grading and worked explanations</li>
+<li>Word training (AI vocabulary chat) and speed reading</li>
+<li>Focus timer that persists across the app</li>
+</ul>
+<h3>Exams and Diagnostics</h3>
+<ul>
+<li>All past exams with real timing, exam history and in-progress exams you can resume</li>
+<li>Custom exams, printable paper exam sheets and exam result pages with normalised scores</li>
+<li>HP-prognosen and “Lilla diagnosen” — free diagnostics that predict a score and suggest where to start</li>
+<li>Public practice questions per section for visitors who haven’t signed up yet</li>
+</ul>
+<h3>AI</h3>
+<ul>
+<li>AI tutor chat with voice input</li>
+<li>Coach Jens personal analysis with a daily study plan</li>
+<li>AI-powered lessons and exercises, and the AI Coach</li>
+</ul>
+<h3>Motivation and Community</h3>
+<ul>
+<li>Daily streaks with milestones and a “ready for HP” progress bar</li>
+<li>Leaderboards (Streakmästare and Pluggmaskiner) and the Survival game mode</li>
+<li>Forum with discussion areas, threads, mentions and reactions; group chat and private messages</li>
+<li>Student reviews and success stories</li>
+</ul>
+<h3>Accounts, Payments and Growth</h3>
+<ul>
+<li>Sign-up with Google, Apple or email, onboarding with name and target score, email verification and password reset</li>
+<li>Profile with avatars, anonymous community name, privacy settings, study-data reset and account deletion</li>
+<li>Free trials, trial invites, Stripe checkout and payment confirmation</li>
+<li>Referral programme with personal codes and a referral dashboard</li>
+<li>Installable web app with offline support, light and dark mode</li>
+</ul>
+<h3>Internal Tools</h3>
+<ul>
+<li>A support desk where staff handle student support cases and content reports</li>
+<li>Admin dashboards for users, email campaign metrics, notifications, AI prompts, referrals, word requests and content uploads</li>
 </ul>
 <h2 id="hpappen-se-the-landing-page-0-1">hpappen.se — The Landing Page, 0 → 1</h2>
 <p>I led the <strong>end‑to‑end homepage creation</strong> — from discovery to deployment.</p>
