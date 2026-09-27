@@ -678,3 +678,30 @@ a.contact-card:hover { border-color: rgba(255, 200, 169, .3); transform: transla
   .hero-meta { flex-direction: column; gap: 2px; }
   .hero-meta i { display: none; }
 }
+
+/* ---------- Portrait ---------- */
+.eyebrow-avatar { padding: 5px 16px 5px 5px; gap: 10px; }
+.eyebrow-avatar img { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 2px rgba(255, 200, 169, .5); }
+.page-hero-split { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); align-items: end; }
+.portrait {
+  position: relative; margin: 0; border-radius: var(--radius-lg); overflow: hidden;
+  aspect-ratio: 4 / 5; max-width: 420px; justify-self: end; width: 100%;
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 50px 100px -40px rgba(164, 40, 64, .7), 0 0 0 8px rgba(50, 55, 74, .18);
+}
+.portrait::before {  /* soft palette wash that ties the photo into the page */
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, .75)), linear-gradient(135deg, rgba(52, 32, 81, .25), transparent 50%, rgba(164, 40, 64, .2));
+}
+.portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+.portrait figcaption {
+  position: absolute; left: 16px; right: 16px; bottom: 16px; z-index: 2;
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--font-mono); font-weight: 500; font-size: 12px; letter-spacing: .06em; color: var(--text);
+}
+.portrait.compact { aspect-ratio: 1; max-width: 320px; }
+@media (max-width: 900px) {
+  .page-hero-split { grid-template-columns: 1fr; }
+  .portrait { justify-self: start; max-width: 360px; order: -1; }
+  .portrait.compact { max-width: 220px; }
+}

@@ -289,5 +289,9 @@
    "kind": "Degree"
   }
  ],
- "relocation": "Open to relocation"
+ "relocation": "Open to relocation",
+ "url": "https://gxxthxm.github.io/portfolio/",
+ "photo": "assets/images/gauthem.jpg",
+ "photoSquare": "assets/images/gauthem-square.jpg",
+ "avatar": "assets/images/gauthem-avatar.jpg"
 }
