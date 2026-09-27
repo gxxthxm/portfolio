@@ -429,7 +429,7 @@
   {
    "t": "p",
    "list": "ul",
-   "h": "AI-powered lessons and exercises, and the AI Coach"
+   "h": "AI-powered lessons and exercises"
   },
   {
    "t": "h3",
@@ -603,37 +603,6 @@
   {
    "t": "p",
    "h": "These AI‑enhanced flows became the platform’s <strong>core retention engine</strong>, tying directly to improved session duration and daily active learner growth."
-  },
-  {
-   "t": "h2",
-   "h": "The AI Coach — Always-On Exam Companion"
-  },
-  {
-   "t": "p",
-   "h": "Currently leading design for the <strong>AI coach</strong>, an assistant that guides learners through study planning, exam strategy, and in‑app navigation."
-  },
-  {
-   "t": "p",
-   "h": "<strong>Process:</strong>"
-  },
-  {
-   "t": "p",
-   "h": "Analyzed support data, usage logs, and interview transcripts to map user confusion points",
-   "list": "ul"
-  },
-  {
-   "t": "p",
-   "h": "Defined conversational flows and tone of voice aligned with trust and guidance principles",
-   "list": "ul"
-  },
-  {
-   "t": "p",
-   "h": "Iteratively measured usefulness, trust, and engagement metrics via structured feedback loops",
-   "list": "ul"
-  },
-  {
-   "t": "p",
-   "h": "As adoption grows, the AI Coach is emerging as a differentiating feature — a <strong>continuously learning, always‑available companion</strong> that increases engagement, confidence, and retention."
   },
   {
    "t": "h2",
