@@ -12,7 +12,7 @@
   },
   {
    "t": "p",
-   "h": "<strong>Head of Product</strong> (UX Lead / Founding Designer until Dec 2025)<br>I led <strong>design and the frontend development team for every feature</strong> in HP-appen 2.0 — from research, flows and UI to shipped, tested React code — working hand in hand with the founders and the backend team."
+   "h": "<strong>Head of Product</strong> (UX Lead / Founding Designer until Dec 2025)<br>I led <strong>design and the frontend development team for every feature</strong> in HP-appen 2.0 — from research, flows and UI to shipped, tested React code — working hand in hand with the founders and the backend team. Beyond leading the team, I <strong>built many features from scratch myself using Claude Code</strong>."
   },
   {
    "t": "h2",
@@ -75,6 +75,56 @@
    "t": "p",
    "list": "ul",
    "h": "<strong>Mentoring:</strong> I set design and code standards, reviewed work and coached designers and developers on AI-assisted workflows."
+  },
+  {
+   "t": "h2",
+   "h": "Hands-On: Building Features with Claude Code"
+  },
+  {
+   "t": "p",
+   "h": "Leading the frontend team didn’t mean stepping away from the code. Using <strong>Claude Code</strong>, I designed and built a number of features end to end myself — from the Figma flow to production components, state management, edge cases and automated tests — and shipped them through the same review process as the rest of the team."
+  },
+  {
+   "t": "h3",
+   "h": "Leaderboard"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Two rankings with different motivations: <strong>Streakmästare</strong> for the longest daily study streaks, with streak milestones, and <strong>Pluggmaskiner</strong> for the most correct answers over the last 30 days."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Infinite scroll</strong> with the student’s <strong>own position pinned in view</strong> whenever their row scrolls out of sight, so they always know where they stand."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Encouraging empty states for students who aren’t ranked yet, and separate error handling for a failed list versus a failed next page, with inline retry."
+  },
+  {
+   "t": "h3",
+   "h": "Profile"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Avatars</strong> — upload a custom picture or pick a preset — saved to the account and synced across devices, with graceful fallbacks if an image can’t load."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "An <strong>anonymous display name</strong> and <strong>privacy toggles</strong> for the community, built to stay in sync even when settings are changed rapidly."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Self-service account controls: <strong>reset all study data</strong> for a fresh start before a new exam, and <strong>delete account</strong>."
+  },
+  {
+   "t": "p",
+   "h": "Building features myself kept me close to the real constraints of the codebase, made my design specs sharper, and let the team ship noticeably faster."
   },
   {
    "t": "h2",
@@ -198,7 +248,7 @@
   {
    "t": "p",
    "list": "ul",
-   "h": "<strong>Leaderboards:</strong> friendly competition with infinite scroll and the student’s own position always pinned in view."
+   "h": "<strong>Leaderboards:</strong> streak and study rankings that turn daily practice into friendly competition (built by me with Claude Code — see above)."
   },
   {
    "t": "p",
