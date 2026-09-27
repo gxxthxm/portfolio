@@ -129,6 +129,8 @@ def page(title, active, base, body, description=None, body_class=""):
 <meta property="og:title" content="{full_title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:type" content="website">
+<meta property="og:image" content="{SITE["url"]}{SITE["photoSquare"]}">
+<meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#0a0a0b">
 <link rel="icon" href="{base}assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -382,7 +384,7 @@ def home():
     features = "".join(feature_row(p, i + 1, base) for i, p in enumerate(prof))
     body = f"""<section class="hero">
   <div class="wrap hero-inner">
-    <p class="eyebrow reveal"><span class="dot"></span> {escape(SITE["role"])}</p>
+    <p class="eyebrow eyebrow-avatar reveal"><img src="{base}{SITE["avatar"]}" alt="{escape(SITE["name"])}" width="28" height="28"><span>{escape(SITE["role"])}</span><span class="dot"></span></p>
     <h1 class="hero-title reveal">I design products that <em>grow</em> — <br class="br-lg">from first insight to shipped pixel.</h1>
     <p class="hero-meta reveal"><span>Product Designer</span><i></i><span>{escape(SITE["stats"][0][0])} Years of Experience</span><i></i><span>{escape(SITE["location"])}</span><i></i><span>{escape(SITE["relocation"])}</span></p>
     <div class="hero-actions reveal">
@@ -426,13 +428,20 @@ def home():
     return page("", "home", base, body, body_class="home")
 
 
-def page_hero(label, title, lede=""):
+def page_hero(label, title, lede="", portrait=None, compact=False):
     lede_html = f'<p class="page-lede reveal">{lede}</p>' if lede else ""
-    return f"""<section class="page-hero">
-  <div class="wrap">
+    text = f"""<div class="page-hero-text">
     <p class="eyebrow reveal"><span class="dot"></span> {label}</p>
     <h1 class="page-title reveal">{title}</h1>
     {lede_html}
+  </div>"""
+    if not portrait:
+        return f'<section class="page-hero"><div class="wrap">{text}</div></section>'
+    cls = "portrait compact" if compact else "portrait"
+    return f"""<section class="page-hero">
+  <div class="wrap page-hero-split">
+  {text}
+  <figure class="{cls} reveal"><img src="{portrait}" alt="{escape(SITE["name"])}" loading="eager"><figcaption><span class="dot"></span> {escape(SITE["location"])} · {escape(SITE["relocation"])}</figcaption></figure>
   </div>
 </section>"""
 
@@ -456,7 +465,7 @@ def listing(section):
 
 def about():
     base = "../"
-    body = page_hero("About", "Founding designer, researcher &amp; <em>product lead.</em>", escape(SITE["bio"]))
+    body = page_hero("About", "Founding designer, researcher &amp; <em>product lead.</em>", escape(SITE["bio"]), portrait=base + SITE["photo"])
     body += f"""<section class="section wrap split">
   <div class="split-side">{section_head("Career", "Work <em>history.</em>")}
     <div class="reveal about-actions">
@@ -495,7 +504,7 @@ def contact():
     base = "../"
     L = SITE["links"]
     phones = "".join(f'<a href="tel:{p.replace(" ", "")}">{escape(p)}</a>' for p in SITE["phones"])
-    body = page_hero("Contact", "Let’s <em>talk</em>.", escape(SITE["contactBlurb"]))
+    body = page_hero("Contact", "Let’s <em>talk</em>.", escape(SITE["contactBlurb"]), portrait=base + SITE["photoSquare"], compact=True)
     body += f"""<section class="section wrap contact-grid">
   <a class="contact-card reveal" href="mailto:{SITE["email"]}">
     {icon("mail")}<span class="label">Email</span><strong>{SITE["email"]}</strong>
