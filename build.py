@@ -335,7 +335,14 @@ def render_blocks(blocks, base, toc=None):
             out.append(f"</{list_open}>")
             list_open = None
         if t == "img":
-            out.append(f'<figure class="shot reveal">{img(b["src"], base, b.get("alt", ""))}</figure>')
+            cap = f'<figcaption>{escape(b["caption"])}</figcaption>' if b.get("caption") else ""
+            out.append(f'<figure class="shot reveal">{img(b["src"], base, b.get("alt", ""))}{cap}</figure>')
+        elif t == "video":
+            cap = f'<figcaption>{escape(b["caption"])}</figcaption>' if b.get("caption") else ""
+            out.append(
+                f'<figure class="shot reveal"><video src="{base}{escape(b["src"])}" poster="{base}{escape(b.get("poster", ""))}" '
+                f'autoplay muted loop playsinline preload="metadata" aria-label="{escape(b.get("caption", ""))}"></video>{cap}</figure>'
+            )
         elif t == "button":
             out.append(f'<p>{ext(b["href"], escape(b["label"]) + " " + icon("arrow-ur"), "btn btn-accent")}</p>')
         elif lst:

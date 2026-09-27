@@ -42,8 +42,13 @@
   },
   {
    "t": "p",
-   "h": "Full‑stack design system and component library adopted across product, web, and growth surfaces",
+   "h": "A unified design system and component library adopted across product, web, and growth surfaces",
    "list": "ul"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Serving <strong>20,000+ students a year</strong>, with <strong>9 in 10 premium users</strong> recommending HP-appen"
   },
   {
    "t": "h2",
@@ -63,7 +68,7 @@
   },
   {
    "t": "h2",
-   "h": "Homepage 0 → 1: From Insight to Launch"
+   "h": "hpappen.se — The Landing Page, 0 → 1"
   },
   {
    "t": "p",
@@ -91,6 +96,87 @@
   {
    "t": "p",
    "h": "The result: a homepage optimized for clarity and conversion, refined post‑launch via analytics (bounce, scroll depth, CTA CTR) and qualitative insights."
+  },
+  {
+   "t": "video",
+   "src": "assets/media/hpappen/landing-demo.mp4",
+   "poster": "assets/media/hpappen/landing-demo-poster.webp",
+   "caption": "Product demo from the hpappen.se hero — the new dashboard, study flow and exam simulation."
+  },
+  {
+   "t": "h3",
+   "h": "A page built around one decision"
+  },
+  {
+   "t": "p",
+   "h": "The landing page has a single job: get a stressed student to try the product. I contributed to structuring the page as a guided argument — <strong>promise, proof, product, then a risk-free first step</strong> — so every section answers the next question a visitor has."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Promise:</strong> a focused hero (“Plugga smartare till högskoleprovet”) with one primary CTA, <em>Prova gratis</em>, and a live product demo instead of a static mockup."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Proof:</strong> social proof placed immediately under the fold — 20,000+ students a year, real score journeys from students (e.g. 1.25 → 1.8), and the creators’ credentials."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Product:</strong> the four core features — Exercises, Mock exams, Personal analysis and Theory — each shown with real UI rather than illustrations."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Risk-free first step:</strong> HP-prognosen, a free 13-question, 16-minute diagnostic with no account required, plus 10-question tests for each of the eight sections."
+  },
+  {
+   "t": "img",
+   "src": "assets/media/hpappen/landing-hero.jpg",
+   "alt": "hpappen.se landing page hero",
+   "caption": "hpappen.se — hero, social proof and value propositions."
+  },
+  {
+   "t": "h3",
+   "h": "Making the content inventory tangible"
+  },
+  {
+   "t": "p",
+   "h": "HP-appen’s biggest advantage is depth, so the page makes it concrete: <strong>14,260 exercises with worked solutions, 31 complete past exams from 2011 onwards, 133 video lessons and 20 text lessons</strong>, broken down per section (XYZ, KVA, NOG, DTK, ORD, LÄS, MEK, ELF). A results guarantee and transparent pricing close the loop on trust."
+  },
+  {
+   "t": "h2",
+   "h": "The New App Experience"
+  },
+  {
+   "t": "p",
+   "h": "HP-appen 2.0 rebuilds the product around the question students keep asking: <em>“Am I on track?”</em> The redesigned dashboard answers it at a glance."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Normalised score, live:</strong> a score ring on the 0.0–2.0 HP scale for the whole test, split into quantitative and verbal parts, compared against the student’s goal and other test-takers."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>All eight sections in one view:</strong> XYZ, KVA, NOG, DTK, ORD, LÄS, MEK and ELF as cards with individual progress and scores, so the next thing to practise is always obvious."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Key dates:</strong> registration, test day and results as a timeline with countdowns."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Exam simulation:</strong> every past exam with real timing and automatic normalisation straight after, plus custom tests built from each student’s weakest sections."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Frictionless onboarding:</strong> sign-up with Google, Apple or email in a single step."
   },
   {
    "t": "h2",
