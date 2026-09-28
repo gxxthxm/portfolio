@@ -277,38 +277,6 @@
   var parallax = reduceMotion ? [] : Array.prototype.slice.call(document.querySelectorAll(".feature-media > img, .case-cover img, .next-media img"));
   parallax.forEach(function (im) { im.classList.add("parallax"); });
 
-  // ---------- Card hover previews: cycle through screens from the case study ----------
-  if (!reduceMotion && window.matchMedia("(hover: hover)").matches) {
-    document.querySelectorAll("[data-previews]").forEach(function (media) {
-      var list = (media.getAttribute("data-previews") || "").split("|").filter(Boolean);
-      if (!list.length) return;
-      var card = media.closest("a") || media;
-      var layer = null, timer = null, idx = -1;
-      function show() {
-        idx = (idx + 1) % list.length;
-        var next = document.createElement("img");
-        next.className = "preview-frame"; next.alt = ""; next.src = list[idx];
-        next.onload = function () {
-          if (!timer) return;
-          layer.appendChild(next);
-          void next.offsetWidth;            // commit the start state so the fade runs
-          next.classList.add("on");
-          var old = layer.querySelectorAll(".preview-frame");
-          if (old.length > 2) old[0].remove();
-        };
-      }
-      card.addEventListener("pointerenter", function () {
-        if (!layer) { layer = document.createElement("div"); layer.className = "preview-layer"; media.appendChild(layer); }
-        layer.classList.add("on");
-        show(); timer = setInterval(show, 1100);
-      });
-      card.addEventListener("pointerleave", function () {
-        clearInterval(timer); timer = null; idx = -1;
-        if (layer) { layer.classList.remove("on"); layer.innerHTML = ""; }
-      });
-    });
-  }
-
   // ---------- Try-it quiz ----------
   document.querySelectorAll("[data-quiz]").forEach(function (quiz) {
     var opts = quiz.querySelectorAll(".quiz-opt");

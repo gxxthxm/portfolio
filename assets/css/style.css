@@ -676,13 +676,6 @@ kbd {
 .palette-hint { padding: 10px 20px; border-top: 1px solid var(--line); font-size: 12px; color: var(--dim); display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
 .palette-open, .lightbox-open { overflow: hidden; }
 
-/* ---------- Card hover previews ---------- */
-.preview-layer { position: absolute; inset: 0; opacity: 0; transition: opacity .3s; pointer-events: none; background: var(--surface-strong); }
-.preview-layer.on { opacity: 1; }
-.preview-frame { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .45s ease; }
-.preview-frame.on { opacity: 1; }
-.feature-media, .work-media { position: relative; }
-.work-arrow { z-index: 2; }
 
 /* ---------- Lightbox ---------- */
 .zoomable { cursor: zoom-in; }

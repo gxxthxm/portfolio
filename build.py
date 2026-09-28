@@ -100,17 +100,6 @@ def tags_of(p):
     return [t.strip() for t in p.get("tags", "").split("|") if t.strip()]
 
 
-def previews(p, base, n=3):
-    """A few screens from the case study, used for the hover preview on cards."""
-    cover = p.get("cover")
-    srcs = [g for g in p.get("gallery", [])] + [b["src"] for b in p["blocks"] if b["t"] == "img"]
-    out = []
-    for s in srcs:
-        if s != cover and s != p.get("hero") and s not in out:
-            out.append(s)
-    return "|".join(base + s for s in out[:n])
-
-
 def search_index(base):
     L = SITE["links"]
     items = [
@@ -283,7 +272,7 @@ def feature_row(p, i, base):
   <a class="feature-link" href="{url_for(p, base)}">
     <span class="badge">{i:02d}</span>
     <span class="feature-corner">{escape(p.get("role") or p.get("domain") or p.get("category", ""))}</span>
-    <div class="feature-media" style="view-transition-name:cover-{p["slug"]}" data-previews="{escape(previews(p, base))}">{img(p["cover"], base, p["title"])}</div>
+    <div class="feature-media" style="view-transition-name:cover-{p["slug"]}">{img(p["cover"], base, p["title"])}</div>
     <div class="feature-body">
       <p class="feature-meta">{escape(meta)}</p>
       <h3>{escape(p["title"])}</h3>
@@ -298,7 +287,7 @@ def feature_row(p, i, base):
 def work_card(p, base, show_tags=True):
     tag = escape(tags_of(p)[0]) if show_tags and tags_of(p) else ""
     return f"""<a class="work-card reveal" href="{url_for(p, base)}" data-category="{escape(p.get("category", ""))}">
-  <div class="work-media" style="view-transition-name:cover-{p["slug"]}" data-previews="{escape(previews(p, base))}">{img(p["cover"], base, p["title"])}<span class="work-arrow">{icon("arrow-ur")}</span></div>
+  <div class="work-media" style="view-transition-name:cover-{p["slug"]}">{img(p["cover"], base, p["title"])}<span class="work-arrow">{icon("arrow-ur")}</span></div>
   <div class="work-info">
     <div><h3>{escape(p["title"])}</h3><p>{escape(p.get("category", ""))}</p></div>
     {f'<span class="pill">{tag}</span>' if tag else ""}
