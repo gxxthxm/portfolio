@@ -437,9 +437,9 @@ def home():
     features = "".join(feature_row(p, i + 1, base) for i, p in enumerate(prof))
     body = f"""<section class="hero">
   <div class="wrap hero-inner">
-    <p class="eyebrow reveal">{escape(SITE["role"])}</p>
+    <p class="hero-hello reveal">Hi, I’m Gauthem.</p>
     <h1 class="hero-title reveal">I design products that <em class="rotator" data-words="grow|convert|scale|delight|last"><span class="sr-only">grow</span><span class="rotator-word" aria-hidden="true">grow</span></em> — <br class="br-lg">from first insight to shipped pixel.</h1>
-    <p class="hero-meta reveal"><span>Product Designer</span><i></i><span>{escape(SITE["stats"][0][0])} Years of Experience</span><i></i><span>{escape(SITE["location"])}</span><i></i><span>{escape(SITE["relocation"])}</span></p>
+    <p class="hero-meta reveal"><span>Head of Product at HP-appen</span><i></i><span>{escape(SITE["stats"][0][0])} Years of Experience</span><i></i><span>{escape(SITE["location"])}</span><i></i><span>{escape(SITE["relocation"])}</span></p>
     <div class="hero-actions reveal">
       <a class="btn btn-accent btn-lg" href="#work">View selected work {icon("arrow-r")}</a>
       {ext(resume(base), icon("file") + " Resume", "btn btn-ghost btn-lg")}

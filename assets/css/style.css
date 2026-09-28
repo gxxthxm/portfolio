@@ -794,3 +794,11 @@ html.lenis { scroll-behavior: auto !important; }
 @media (max-height: 960px) { .split-side.has-portrait { position: static; } }
 @media (max-width: 900px) { .home-portrait { max-width: 240px; order: 0; } }
 .eyebrow { white-space: nowrap; }
+
+/* Greeting above the homepage headline — continues from the intro's "Hi, I’m Gauthem." */
+.hero-hello {
+  font-family: var(--font-serif); font-style: italic; font-weight: 400;
+  font-size: clamp(26px, 3vw, 38px); line-height: 1.1; letter-spacing: -0.01em;
+  color: var(--mint);
+}
+.hero-hello + .hero-title { margin-top: 18px; }
