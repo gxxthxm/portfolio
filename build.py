@@ -154,7 +154,7 @@ def page(title, active, base, body, description=None, body_class=""):
 <meta property="og:type" content="website">
 <meta property="og:image" content="{SITE["url"]}{SITE["photoSquare"]}">
 <meta name="twitter:card" content="summary">
-<meta name="theme-color" content="#0a0a0b">
+<meta name="theme-color" content="#010a26">
 <link rel="icon" href="{base}assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

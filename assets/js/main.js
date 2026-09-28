@@ -124,12 +124,12 @@
   if (canvas && canvas.getContext) {
     var ctx = canvas.getContext("2d");
     var W = 0, H = 0, dpr = 1;
-    // palette: peach, coral, crimson, plum
+    // palette: pink, periwinkle, royal blue, aqua
     var ribbons = [
-      { rgb: "208,85,90", y: 0.30, amp: 0.16, freq: 1.6, speed: 0.00022, phase: 0.0, strands: 26, spread: 1.2, alpha: 0.26 },
-      { rgb: "164,40,64", y: 0.62, amp: 0.20, freq: 1.2, speed: 0.00016, phase: 2.1, strands: 30, spread: 1.5, alpha: 0.28 },
-      { rgb: "255,200,169", y: 0.45, amp: 0.10, freq: 2.2, speed: 0.00028, phase: 4.2, strands: 16, spread: 0.8, alpha: 0.16 },
-      { rgb: "120,128,160", y: 0.80, amp: 0.14, freq: 1.0, speed: 0.00012, phase: 1.3, strands: 20, spread: 1.7, alpha: 0.20 }
+      { rgb: "217,180,211", y: 0.30, amp: 0.16, freq: 1.6, speed: 0.00022, phase: 0.0, strands: 26, spread: 1.2, alpha: 0.22 },
+      { rgb: "56,84,166", y: 0.62, amp: 0.20, freq: 1.2, speed: 0.00016, phase: 2.1, strands: 30, spread: 1.5, alpha: 0.42 },
+      { rgb: "180,210,217", y: 0.45, amp: 0.10, freq: 2.2, speed: 0.00028, phase: 4.2, strands: 16, spread: 0.8, alpha: 0.14 },
+      { rgb: "128,138,191", y: 0.80, amp: 0.14, freq: 1.0, speed: 0.00012, phase: 1.3, strands: 20, spread: 1.7, alpha: 0.24 }
     ];
 
     var resize = function () {
