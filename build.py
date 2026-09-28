@@ -249,8 +249,8 @@ def footer(base):
 # ---------- components ----------
 
 GREETINGS = escape(json.dumps([
-    ["Hello", "en"], ["Hej", "sv"], ["नमस्ते", "hi"], ["നമസ്കാരം", "ml"], ["ನಮಸ್ಕಾರ", "kn"],
-    ["வணக்கம்", "ta"], ["Hola", "es"], ["Bonjour", "fr"], ["こんにちは", "ja"], ["안녕하세요", "ko"],
+    ["Hello", "en"], ["Hej", "sv"], ["നമസ്കാരം", "ml"], ["Hola", "es"], ["Bonjour", "fr"],
+    ["Ciao", "it"], ["Olá", "pt"], ["こんにちは", "ja"], ["你好", "zh"], ["مرحبا", "ar"],
     ["Hi, I’m Gauthem.", "en"],
 ], ensure_ascii=False), quote=True)
 
