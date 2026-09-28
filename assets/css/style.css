@@ -617,3 +617,14 @@ a.contact-card:hover { border-color: var(--line-strong); }
   .portrait { justify-self: start; max-width: 360px; order: -1; }
   .portrait.compact { max-width: 220px; }
 }
+
+/* Alternate feature rows: image left, then image right */
+.feature:nth-child(even) .feature-link { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); }
+.feature:nth-child(even) .feature-media { order: 2; }
+.feature:nth-child(even) .badge { left: auto; right: clamp(20px, 3.4vw, 44px); }
+.feature:nth-child(even) .feature-corner { right: auto; left: clamp(20px, 3.4vw, 44px); }
+@media (max-width: 900px) {
+  .feature:nth-child(even) .feature-link { grid-template-columns: 1fr; }
+  .feature:nth-child(even) .feature-media { order: 0; }
+}
+.feature-link, .next-card { position: relative; }
