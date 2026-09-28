@@ -44,6 +44,8 @@ def icon(name):
         "calendar": '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
         "linkedin": '<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/>',
         "file": '<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/>',
+        "search": '<circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/>',
+        "clock": '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
         "pin": '<path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>',
     }
     return f'<svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">{paths[name]}</svg>'
@@ -98,6 +100,38 @@ def tags_of(p):
     return [t.strip() for t in p.get("tags", "").split("|") if t.strip()]
 
 
+def previews(p, base, n=3):
+    """A few screens from the case study, used for the hover preview on cards."""
+    cover = p.get("cover")
+    srcs = [g for g in p.get("gallery", [])] + [b["src"] for b in p["blocks"] if b["t"] == "img"]
+    out = []
+    for s in srcs:
+        if s != cover and s != p.get("hero") and s not in out:
+            out.append(s)
+    return "|".join(base + s for s in out[:n])
+
+
+def search_index(base):
+    L = SITE["links"]
+    items = [
+        {"t": "Home", "s": "Page", "u": base or "./"},
+        {"t": "Professional works", "s": "Page", "u": base + "professional_works/"},
+        {"t": "Other works", "s": "Page", "u": base + "other_works/"},
+        {"t": "About", "s": "Page", "u": base + "about/"},
+        {"t": "Services", "s": "Page", "u": base + "service/"},
+        {"t": "Contact", "s": "Page", "u": base + "contact/"},
+        {"t": "Resume (PDF)", "s": "Link", "u": base + L["resume"], "x": 1},
+        {"t": "Book a call", "s": "Link", "u": L["calendly"], "x": 1},
+        {"t": "LinkedIn", "s": "Link", "u": L["linkedin"], "x": 1},
+        {"t": "Email " + SITE["email"], "s": "Link", "u": "mailto:" + SITE["email"]},
+    ]
+    for key, label in (("professional", "Professional work"), ("other", "Side project")):
+        for s in SITE[key]:
+            q = PROJECTS[s]
+            items.append({"t": q["title"], "s": f'{label} · {q.get("category", "")}', "u": url_for(q, base)})
+    return json.dumps(items, ensure_ascii=False).replace("</", "<\\/")
+
+
 def url_for(p, base):
     return f'{base}{p["section"]}/{p["slug"]}/'
 
@@ -150,6 +184,7 @@ def page(title, active, base, body, description=None, body_class=""):
     </a>
     <nav class="nav" aria-label="Main">{nav}</nav>
     {ext(L["calendly"], "Let’s talk " + icon("arrow-ur"), "btn btn-accent btn-sm header-cta")}
+    <button class="search-btn" type="button" aria-label="Search projects and pages" data-open-palette>{icon("search")}<kbd>⌘K</kbd></button>
     <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
   </div>
   <div class="mobile-menu" id="mobile-menu">
@@ -161,6 +196,15 @@ def page(title, active, base, body, description=None, body_class=""):
 {body}
 </main>
 {footer(base)}
+<div class="palette" role="dialog" aria-modal="true" aria-label="Search" hidden>
+  <div class="palette-box">
+    <input class="palette-input" type="search" placeholder="Jump to a project or page…" aria-label="Search" autocomplete="off">
+    <ul class="palette-list" role="listbox"></ul>
+    <p class="palette-hint"><kbd>↑</kbd><kbd>↓</kbd> to move · <kbd>Enter</kbd> to open · <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<div class="lightbox" hidden><img alt=""><button type="button" aria-label="Close image">×</button></div>
+<script>window.__INDEX={search_index(base)}</script>
 <script src="{base}assets/js/main.js" defer></script>
 </body>
 </html>
@@ -196,7 +240,7 @@ def footer(base):
     </div>
   </div>
   <div class="wrap footer-bottom">
-    <span>&copy; <span data-year>{YEAR}</span> {escape(SITE["name"])}</span>
+    <span>&copy; <span data-year>{YEAR}</span> {escape(SITE["name"])}<span class="footer-time" data-local-time data-prefix=" · Bangalore "></span></span>
     <a href="#main" class="to-top">Back to top ↑</a>
   </div>
 </footer>"""
@@ -231,7 +275,7 @@ def feature_row(p, i, base):
   <a class="feature-link" href="{url_for(p, base)}">
     <span class="badge">{i:02d}</span>
     <span class="feature-corner">{escape(p.get("role") or p.get("domain") or p.get("category", ""))}</span>
-    <div class="feature-media">{img(p["cover"], base, p["title"])}</div>
+    <div class="feature-media" data-previews="{escape(previews(p, base))}">{img(p["cover"], base, p["title"])}</div>
     <div class="feature-body">
       <p class="feature-meta">{escape(meta)}</p>
       <h3>{escape(p["title"])}</h3>
@@ -246,7 +290,7 @@ def feature_row(p, i, base):
 def work_card(p, base, show_tags=True):
     tag = escape(tags_of(p)[0]) if show_tags and tags_of(p) else ""
     return f"""<a class="work-card reveal" href="{url_for(p, base)}" data-category="{escape(p.get("category", ""))}">
-  <div class="work-media">{img(p["cover"], base, p["title"])}<span class="work-arrow">{icon("arrow-ur")}</span></div>
+  <div class="work-media" data-previews="{escape(previews(p, base))}">{img(p["cover"], base, p["title"])}<span class="work-arrow">{icon("arrow-ur")}</span></div>
   <div class="work-info">
     <div><h3>{escape(p["title"])}</h3><p>{escape(p.get("category", ""))}</p></div>
     {f'<span class="pill">{tag}</span>' if tag else ""}
@@ -339,6 +383,18 @@ def render_blocks(blocks, base, toc=None):
         if t == "img":
             cap = f'<figcaption>{escape(b["caption"])}</figcaption>' if b.get("caption") else ""
             out.append(f'<figure class="shot reveal">{img(b["src"], base, b.get("alt", ""))}{cap}</figure>')
+        elif t == "quiz":
+            opts = "".join(
+                f'<li><button type="button" class="quiz-opt" data-correct="{1 if k == b["answer"] else 0}"><span class="quiz-key">{"ABCDE"[k]}</span>{escape(o)}</button></li>'
+                for k, o in enumerate(b["options"])
+            )
+            out.append(f"""<div class="quiz reveal" data-quiz>
+  <div class="quiz-bar"><span class="quiz-tag">{escape(b.get("tag", ""))}</span><span class="quiz-meta">{escape(b.get("meta", ""))}</span></div>
+  <p class="quiz-q">{escape(b["question"])}</p>
+  <ol class="quiz-opts">{opts}</ol>
+  <div class="quiz-expl" hidden><p class="quiz-result"></p><p><strong>{escape(b.get("explainer", "Explanation"))}:</strong> {escape(b["explanation"])}</p><button type="button" class="quiz-reset">Try again</button></div>
+  <p class="quiz-caption">{escape(b.get("caption", ""))}</p>
+</div>""")
         elif t == "video":
             cap = f'<figcaption>{escape(b["caption"])}</figcaption>' if b.get("caption") else ""
             out.append(
@@ -521,7 +577,7 @@ def contact():
     {icon("file")}<span class="label">Resume</span><strong>Download PDF</strong>
   </a>
   <div class="contact-card reveal">
-    {icon("pin")}<span class="label">Based in</span><strong>{escape(SITE["location"])}</strong><span class="muted">{escape(SITE["relocation"])}</span>
+    {icon("pin")}<span class="label">Based in</span><strong>{escape(SITE["location"])}</strong><span class="muted">{escape(SITE["relocation"])}</span><span class="muted local-time" data-local-time></span>
   </div>
 </section>
 <section class="section wrap">

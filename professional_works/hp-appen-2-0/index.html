@@ -29,6 +29,7 @@
     </a>
     <nav class="nav" aria-label="Main"><a href="../../professional_works/" aria-current="page">Work</a><a href="../../other_works/">Other Works</a><a href="../../about/">About</a><a href="../../service/">Services</a><a href="../../contact/">Contact</a></nav>
     <a class="btn btn-accent btn-sm header-cta" href="https://calendly.com/gauthemk99" target="_blank" rel="noopener">Let’s talk <svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+    <button class="search-btn" type="button" aria-label="Search projects and pages" data-open-palette><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg><kbd>⌘K</kbd></button>
     <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
   </div>
   <div class="mobile-menu" id="mobile-menu">
@@ -121,6 +122,13 @@
 <h2 id="practice-exams-and-analysis">Practice, Exams and Analysis</h2>
 <p>The core study loop is practise → simulate → analyse → focus, and each step got its own purpose-built experience.</p>
 <figure class="shot reveal"><img class="" src="../../assets/media/hpappen/mockup-practice.jpg" alt="HP-appen exams, exercise and score" loading="lazy" decoding="async"><figcaption>Past exams, an exercise with the teacher’s explanation, and the normalised score with a goal set by dream programme.</figcaption></figure>
+<div class="quiz reveal" data-quiz>
+  <div class="quiz-bar"><span class="quiz-tag">KVA · Quantitative comparison</span><span class="quiz-meta">Question 2 of 4</span></div>
+  <p class="quiz-q">Which number is the largest?</p>
+  <ol class="quiz-opts"><li><button type="button" class="quiz-opt" data-correct="1"><span class="quiz-key">A</span>3/7</button></li><li><button type="button" class="quiz-opt" data-correct="0"><span class="quiz-key">B</span>5/12</button></li><li><button type="button" class="quiz-opt" data-correct="0"><span class="quiz-key">C</span>7/17</button></li><li><button type="button" class="quiz-opt" data-correct="0"><span class="quiz-key">D</span>2/5</button></li></ol>
+  <div class="quiz-expl" hidden><p class="quiz-result"></p><p><strong>Teacher’s explanation:</strong> Don’t calculate each fraction — compare them with 1/2. All four sit just below 1/2, and 3/7 is the closest (only 1/14 away), so 3/7 is the largest.</p><button type="button" class="quiz-reset">Try again</button></div>
+  <p class="quiz-caption">Try it — a real HP-appen question, translated into English. Every question in the product comes with an explanation like this.</p>
+</div>
 <ul>
 <li><strong>Exercises:</strong> single- and multi-question modes with instant grading and a teacher’s worked explanation — video or text — for every question.</li>
 <li><strong>Exam simulation:</strong> every past exam since 2011 with real timing, custom exams from the weakest sections, printable paper exam sheets for pen-and-paper practice, and automatic normalisation to the 0.0–2.0 scale straight after.</li>
@@ -280,10 +288,19 @@
     </div>
   </div>
   <div class="wrap footer-bottom">
-    <span>&copy; <span data-year>2026</span> Gauthem Krishna</span>
+    <span>&copy; <span data-year>2026</span> Gauthem Krishna<span class="footer-time" data-local-time data-prefix=" · Bangalore "></span></span>
     <a href="#main" class="to-top">Back to top ↑</a>
   </div>
 </footer>
+<div class="palette" role="dialog" aria-modal="true" aria-label="Search" hidden>
+  <div class="palette-box">
+    <input class="palette-input" type="search" placeholder="Jump to a project or page…" aria-label="Search" autocomplete="off">
+    <ul class="palette-list" role="listbox"></ul>
+    <p class="palette-hint"><kbd>↑</kbd><kbd>↓</kbd> to move · <kbd>Enter</kbd> to open · <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<div class="lightbox" hidden><img alt=""><button type="button" aria-label="Close image">×</button></div>
+<script>window.__INDEX=[{"t": "Home", "s": "Page", "u": "../../"}, {"t": "Professional works", "s": "Page", "u": "../../professional_works/"}, {"t": "Other works", "s": "Page", "u": "../../other_works/"}, {"t": "About", "s": "Page", "u": "../../about/"}, {"t": "Services", "s": "Page", "u": "../../service/"}, {"t": "Contact", "s": "Page", "u": "../../contact/"}, {"t": "Resume (PDF)", "s": "Link", "u": "../../assets/Resume_Gauthem.pdf", "x": 1}, {"t": "Book a call", "s": "Link", "u": "https://calendly.com/gauthemk99", "x": 1}, {"t": "LinkedIn", "s": "Link", "u": "https://www.linkedin.com/in/gauthemkrishna", "x": 1}, {"t": "Email gauthemk99@gmail.com", "s": "Link", "u": "mailto:gauthemk99@gmail.com"}, {"t": "HP-appen 2.0", "s": "Professional work · Product", "u": "../../professional_works/hp-appen-2-0/"}, {"t": "HP-appen 1.0", "s": "Professional work · Product", "u": "../../professional_works/hpappen/"}, {"t": "Agrivator", "s": "Professional work · Product", "u": "../../professional_works/agrivator/"}, {"t": "Zomato", "s": "Professional work · Brand", "u": "../../professional_works/zomato/"}, {"t": "IEEE", "s": "Professional work · Design", "u": "../../professional_works/ieee/"}, {"t": "Thesis Work", "s": "Professional work · Research and Analysis", "u": "../../professional_works/thesis-work/"}, {"t": "This Portfolio", "s": "Side project · Design and AI", "u": "../../other_works/portfolio/"}, {"t": "Flashback", "s": "Side project · Redesign", "u": "../../other_works/flashback/"}, {"t": "Molasses", "s": "Side project · Research and Design", "u": "../../other_works/molasses/"}, {"t": "MinFit", "s": "Side project · Product", "u": "../../other_works/minfit/"}, {"t": "FlowVest", "s": "Side project · Product", "u": "../../other_works/flowvest/"}, {"t": "SpeaRay", "s": "Side project · Product", "u": "../../other_works/spearay/"}, {"t": "VistaGo", "s": "Side project · Research and Design", "u": "../../other_works/vistago/"}, {"t": "Medi Connect", "s": "Side project · Product", "u": "../../other_works/mediconnect/"}, {"t": "IFE Case Study", "s": "Side project · Research and Design", "u": "../../other_works/ife/"}, {"t": "Game Hub", "s": "Side project · Redesign", "u": "../../other_works/ghub/"}, {"t": "AutoPulse", "s": "Side project · Research and Design", "u": "../../other_works/autopulse/"}, {"t": "Capella", "s": "Side project · Redesign", "u": "../../other_works/capella/"}, {"t": "FlightTracker", "s": "Side project · Design and AI", "u": "../../other_works/flighttracker/"}, {"t": "FumeCart", "s": "Side project · Redesign", "u": "../../other_works/fumecart/"}, {"t": "Limelight", "s": "Side project · Redesign", "u": "../../other_works/limelight/"}, {"t": "Branding Works", "s": "Side project · Brand", "u": "../../other_works/brandingworks/"}]</script>
 <script src="../../assets/js/main.js" defer></script>
 </body>
 </html>

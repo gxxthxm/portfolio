@@ -252,6 +252,22 @@
    "caption": "Past exams, an exercise with the teacher’s explanation, and the normalised score with a goal set by dream programme."
   },
   {
+   "t": "quiz",
+   "tag": "KVA · Quantitative comparison",
+   "meta": "Question 2 of 4",
+   "question": "Which number is the largest?",
+   "options": [
+    "3/7",
+    "5/12",
+    "7/17",
+    "2/5"
+   ],
+   "answer": 0,
+   "explainer": "Teacher’s explanation",
+   "explanation": "Don’t calculate each fraction — compare them with 1/2. All four sit just below 1/2, and 3/7 is the closest (only 1/14 away), so 3/7 is the largest.",
+   "caption": "Try it — a real HP-appen question, translated into English. Every question in the product comes with an explanation like this."
+  },
+  {
    "t": "p",
    "list": "ul",
    "h": "<strong>Exercises:</strong> single- and multi-question modes with instant grading and a teacher’s worked explanation — video or text — for every question."

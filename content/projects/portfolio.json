@@ -137,6 +137,35 @@
   },
   {
    "t": "h2",
+   "h": "Interactions With a Purpose"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Living background:</strong> the ribbons bend towards the cursor, and a click or tap sends a ripple through them."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Hover previews:</strong> project cards cycle through screens from the case study, so visitors see the product before they click."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Playable product moment:</strong> the HP-appen case study includes a real exam question you can answer, with the teacher’s explanation — the product’s core loop, in miniature."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>⌘K quick search:</strong> jump to any project or page from anywhere."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Click-to-zoom</strong> on every case study image, and a <strong>live Bangalore clock</strong> so people in other time zones know when I’m around."
+  },
+  {
+   "t": "h2",
    "h": "Details That Matter"
   },
   {
