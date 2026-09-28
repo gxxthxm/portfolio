@@ -1,7 +1,11 @@
 (function () {
   var doc = document.documentElement;
   var header = document.querySelector(".site-header");
-  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // "?shot" renders a still page for mockup screenshots: no intro, no motion.
+  var shot = /[?&]shot\b/.test(location.search);
+  if (shot) doc.classList.add("shot");
+  if (shot) document.querySelectorAll("img[loading=lazy]").forEach(function (i) { i.loading = "eager"; });
+  var reduceMotion = shot || window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // ---------- Intro loader: once per browser session ----------
   var loader = document.querySelector(".loader");

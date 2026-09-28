@@ -137,7 +137,7 @@ def page(title, active, base, body, description=None, body_class=""):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Red+Hat+Display:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{base}assets/css/style.css">
-<script>document.documentElement.classList.add("js")</script>
+<script>document.documentElement.classList.add("js");if(/[?&]shot(&|=|$)/.test(location.search))document.documentElement.classList.add("shot")</script>
 </head>
 <body class="{body_class}">
 <div class="loader" aria-hidden="true"><p class="loader-name">{escape(SITE["name"]).upper()}</p><span class="loader-line"></span></div>
