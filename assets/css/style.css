@@ -788,3 +788,9 @@ html.lenis, html.lenis body { height: auto; }
 .shot main, .shot .site-footer { animation: none !important; }
 html.lenis { scroll-behavior: auto !important; }
 .eyebrow-avatar span { white-space: nowrap; }
+
+/* Portrait beside the homepage bio */
+.home-portrait { justify-self: start; max-width: 280px; aspect-ratio: 4 / 5; margin-bottom: 8px; }
+@media (max-height: 960px) { .split-side.has-portrait { position: static; } }
+@media (max-width: 900px) { .home-portrait { max-width: 240px; order: 0; } }
+.eyebrow { white-space: nowrap; }
