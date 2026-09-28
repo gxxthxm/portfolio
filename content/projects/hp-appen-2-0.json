@@ -1,14 +1,10 @@
 {
- "hero": "assets/images/Sh75LzQGCyDBQQ72JqebXZ18k.png",
+ "hero": "assets/media/hpappen/dashboard-mockup.jpg",
  "visit": "https://app.hpappen.se",
  "overview": [
-  "HP-appen 2.0 is an upgraded version of the digital platform that helps students prepare for Sweden’s högskoleprovet (university entrance exam). Built in response to user feedback, the new version introduces improved user flows, enhanced learning features, and a more personalized practice experience. I led the end-to-end design of this release across web and mobile, focusing on turning user insights into actionable design improvements. These refinements elevated engagement, optimized usability, and strengthened HP-appen’s position as a leading platform in the Swedish EdTech market.<br><br>This is a work in progress."
+  "HP-appen 2.0 is the rebuilt platform that helps students prepare for Sweden’s högskoleprovet (university entrance exam). Built from user feedback and usage data, it introduces a new dashboard, a complete practise-simulate-analyse study loop, AI-powered help and community features — across desktop and mobile. As Head of Product, I led design and the frontend development team for every feature, turning user insights into shipped, measurable improvements that strengthened HP-appen’s position as a leading platform in the Swedish EdTech market."
  ],
- "gallery": [
-  "assets/images/XaQ4Xlt4I2iKTeLNhgnO6ntF9ZI.png",
-  "assets/images/TOLsfkFDWF7J4iLGMEuOfqI7S8A.png",
-  "assets/images/sxpjL4LCz145GnHDuXgqEx0CU.png"
- ],
+ "gallery": [],
  "blocks": [
   {
    "t": "h2",
@@ -16,62 +12,495 @@
   },
   {
    "t": "p",
-   "h": "<strong>Founding Product Designer</strong><br>Built and led the design and product function from scratch — shaping the brand, experience, and technical design foundation that took HP‑appen from concept to <strong>market leadership within six months</strong>."
+   "h": "<strong>Head of Product</strong> (UX Lead / Founding Designer until Dec 2025)<br>I led <strong>design and the frontend development team for every feature</strong> in HP-appen 2.0 — from research, flows and UI to shipped, tested React code — working hand in hand with the founders and the backend team. Beyond leading the team, I <strong>built many features from scratch myself using Claude Code</strong>."
   },
   {
    "t": "h2",
-   "h": "Overview"
+   "h": "Impact Highlights"
   },
   {
    "t": "p",
-   "h": "As the founding designer, I worked end‑to‑end across research, strategy, design systems, and execution. My focus was to create a platform that could deliver measurable learning impact <strong>while scaling user growth and retention</strong>."
+   "list": "ul",
+   "h": "Conversion uplift <strong>3% → 24%</strong>, generating approximately <strong>10M SEK in seasonal revenue</strong>"
   },
   {
    "t": "p",
-   "h": "<strong>Impact Highlights</strong>"
+   "list": "ul",
+   "h": "Serving <strong>20,000+ students a year</strong>, with <strong>9 in 10 premium users</strong> recommending HP-appen"
   },
   {
    "t": "p",
-   "h": "Conversion uplift <strong>3% → 24%</strong>, growing seasonal revenue to <strong>~3M SEK per learning cycle</strong>",
-   "list": "ul"
+   "list": "ul",
+   "h": "Sprint delivery time reduced by <strong>more than 50%</strong> through AI-native design-to-code workflows"
   },
   {
    "t": "p",
-   "h": "Sprint delivery time reduced by <strong>&gt; 50%</strong> through AI‑assisted design workflows",
-   "list": "ul"
+   "list": "ul",
+   "h": "A design system of <strong>~500 production components</strong>, shared across web, mobile web and marketing surfaces"
   },
   {
    "t": "p",
-   "h": "Full‑stack design system adoption across product, web, and growth surfaces",
-   "list": "ul"
-  },
-  {
-   "t": "p",
-   "h": "<em>(Visual cue: Add an infographic showing growth metrics — conversion, revenue, and delivery speed improvements.)</em>"
+   "list": "ul",
+   "h": "Quality at speed: <strong>500+ unit-test suites</strong> and <strong>17 end-to-end test suites</strong> guarding every release"
   },
   {
    "t": "h2",
-   "h": "Building the Foundation"
+   "h": "Leading Design and Frontend as One Team"
   },
   {
    "t": "p",
-   "h": "I collaborated with engineering and growth teams to turn high‑level goals into user‑centric solutions. My approach balanced <strong>strategic product thinking</strong> with <strong>hands‑on execution</strong>, ensuring each release delivered quantifiable business value."
+   "h": "Instead of handing designs over a wall, I ran design and frontend as a single loop. Every feature moved from research and Figma flows straight into production components, with the same people owning both the experience and the code that ships it."
   },
   {
    "t": "p",
-   "h": "To support velocity at scale, I built a <strong>unified design language and reusable component library</strong>, paired with an <strong>AI‑augmented design workflow</strong> (Claude AI + Figma MCP + Lovable). This setup <strong>accelerated design‑to‑dev handoff</strong> and standardized design quality across launches."
+   "list": "ul",
+   "h": "<strong>Paired delivery:</strong> each feature shipped as matching frontend and backend changes, reviewed together so UX, API and data never drifted apart."
   },
   {
    "t": "p",
-   "h": "Beyond execution, I served as a <strong>strategic design partner to founders</strong>, mentoring designers on AI‑driven workflows and co‑shaping roadmap decisions that pushed both product usability and business growth."
+   "list": "ul",
+   "h": "<strong>AI-native workflow:</strong> Figma MCP, Claude and Lovable turned approved designs into working UI quickly, so reviews happened on real, clickable software rather than static frames."
   },
   {
    "t": "p",
-   "h": "<em>(Visual cue: Screenshot of design system structure, component hierarchy, or workflow automation setup.)</em>"
+   "list": "ul",
+   "h": "<strong>Safe rollouts:</strong> new features ship behind feature flags — live in staging, hidden in production — until they are tested and ready."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Quality gates:</strong> unit tests, Cypress end-to-end tests and automated pull-request reviews on every change, plus product analytics to verify impact after launch."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Mentoring:</strong> I set design and code standards, reviewed work and coached designers and developers on AI-assisted workflows."
   },
   {
    "t": "h2",
-   "h": "Homepage 0 → 1: From Insight to Launch"
+   "h": "Hands-On: Building Features with Claude Code"
+  },
+  {
+   "t": "p",
+   "h": "Leading the frontend team didn’t mean stepping away from the code. Using <strong>Claude Code</strong>, I designed and built many features end to end myself — including the leaderboard, profile, word training and speed reading — from the Figma flow to production components, state management, edge cases and automated tests — and shipped them through the same review process as the rest of the team."
+  },
+  {
+   "t": "h3",
+   "h": "Leaderboard"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Two rankings with different motivations: <strong>Streakmästare</strong> for the longest daily study streaks, with streak milestones, and <strong>Pluggmaskiner</strong> for the most correct answers over the last 30 days."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Infinite scroll</strong> with the student’s <strong>own position pinned in view</strong> whenever their row scrolls out of sight, so they always know where they stand."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Encouraging empty states for students who aren’t ranked yet, and separate error handling for a failed list versus a failed next page, with inline retry."
+  },
+  {
+   "t": "h3",
+   "h": "Profile"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Avatars</strong> — upload a custom picture or pick a preset — saved to the account and synced across devices, with graceful fallbacks if an image can’t load."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "An <strong>anonymous display name</strong> and <strong>privacy toggles</strong> for the community, built to stay in sync even when settings are changed rapidly."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Self-service account controls: <strong>reset all study data</strong> for a fresh start before a new exam, and <strong>delete account</strong>."
+  },
+  {
+   "t": "h3",
+   "h": "Word Training (ORD)"
+  },
+  {
+   "t": "img",
+   "src": "assets/media/hpappen/mockup-ord.jpg",
+   "alt": "HP-appen word training chat",
+   "caption": "Word training — an AI tutor teaches six words at a time and checks the student’s own sentences."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "A conversational way to learn vocabulary: the AI tutor introduces each word with its meaning and an example, then asks the student to <strong>use it correctly in three sentences of their own</strong>."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Words come in <strong>lists of six</strong> with clear progress (1/3 → 2/3 → 3/3 per word), a word list to jump between, and a celebratory finish before offering six new words."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Students can add <strong>their own words</strong> to practise, and answer by typing or by voice."
+  },
+  {
+   "t": "h3",
+   "h": "Speed Reading (Läsning)"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Timed reading sessions with <strong>freshly generated passages</strong> and comprehension questions, built to raise reading pace for LÄS and ELF."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Students can regenerate a passage within a <strong>fair-use quota</strong>; when it runs out, a live “try again in X minutes” countdown replaces the button instead of an error."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Answers are checked on the server, so the answer key never ships to the browser."
+  },
+  {
+   "t": "p",
+   "h": "Building features myself kept me close to the real constraints of the codebase, made my design specs sharper, and let the team ship noticeably faster."
+  },
+  {
+   "t": "h2",
+   "h": "A Design System Built to Scale"
+  },
+  {
+   "t": "p",
+   "h": "HP-appen 2.0 runs on a unified design language built with <strong>atomic design</strong> — around <strong>100 atoms, 160 molecules and 47 page-level organisms</strong> — so new features are assembled from proven parts instead of redrawn from scratch."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Light and dark themes</strong> from a single set of tokens, switchable anywhere in the app."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>A 3D icon language</strong> for the eight test sections and community areas that makes a dense exam product feel friendly."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Responsive by default:</strong> a sidebar navigation on desktop becomes a six-tab bottom bar on mobile (Home, Study, Analysis, Forum, Messages, References), tuned so labels never truncate."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Installable web app:</strong> a web-app manifest, service worker and offline page let students add HP-appen to their home screen and keep working on patchy connections."
+  },
+  {
+   "t": "h2",
+   "h": "The Dashboard: “Am I on Track?”"
+  },
+  {
+   "t": "img",
+   "src": "assets/media/hpappen/dashboard.png",
+   "alt": "HP-appen 2.0 dashboard on a tablet",
+   "caption": "The Plugga dashboard — score, goal progress, key dates and all eight sections at a glance."
+  },
+  {
+   "t": "p",
+   "h": "Students preparing for högskoleprovet ask one question over and over: <em>am I on track?</em> The dashboard answers it in a single glance."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Normalised score, live:</strong> a score ring on the 0.0–2.0 HP scale for the whole test (e.g. 1.2), with how much of the personal goal is reached and how the student compares to other test-takers."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Quantitative vs. verbal:</strong> the two halves of the test side by side, each with its own score and progress bar."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>All eight sections as cards:</strong> XYZ, KVA, NOG, DTK, ORD, ELF, LÄS and MEK — each with a 3D icon, progress and score, so the weakest area is obvious and one tap away."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Key dates:</strong> registration, test day and results as a timeline with live countdowns."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Momentum:</strong> a “Start → Ready for HP” progress bar and a daily streak keep motivation visible without getting in the way."
+  },
+  {
+   "t": "h2",
+   "h": "Practice, Exams and Analysis"
+  },
+  {
+   "t": "p",
+   "h": "The core study loop is practise → simulate → analyse → focus, and each step got its own purpose-built experience."
+  },
+  {
+   "t": "img",
+   "src": "assets/media/hpappen/mockup-practice.jpg",
+   "alt": "HP-appen exams, exercise and score",
+   "caption": "Past exams, an exercise with the teacher’s explanation, and the normalised score with a goal set by dream programme."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Exercises:</strong> single- and multi-question modes with instant grading and a teacher’s worked explanation — video or text — for every question."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Exam simulation:</strong> every past exam since 2011 with real timing, custom exams from the weakest sections, printable paper exam sheets for pen-and-paper practice, and automatic normalisation to the 0.0–2.0 scale straight after."
+  },
+  {
+   "t": "img",
+   "src": "assets/media/hpappen/mockup-exams.jpg",
+   "alt": "HP-appen past exam reading view",
+   "caption": "Past exams in the app — reading passages, question navigation and progress through each provpass."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Personal analysis:</strong> “Coach Jens” turns each student’s training data into a written analysis and a day-by-day plan — the first unfinished step is highlighted, and completing the day is celebrated. Goals are set on the 0.0–2.0 scale, with reference scores for dream programmes like medicine or engineering."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Courses and lessons:</strong> section-by-section courses from award-winning teachers — video and text lessons with progress tracking, bookmarks, ratings and a “next lesson” flow that keeps momentum."
+  },
+  {
+   "t": "img",
+   "src": "assets/media/hpappen/mockup-lessons.jpg",
+   "alt": "HP-appen course and lesson screens",
+   "caption": "Course overview for XYZ and the lesson-complete screen with rating and next lesson."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Focus timer:</strong> a small, persistent timer that keeps running as students move between practice, material and the forum."
+  },
+  {
+   "t": "h2",
+   "h": "Features That Make Studying Stick"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>AI tutor:</strong> a chat tutor students can type or talk to, with voice input and transcription, for help the moment they get stuck."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Word training:</strong> an AI-guided vocabulary chat for ORD (built by me — see above)."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Speed reading:</strong> timed sessions with generated passages for LÄS and ELF (built by me — see above)."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Leaderboards:</strong> streak and study rankings that turn daily practice into friendly competition (built by me with Claude Code — see above)."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Survival mode (in development):</strong> a fast, game-like run of questions in Mixed, Verbal or Quantitative mode that ends on the first mistake."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Community:</strong> a forum with discussion areas, mentions and reactions, plus private messaging — built so user content is never rendered as HTML, keeping it safe by design."
+  },
+  {
+   "t": "h2",
+   "h": "Growth Loops"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>HP-prognosen:</strong> a free, no-account diagnostic that gives a predicted score and suggests where to start — the top of the funnel."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Trials and checkout:</strong> free-trial invites and a Stripe checkout designed to make upgrading a clear, low-friction decision."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Referrals:</strong> a referral programme with its own dashboard so students bring their friends."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Onboarding:</strong> sign-up with Google, Apple or email in a single step."
+  },
+  {
+   "t": "h2",
+   "h": "The Full Feature Map"
+  },
+  {
+   "t": "p",
+   "h": "Every feature below was designed and shipped by the team I led — together they make HP-appen a complete preparation platform rather than a question bank."
+  },
+  {
+   "t": "h3",
+   "h": "Learning"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Home dashboard with continue-where-you-left-off, recommended courses and tips"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Section pages for all eight subtests with study material, formula sheets and guides"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Video and text lessons, exercise lessons, bookmarks and lesson ratings"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Single- and multi-question practice with instant grading and worked explanations"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Word training (AI vocabulary chat) and speed reading"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Focus timer that persists across the app"
+  },
+  {
+   "t": "h3",
+   "h": "Exams and Diagnostics"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "All past exams with real timing, exam history and in-progress exams you can resume"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Custom exams, printable paper exam sheets and exam result pages with normalised scores"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "HP-prognosen and “Lilla diagnosen” — free diagnostics that predict a score and suggest where to start"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Public practice questions per section for visitors who haven’t signed up yet"
+  },
+  {
+   "t": "h3",
+   "h": "AI"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "AI tutor chat with voice input"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Coach Jens personal analysis with a daily study plan"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "AI-powered lessons and exercises"
+  },
+  {
+   "t": "h3",
+   "h": "Motivation and Community"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Daily streaks with milestones and a “ready for HP” progress bar"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Leaderboards (Streakmästare and Pluggmaskiner) and the Survival game mode"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Forum with discussion areas, threads, mentions and reactions; group chat and private messages"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Student reviews and success stories"
+  },
+  {
+   "t": "h3",
+   "h": "Accounts, Payments and Growth"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Sign-up with Google, Apple or email, onboarding with name and target score, email verification and password reset"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Profile with avatars, anonymous community name, privacy settings, study-data reset and account deletion"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Free trials, trial invites, Stripe checkout and payment confirmation"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Referral programme with personal codes and a referral dashboard"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Installable web app with offline support, light and dark mode"
+  },
+  {
+   "t": "h3",
+   "h": "Internal Tools"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "A support desk where staff handle student support cases and content reports"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "Admin dashboards for users, email campaign metrics, notifications, AI prompts, referrals, word requests and content uploads"
+  },
+  {
+   "t": "h2",
+   "h": "hpappen.se — The Landing Page, 0 → 1"
   },
   {
    "t": "p",
@@ -101,12 +530,56 @@
    "h": "The result: a homepage optimized for clarity and conversion, refined post‑launch via analytics (bounce, scroll depth, CTA CTR) and qualitative insights."
   },
   {
+   "t": "video",
+   "src": "assets/media/hpappen/landing-demo.mp4",
+   "poster": "assets/media/hpappen/landing-demo-poster.webp",
+   "caption": "Product demo from the hpappen.se hero — the new dashboard, study flow and exam simulation."
+  },
+  {
+   "t": "h3",
+   "h": "A page built around one decision"
+  },
+  {
    "t": "p",
-   "h": "<em>(Visual cue: Before/after layout comparison or annotated homepage flow.)</em>"
+   "h": "The landing page has a single job: get a stressed student to try the product. I structured the page as a guided argument — <strong>promise, proof, product, then a risk-free first step</strong> — so every section answers the next question a visitor has."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Promise:</strong> a focused hero (“Plugga smartare till högskoleprovet”) with one primary CTA, <em>Prova gratis</em>, and a live product demo instead of a static mockup."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Proof:</strong> social proof placed immediately under the fold — 20,000+ students a year, real score journeys from students (e.g. 1.25 → 1.8), and the creators’ credentials."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Product:</strong> the four core features — Exercises, Mock exams, Personal analysis and Theory — each shown with real UI rather than illustrations."
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Risk-free first step:</strong> HP-prognosen, a free 13-question, 16-minute diagnostic with no account required, plus 10-question tests for each of the eight sections."
+  },
+  {
+   "t": "img",
+   "src": "assets/media/hpappen/landing-hero.jpg",
+   "alt": "hpappen.se landing page hero",
+   "caption": "hpappen.se — hero, social proof and value propositions."
+  },
+  {
+   "t": "h3",
+   "h": "Making the content inventory tangible"
+  },
+  {
+   "t": "p",
+   "h": "HP-appen’s biggest advantage is depth, so the page makes it concrete: <strong>14,260 exercises with worked solutions, 31 complete past exams from 2011 onwards, 133 video lessons and 20 text lessons</strong>, broken down per section (XYZ, KVA, NOG, DTK, ORD, LÄS, MEK, ELF). A results guarantee and transparent pricing close the loop on trust."
   },
   {
    "t": "h2",
-   "h": "Designing AI‑Integrated Learning Experiences"
+   "h": "Designing AI-Integrated Learning Experiences"
   },
   {
    "t": "p",
@@ -132,39 +605,36 @@
    "h": "These AI‑enhanced flows became the platform’s <strong>core retention engine</strong>, tying directly to improved session duration and daily active learner growth."
   },
   {
-   "t": "p",
-   "h": "<em>(Visual cue: Flow diagram showing adaptive feedback loop or AI integration sketch.)</em>"
-  },
-  {
    "t": "h2",
-   "h": "The AI Coach — Always‑On Exam Companion"
+   "h": "In Progress: Native Apps for iOS and Android"
   },
   {
    "t": "p",
-   "h": "Currently leading design for the <strong>AI coach</strong>, an assistant that guides learners through study planning, exam strategy, and in‑app navigation."
+   "h": "The next chapter is bringing HP-appen to the phone as <strong>native iOS and Android apps</strong>. I’m leading the design, building on everything the web product has taught us."
   },
   {
    "t": "p",
-   "h": "<strong>Process:</strong>"
+   "list": "ul",
+   "h": "<strong>Mobile-first study loop:</strong> short, satisfying practice sessions designed for the moments students actually have — on the bus, between classes, before bed."
   },
   {
    "t": "p",
-   "h": "Analyzed support data, usage logs, and interview transcripts to map user confusion points",
-   "list": "ul"
+   "list": "ul",
+   "h": "<strong>Platform-native feel:</strong> navigation, gestures and components that follow iOS and Android conventions rather than a wrapped website."
   },
   {
    "t": "p",
-   "h": "Defined conversational flows and tone of voice aligned with trust and guidance principles",
-   "list": "ul"
+   "list": "ul",
+   "h": "<strong>Timely nudges:</strong> reminders for streaks, study goals and key dates like registration and test day."
   },
   {
    "t": "p",
-   "h": "Iteratively measured usefulness, trust, and engagement metrics via structured feedback loops",
-   "list": "ul"
+   "list": "ul",
+   "h": "<strong>One design language:</strong> shared tokens and components with the web design system, so web and native evolve together instead of drifting apart."
   },
   {
    "t": "p",
-   "h": "As adoption grows, the AI Coach is emerging as a differentiating feature — a <strong>continuously learning, always‑available companion</strong> that increases engagement, confidence, and retention."
+   "h": "The goal is simple: make it effortless to study a little every day, wherever students are."
   }
  ],
  "employer": "HP-appen",
@@ -174,5 +644,7 @@
  "title": "HP-appen 2.0",
  "category": "Product",
  "tags": "Ed-tech | B2C | SaaS",
- "cover": "assets/images/Sh75LzQGCyDBQQ72JqebXZ18k.png"
+ "cover": "assets/media/hpappen/dashboard-mockup.jpg",
+ "role": "Head of Product · Design & Frontend Lead",
+ "period": "Dec 2022 — Present"
 }

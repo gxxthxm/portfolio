@@ -3,7 +3,7 @@
  "title": "Gauthem's Portfolio",
  "links": {
   "linkedin": "https://www.linkedin.com/in/gauthemkrishna",
-  "resume": "https://drive.google.com/file/d/18rahDcLZO-l0BYReqU1t07BIm2hrR2fA/view?usp=sharing",
+  "resume": "assets/Resume_Gauthem.pdf",
   "calendly": "https://calendly.com/gauthemk99"
  },
  "email": "gauthemk99@gmail.com",
@@ -13,40 +13,75 @@
  ],
  "skills": [
   "Product Design",
-  "User Experience",
+  "Mobile & Web UX/UI",
+  "Design Systems",
+  "AI-native Workflows",
+  "User Research",
+  "0 → 1 Products",
   "Usability Testing",
-  "R & D",
   "Data Analysis",
-  "Project Leading"
+  "Team Leadership"
  ],
- "intro": "Innovative Product Designer with a proven record accelerating platform growth and user engagement in SaaS, B2B, and B2C. Expert in building accessible, high-impact design systems and leading teams to deliver measurable business results. Expert in sprint management and integrating AI and research-driven design to create world-class user experiences.",
- "contactBlurb": "Experienced Designer skilled in end-to-end product development, from research to prototyping, with experience leading teams and delivering user-focused solutions.",
- "bio": "I am Gauthem, a Designer with extensive experience driving projects from discovery to inception to completion and overseeing all stages of product development. My expertise spans User Research and Analysis, Wireframing, lo-fi, mid-fi, and hi-fi production, Prototyping, and post-design analysis. Throughout my career, I have held both junior and senior roles, including leading multiple design teams, where I have consistently delivered innovative and user-centric solutions.",
+ "intro": "Product designer with 8+ years of experience in end-to-end mobile and web UX/UI across iOS and Android, design systems, and AI-native design workflows. Increased conversion from 3% to 24% and drove approximately 10M SEK in revenue through research-led consumer products. Founding-designer experience taking products from 0 to 1 and accelerating design-to-development cycles by over 50% in close partnership with product management and engineering.",
+ "contactBlurb": "Product designer with 8+ years of experience taking products from 0 to 1 — research, mobile and web UX/UI, design systems and AI-native workflows.",
+ "bio": "I’m Gauthem — a product designer who has spent 8+ years taking products from zero to one. I own the full journey: research and problem framing, flows and wireframes, high-fidelity UI, design systems and hand-off, with AI-native workflows that shorten the path from concept to production. I’ve led design teams, mentored designers and partnered closely with product and engineering to ship work that moves real numbers.",
  "experience": [
   {
-   "period": "2022 - Present",
-   "role": "Lead Designer - UX and Product",
-   "place": "HP-appen, Stockholm, Sweden"
+   "period": "Dec 2022 — Present",
+   "role": "Head of Product",
+   "org": "HP-appen",
+   "note": "UX Lead / Founding Designer until Dec 2025",
+   "place": "HP-appen, Sweden",
+   "points": [
+    "Founding designer for an AI-native EdTech SaaS product, owning end-to-end product design across core user journeys, onboarding, activation and platform foundations.",
+    "Increased conversion from 3% to 24% and generated approximately 10M SEK in seasonal revenue.",
+    "Built and scaled a unified design system and component library, reducing sprint cycles by more than 50%.",
+    "Integrated AI-native workflows using Figma MCP, Lovable and Claude to move from concept to production with less friction.",
+    "Shaped product direction and mentored designers, establishing structured design processes."
+   ]
   },
   {
-   "period": "2014 - 2022 (Intermittently)",
-   "role": "Freelance - Product/UX/Graphics/Motion Designer",
-   "place": "Self employed and under an agency, Multiple Locations"
+   "period": "Aug 2021 — Nov 2021",
+   "role": "UI / Marketing Designer",
+   "org": "Zomato",
+   "place": "Zomato, India",
+   "points": [
+    "Designed for a large-scale consumer platform serving millions of users, improving UI consistency and engagement across high-traffic surfaces.",
+    "Delivered marketing and product visuals to demanding quality standards in a fast-paced product environment."
+   ]
   },
   {
-   "period": "2021 - 2021",
-   "role": "Marketing/UI Designer",
-   "place": "Zomato, Gurgaon, India"
+   "period": "Jun 2020 — Jul 2021",
+   "role": "Design Lead — UI/UX, Product & Marketing",
+   "org": "Agrivator",
+   "place": "Agrivator, India",
+   "points": [
+    "Led product design at an early-stage startup, from user research and problem framing to shipped product.",
+    "Reduced bounce rate by 28% and increased user satisfaction by 45% through rapid iteration and close engineering collaboration.",
+    "Simplified complex workflows for low-digital-literacy users.",
+    "Established reusable design patterns and systems that reduced release cycles by 40%."
+   ]
   },
   {
-   "period": "2020- 2021",
-   "role": "Design Lead - UI/UX, Product and Marketing",
-   "place": "Agrivator, Kerala, India"
+   "period": "Jan 2018 — Dec 2020",
+   "role": "Designer — UI/UX & Communication",
+   "org": "IEEE",
+   "place": "IEEE, India",
+   "points": [
+    "Led digital and brand design across web and communication surfaces.",
+    "Supported team growth through mentorship and improved design processes."
+   ]
   },
   {
-   "period": "2018- 2020",
-   "role": "Designer(UI/UX/Communication)",
-   "place": "IEEE, Kerala, India"
+   "period": "Jan 2014 — Dec 2022",
+   "role": "UI/UX, Product & Digital Designer (Contract)",
+   "org": "Freelance",
+   "place": "Freelance, multiple locations",
+   "points": [
+    "Delivered end-to-end design for 30+ products across SaaS, fintech, e-commerce and consumer sectors, often zero-to-one.",
+    "Partnered directly with founders and developers to shape product strategy, prototype rapidly and ship with measurable impact.",
+    "Built scalable design systems and repeatable workflows that helped small teams ship faster."
+   ]
   }
  ],
  "stack": [
@@ -102,7 +137,7 @@
  "services": [
   {
    "title": "Product Design",
-   "text": "I design digital products that are intuitive, scalable, and aligned with real user needs. From early concept development and stakeholder collaboration to prototyping and testing, I guide products through each stage of the design process with a focus on clarity, functionality, and business impact. My approach blends strategic thinking with hands-on design execution—ensuring that every product is not only visually cohesive but also technically feasible and ready to deliver value. I work closely with cross-functional teams to turn ideas into usable, effective solutions that users love.",
+   "text": "I design digital products that are intuitive, scalable, and aligned with real user needs — with founding-designer experience taking products from 0 to 1 across iOS, Android and web. From early concept development and stakeholder collaboration to prototyping and testing, I guide products through each stage of the design process with a focus on clarity, functionality, and business impact. My approach blends strategic thinking with hands-on design execution—ensuring that every product is not only visually cohesive but also technically feasible and ready to deliver value. I work closely with cross-functional teams to turn ideas into usable, effective solutions that users love.",
    "items": [
     "Research and Analysis",
     "Scalable Product Design",
@@ -115,9 +150,9 @@
    "text": "I help bring ideas to life through thoughtful, end-to-end product design that balances user needs, business goals, and technical constraints. With experience leading design efforts from concept to launch, I specialize in creating scalable, user-centric products that solve real problems. My process includes product discovery, stakeholder collaboration, user research, ideation, wireframing, prototyping, and testing—ensuring every feature has a purpose and every interaction feels natural. Whether it’s a web app, mobile platform, or internal tool, I design products that are not only beautiful but also functional, measurable, and ready for development.",
    "items": [
     "Storyboard and Sketches",
-    "Wireframe (lo-fi designs)",
-    "Testing phase (mid-fi and A/B testing)",
-    "Final Design and Prototyping"
+    "Wireframes (lo-fi)",
+    "Testing (mid-fi and A/B)",
+    "Design Systems and Prototyping"
    ]
   },
   {
@@ -132,7 +167,7 @@
   },
   {
    "title": "Development Assistance",
-   "text": "With a Bachelor’s degree in Computer Science, I bring a strong technical foundation to the design process—ensuring smooth collaboration between design and development. I actively support implementation by using modern AI-powered tools like Cursor, Lovable, and Google Jules to convert design elements into clean, scalable code. My approach focuses on creating development-friendly designs that align with technical constraints while maintaining design integrity. This combination of design expertise and technical understanding allows me to bridge the gap efficiently and help teams ship high-quality products faster.",
+   "text": "With a Bachelor’s degree in Computer Science, I bring a strong technical foundation to the design process—ensuring smooth collaboration between design and development. I actively support implementation by using AI-native tools like Claude Code, Figma MCP, Lovable and Cursor to convert design elements into clean, scalable code — and I build complete features from scratch with Claude Code, like the leaderboard and profile in HP-appen. My approach focuses on creating development-friendly designs that align with technical constraints while maintaining design integrity. This combination of design expertise and technical understanding allows me to bridge the gap efficiently and help teams ship high-quality products faster.",
    "items": [
     "Smooth Handover",
     "UI Components Creation",
@@ -152,7 +187,7 @@
   },
   {
    "title": "Team Management",
-   "text": "With experience leading both in-house and remote design teams, I bring a collaborative and structured approach to team management. I’ve guided cross-functional teams through complex product lifecycles—ensuring alignment between design, development, and business goals. From setting clear design standards and mentoring junior designers to managing workflows with tools like Jira, Trello, and Miro, I create an environment where creativity and efficiency thrive. My leadership style balances autonomy with accountability, fostering strong communication and delivering consistent, high-quality outcomes.",
+   "text": "As Head of Product and a former design lead, with experience leading both in-house and remote design teams, I bring a collaborative and structured approach to team management. I’ve guided cross-functional teams through complex product lifecycles—ensuring alignment between design, development, and business goals. From setting clear design standards and mentoring junior designers to managing workflows with tools like Jira, Trello, and Miro, I create an environment where creativity and efficiency thrive. My leadership style balances autonomy with accountability, fostering strong communication and delivering consistent, high-quality outcomes.",
    "items": [
     "Cross-functional Collaboration",
     "Design Leadership",
@@ -192,6 +227,7 @@
   "thesis-work"
  ],
  "other": [
+  "portfolio",
   "flashback",
   "molasses",
   "minfit",
@@ -207,5 +243,56 @@
   "fumecart",
   "limelight",
   "brandingworks"
- ]
+ ],
+ "role": "Head of Product · HP-appen",
+ "location": "Bangalore, India",
+ "stats": [
+  [
+   "8+",
+   "Years of end-to-end product design across iOS, Android and web"
+  ],
+  [
+   "~10M",
+   "SEK in seasonal revenue driven at HP-appen"
+  ],
+  [
+   "3→24%",
+   "Conversion rate increase through research-led design"
+  ],
+  [
+   "30+",
+   "Products designed for founders across SaaS, fintech and e-commerce"
+  ]
+ ],
+ "education": [
+  {
+   "title": "Product Ideation, Design, and Management",
+   "org": "University of Maryland",
+   "year": "2025",
+   "kind": "Certificate"
+  },
+  {
+   "title": "UX Design Specialization",
+   "org": "Google",
+   "year": "2025",
+   "kind": "Certificate"
+  },
+  {
+   "title": "MS Media Technology",
+   "org": "Linnaeus University",
+   "year": "2022 — 2024",
+   "kind": "Degree"
+  },
+  {
+   "title": "B.Tech Computer Science",
+   "org": "RIT Kottayam",
+   "year": "2017 — 2021",
+   "kind": "Degree"
+  }
+ ],
+ "relocation": "Open to relocation",
+ "url": "https://gxxthxm.github.io/portfolio/",
+ "photo": "assets/images/gauthem.jpg",
+ "photoSquare": "assets/images/gauthem-square.jpg",
+ "avatar": "assets/images/gauthem-avatar.jpg"
 }

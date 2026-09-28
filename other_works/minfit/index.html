@@ -3,41 +3,63 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MinFit - Gauthem&#x27;s Portfolio</title>
-<meta name="description" content="After struggling to find a workout app that met my preference for a minimalistic, dark mode interface focused purely on workout tracking, I decided to create my">
-<meta property="og:title" content="MinFit - Gauthem&#x27;s Portfolio">
-<meta property="og:description" content="After struggling to find a workout app that met my preference for a minimalistic, dark mode interface focused purely on workout tracking, I decided to create my">
-<meta name="theme-color" content="#000000">
+<title>MinFit — Gauthem Krishna</title>
+<meta name="description" content="After struggling to find a workout app that met my preference for a minimalistic, dark mode interface focused purely on workout tracking, I decided to create…">
+<meta property="og:title" content="MinFit — Gauthem Krishna">
+<meta property="og:description" content="After struggling to find a workout app that met my preference for a minimalistic, dark mode interface focused purely on workout tracking, I decided to create…">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://gxxthxm.github.io/portfolio/assets/images/gauthem-square.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0a0a0b">
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Red+Hat+Display:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/style.css">
-<script>document.documentElement.classList.add("js")</script>
+<script>document.documentElement.classList.add("js");if(/[?&]shot(&|=|$)/.test(location.search))document.documentElement.classList.add("shot")</script>
 </head>
-<body>
-<header class="nav-wrap">
-  <nav class="nav" aria-label="Main">
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
-    <div class="nav-links"><a href="../../" class="">Home</a><a href="../../professional_works/" class="">Professional Works</a><a href="../../other_works/" class="active">Other Works</a><a href="../../about/" class="">About</a><a href="../../service/" class="">Services</a><a href="../../contact/" class="">Contact</a></div>
-  </nav>
+<body class="case">
+<div class="loader" aria-hidden="true"><p class="loader-name">GAUTHEM KRISHNA</p><span class="loader-line"></span></div>
+<canvas class="glow-canvas" aria-hidden="true"></canvas>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../../" aria-label="Gauthem Krishna — home">
+      <img class="brand-mark" src="../../assets/images/gauthem-avatar.jpg" alt="" width="36" height="36"><span class="brand-name">Gauthem Krishna</span><span class="brand-role">— Product designer</span>
+    </a>
+    <nav class="nav" aria-label="Main"><a href="../../professional_works/">Work</a><a href="../../other_works/" aria-current="page">Other Works</a><a href="../../about/">About</a><a href="../../service/">Services</a><a href="../../contact/">Contact</a></nav>
+    <a class="btn btn-accent btn-sm header-cta" href="https://calendly.com/gauthemk99" target="_blank" rel="noopener">Let’s talk <svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../../">Home</a><a href="../../professional_works/">Work</a><a href="../../other_works/" aria-current="page">Other Works</a><a href="../../about/">About</a><a href="../../service/">Services</a><a href="../../contact/">Contact</a>
+    <a class="btn btn-accent" href="https://calendly.com/gauthemk99" target="_blank" rel="noopener">Let’s talk <svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+  </div>
 </header>
-<main>
-<div class="container narrow">
-<a class="back-link" href="../../other_works/">&larr; Other Works</a>
-<header class="case-head">
-  <h1>MinFit</h1>
-  <p>Product</p>
-</header>
-<article class="prose case-body">
-<figure class="shot"><img class="" src="../../assets/images/noHqySK5SSMeWYhVLss2HbiRY.png" alt="" loading="lazy" decoding="async"></figure>
-<p>After struggling to find a workout app that met my preference for a minimalistic, dark mode interface focused purely on workout tracking, I decided to create my own solution. I designed the entire user interface and experience in Figma, inspired by a clean and calming dark-themed aesthetic. To bring the design to life as a functional mobile app for my phone, I developed it using Claude AI, which enabled efficient and seamless app creation aligned with my vision.</p>
-<figure class="shot"><img class="" src="../../assets/images/sYNARqV6SXif4oJcyWvtJkjsSss.png" alt="" loading="lazy" decoding="async"></figure>
-<figure class="shot"><img class="" src="../../assets/images/yhHsaYXnPDDf8DXckJWFyfNVY.png" alt="" loading="lazy" decoding="async"></figure>
-<figure class="shot"><img class="" src="../../assets/images/WpJMliW10HINcahbud98MHpY.png" alt="" loading="lazy" decoding="async"></figure>
-<h3>Problem Statement</h3>
+<main id="main">
+<div class="progress" aria-hidden="true"><span></span></div>
+<section class="case-hero">
+  <div class="wrap">
+    <a class="back-link reveal" href="../../other_works/"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Other works</a>
+    <p class="eyebrow reveal">Case study / Product</p>
+    <h1 class="case-title reveal">MinFit</h1>
+    <dl class="case-meta reveal"><div><dt>Domain</dt><dd>Product</dd></div><div><dt>Industry</dt><dd>Fitness</dd></div></dl>
+  </div>
+</section>
+<div class="wrap">
+  <figure class="case-cover reveal"><img class="" src="../../assets/images/noHqySK5SSMeWYhVLss2HbiRY.png" alt="MinFit"></figure>
+</div>
+<section class="wrap case-layout">
+  <aside class="case-aside"><nav class="toc" aria-label="On this page"><p class="label">On this page</p><ol><li><a href="#problem-statement">Problem Statement</a></li><li><a href="#goals">Goals</a></li><li><a href="#user-persona">User Persona</a></li><li><a href="#features-user-flow">Features &amp; User Flow</a></li><li><a href="#design-highlights">Design Highlights</a></li><li><a href="#development-with-claude-ai">Development with Claude AI</a></li><li><a href="#outcomes-reflection">Outcomes &amp; Reflection</a></li><li><a href="#future-outlook">Future Outlook</a></li><li><a href="#conclusion">Conclusion</a></li></ol></nav></aside>
+  <article class="prose">
+    
+    <p>After struggling to find a workout app that met my preference for a minimalistic, dark mode interface focused purely on workout tracking, I decided to create my own solution. I designed the entire user interface and experience in Figma, inspired by a clean and calming dark-themed aesthetic. To bring the design to life as a functional mobile app for my phone, I developed it using Claude AI, which enabled efficient and seamless app creation aligned with my vision.</p>
+<figure class="shot reveal"><img class="" src="../../assets/images/sYNARqV6SXif4oJcyWvtJkjsSss.png" alt="" loading="lazy" decoding="async"></figure>
+<figure class="shot reveal"><img class="" src="../../assets/images/yhHsaYXnPDDf8DXckJWFyfNVY.png" alt="" loading="lazy" decoding="async"></figure>
+<figure class="shot reveal"><img class="" src="../../assets/images/WpJMliW10HINcahbud98MHpY.png" alt="" loading="lazy" decoding="async"></figure>
+<h2 id="problem-statement">Problem Statement</h2>
 <p>Most workout apps available are visually busy and filled with features that clutter the experience, detracting from quick and clear workout tracking. Bright and complex UIs made it difficult for me to focus during workouts and added unnecessary friction when logging exercise details. I needed a streamlined, distraction-free, dark mode app that prioritized simplicity and usability.</p>
-<h3>Goals</h3>
+<h2 id="goals">Goals</h2>
 <ul>
 <li>Build a minimalistic workout app with a dark theme optimized for ease of use in low-light environments.</li>
 <li>Design an intuitive card-based UI for workout sessions, exercises, and progress tracking.</li>
@@ -45,14 +67,14 @@
 <li>Ensure accessibility with legible typography, proper contrast, and comfortable tap areas.</li>
 <li>Develop a functional mobile app from the Figma design using Claude AI to have a personal, usable tool.</li>
 </ul>
-<h3>User Persona</h3>
+<h2 id="user-persona">User Persona</h2>
 <p><strong>Myself – The Only User:</strong></p>
 <ul>
 <li>A fitness enthusiast who values a calm, focused, and efficient workout logging experience.</li>
 <li>Prefers using apps with a minimalistic dark theme during early morning or late-night sessions.</li>
 <li>Looks for speed and clarity when reviewing or entering workout data on the go.</li>
 </ul>
-<h3>Features &amp; User Flow</h3>
+<h2 id="features-user-flow">Features &amp; User Flow</h2>
 <ul>
 <li><strong>Home/Dashboard:</strong> Displays cards summarizing recent and scheduled workouts with session details, exercise breakdowns, and total volume. Tapping a card opens detailed session views.</li>
 <li><strong>Calendar:</strong> Month view highlighting workout days. Selecting a date reveals workouts for that day, with options to add or edit sessions.</li>
@@ -61,7 +83,7 @@
 <li><strong>Profile:</strong> Displays personal statistics, progress highlights, and preference settings.</li>
 <li><strong>Navigation:</strong> Fixed bottom navigation bar for swift movement between core sections.</li>
 </ul>
-<h3>Design Highlights</h3>
+<h2 id="design-highlights">Design Highlights</h2>
 <ul>
 <li>Dark gray background (#121212) reduces eye strain with softer card backgrounds offering contrast.</li>
 <li>Off-white and gray typography layered for clear hierarchy without harsh brightness.</li>
@@ -70,35 +92,75 @@
 <li>Ample spacing and large touch targets create an easy-to-use interface during active gym sessions.</li>
 <li>Accessibility features such as scalable text sizes and contrast compliance ensure inclusivity.</li>
 </ul>
-<h3>Development with Claude AI</h3>
+<h2 id="development-with-claude-ai">Development with Claude AI</h2>
 <p>Claude AI played a crucial role in translating the detailed Figma designs into a working mobile app. Its capabilities enabled rapid app development while maintaining fidelity to the original design aesthetic and functional requirements. This approach streamlined bringing MinFit from a visual concept to a practical tool I could use daily.</p>
-<h3>Outcomes &amp; Reflection</h3>
+<h2 id="outcomes-reflection">Outcomes &amp; Reflection</h2>
 <ul>
 <li>MinFit successfully provides a distraction-free, elegant dark mode workout app that supports streamlined workout logging.</li>
 <li>The card-based UI and straightforward navigation reduce cognitive load, allowing quick access to essential info.</li>
 <li>Creating the app through Claude AI from detailed Figma designs combined the strengths of visual design with intelligent development.</li>
 <li>The project confirmed the viability and power of integrating design tools like Figma with AI-driven development platforms for personal app creation.</li>
 </ul>
-<h3>Future Outlook</h3>
+<h2 id="future-outlook">Future Outlook</h2>
 <ul>
 <li>Expanding customization options for workouts, themes, and notifications.</li>
 <li>Integrating with wearable devices or sensors for automatic data input.</li>
 <li>Enhancing onboarding to assist new users.</li>
 <li>Exploring social or community features for motivation and sharing.</li>
 </ul>
-<h3>Conclusion</h3>
+<h2 id="conclusion">Conclusion</h2>
 <p>MinFit embodies my vision of a minimal, user-centered workout app created through thoughtful design in Figma and brought to life via Claude AI development. This project highlights how combining robust design and AI-powered development platforms can empower individuals to build highly tailored, functional apps aligned with personal needs and aesthetics.</p>
-</article>
-<nav class="pager" aria-label="Project navigation"><a href="../../other_works/molasses/">&lsaquo; Molasses</a><a href="../../other_works/flowvest/">FlowVest &rsaquo;</a></nav>
-</div>
-<div class="container"><section class="cta card">
-  <h4>Let’s Work Together</h4>
-  <a class="cta-link" href="https://calendly.com/gauthemk99" target="_blank" rel="noopener">Let's chat <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-</section></div>
+  </article>
+</section>
+<section class="wrap next-wrap">
+  <a class="next-card reveal" href="../../other_works/flowvest/">
+    <div class="next-text"><p class="label">Next project</p><h2>FlowVest</h2><p class="muted">Product</p>
+      <span class="text-link">View case study <svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+    <div class="next-media"><img class="" src="../../assets/images/BHAilodDHXOo49W0R92kN03QFU.jpg" alt="FlowVest" loading="lazy" decoding="async"></div>
+  </a>
+</section>
+<section class="cta wrap">
+  <div class="cta-card reveal">
+    <div class="cta-glow" aria-hidden="true"></div>
+    <p class="label">Have a project in mind?</p>
+    <h2>Let’s build something <em>people love</em> to use.</h2>
+    <div class="cta-actions">
+      <a class="btn btn-accent btn-lg" href="https://calendly.com/gauthemk99" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> Book a call</a>
+      <a class="btn btn-ghost btn-lg" href="mailto:gauthemk99@gmail.com"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg> gauthemk99@gmail.com</a>
+    </div>
+  </div>
+</section>
 </main>
 <footer class="site-footer">
-  <span>&copy; <span data-year></span> Gauthem Krishna</span>
-  <span><a href="mailto:gauthemk99@gmail.com">gauthemk99@gmail.com</a></span>
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand" href="../../"><img class="brand-mark" src="../../assets/images/gauthem-avatar.jpg" alt="" width="36" height="36"><span class="brand-name">Gauthem Krishna</span></a>
+      <p class="muted footer-blurb">Product designer with 8+ years of experience taking products from 0 to 1 — research, mobile and web UX/UI, design systems and AI-native workflows.</p>
+    </div>
+    <div>
+      <h2 class="label">Pages</h2>
+      <ul class="footer-links">
+        <li><a href="../../professional_works/">Professional works</a></li>
+        <li><a href="../../other_works/">Other works</a></li>
+        <li><a href="../../about/">About</a></li>
+        <li><a href="../../service/">Services</a></li>
+        <li><a href="../../contact/">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="label">Elsewhere</h2>
+      <ul class="footer-links">
+        <li><a class="" href="https://www.linkedin.com/in/gauthemkrishna" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a class="" href="../../assets/Resume_Gauthem.pdf" target="_blank" rel="noopener">Resume</a></li>
+        <li><a class="" href="https://calendly.com/gauthemk99" target="_blank" rel="noopener">Book a call</a></li>
+        <li><a href="mailto:gauthemk99@gmail.com">gauthemk99@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>&copy; <span data-year>2026</span> Gauthem Krishna</span>
+    <a href="#main" class="to-top">Back to top ↑</a>
+  </div>
 </footer>
 <script src="../../assets/js/main.js" defer></script>
 </body>
