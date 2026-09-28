@@ -628,3 +628,9 @@ a.contact-card:hover { border-color: var(--line-strong); }
   .feature:nth-child(even) .feature-media { order: 0; }
 }
 .feature-link, .next-card { position: relative; }
+
+/* Still rendering for mockup screenshots (?shot) */
+.shot *, .shot *::before, .shot *::after { transition: none !important; animation: none !important; }
+.shot .reveal { opacity: 1 !important; transform: none !important; }
+.shot .loader { display: none !important; }
+html.shot { scroll-behavior: auto !important; }
