@@ -1,5 +1,5 @@
 {
- "hero": "assets/images/U7OuUlq6cpaZ2nQq44H1ktyOlOE.png",
+ "hero": "assets/media/thesis/cover.jpg",
  "visit": "https://lnu.diva-portal.org/smash/record.jsf?aq2=%5B%5B%5D%5D&c=2&af=%5B%5D&searchType=SIMPLE&sortOrder2=title_sort_asc&query=H%C3%B6gskoleprovet+&language=en&pid=diva2%3A1949235&aq=%5B%5B%5D%5D&sf=all&aqe=%5B%5D&sortOrder=author_sort_asc&onlyFullText=false&noOfRows=50&dswid=-4780",
  "overview": [
   "For my Master's thesis in Media Technology, I collaborated with <strong>HP-appen</strong>, a Swedish EdTech company preparing students for the <em>högskoleprovet</em> (Sweden’s university entrance exam). The aim was to explore and evaluate how gamification could enhance motivation, retention, and learning outcomes on a digital education platform.",
@@ -148,7 +148,7 @@
  "title": "Thesis Work",
  "category": "Research and Analysis",
  "tags": "Ed-tech",
- "cover": "assets/images/U7OuUlq6cpaZ2nQq44H1ktyOlOE.png",
+ "cover": "assets/media/thesis/cover.jpg",
  "role": "MS thesis, Media Technology",
  "period": "2022 — 2024"
 }
