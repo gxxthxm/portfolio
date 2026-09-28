@@ -429,7 +429,7 @@ def home():
 
 def page_hero(label, title, lede="", portrait=None, compact=False):
     lede_html = f'<p class="page-lede reveal">{lede}</p>' if lede else ""
-    text = f"""<div class="page-hero-text">
+    text = f"""<div class="page-hero-text{"" if portrait else " centered"}">
     <p class="eyebrow reveal">{label}</p>
     <h1 class="page-title reveal">{title}</h1>
     {lede_html}
