@@ -543,7 +543,6 @@ a.contact-card:hover { border-color: var(--line-strong); }
   .next-media { order: -1; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-grid > :first-child { grid-column: 1 / -1; }
-  .br-lg { display: none; }
 }
 @media (max-width: 600px) {
   .brand-name { display: none; }
