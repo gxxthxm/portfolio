@@ -142,6 +142,16 @@
   {
    "t": "p",
    "list": "ul",
+   "h": "<strong>A hello in many languages:</strong> the first visit opens with greetings in English, Swedish, Hindi, Malayalam, Kannada, Tamil and more — the places I’ve lived and worked — before landing on “Hi, I’m Gauthem.”"
+  },
+  {
+   "t": "p",
+   "list": "ul",
+   "h": "<strong>Living headline and numbers:</strong> the hero’s accent word rotates through what good products do, and the key metrics count up as they come into view."
+  },
+  {
+   "t": "p",
+   "list": "ul",
    "h": "<strong>Living background:</strong> the ribbons bend towards the cursor, and a click or tap sends a ripple through them."
   },
   {

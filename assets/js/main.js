@@ -7,7 +7,7 @@
   if (shot) document.querySelectorAll("img[loading=lazy]").forEach(function (i) { i.loading = "eager"; });
   var reduceMotion = shot || window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // ---------- Intro loader: once per browser session ----------
+  // ---------- Intro: "hello" in many languages, once per browser session ----------
   var loader = document.querySelector(".loader");
   if (loader) {
     var seen = false;
@@ -16,17 +16,71 @@
       loader.remove();
     } else {
       try { sessionStorage.setItem("introSeen", "1"); } catch (e) {}
-      var start = Date.now();
+      var wordEl = loader.querySelector(".loader-word");
+      var greetings = [];
+      try { greetings = JSON.parse(wordEl.getAttribute("data-greetings")); } catch (e) {}
+      var finished = false, loaded = document.readyState === "complete";
       var hide = function () {
-        setTimeout(function () {
-          loader.classList.add("done");
-          setTimeout(function () { loader.remove(); }, 800);
-        }, Math.max(0, 1500 - (Date.now() - start)));
+        if (!finished || !loaded || loader.classList.contains("done")) return;
+        loader.classList.add("done");
+        setTimeout(function () { loader.remove(); }, 700);
       };
-      if (document.readyState === "complete") hide(); else window.addEventListener("load", hide);
-      setTimeout(hide, 4000); // never block the page on a slow asset
+      window.addEventListener("load", function () { loaded = true; hide(); });
+      setTimeout(function () { loaded = true; finished = true; hide(); }, 5000); // never block on a slow asset
+      var n = 0;
+      var step = function () {
+        var g = greetings[n];
+        if (!g) { finished = true; hide(); return; }
+        wordEl.textContent = g[0];
+        wordEl.setAttribute("lang", g[1]);
+        wordEl.classList.remove("flash"); void wordEl.offsetWidth; wordEl.classList.add("flash");
+        var last = n === greetings.length - 1;
+        wordEl.classList.toggle("final", last);
+        n++;
+        // Linger on the first "Hello", flash through the rest, then hold the name.
+        setTimeout(step, n === 1 ? 420 : last ? 900 : 150);
+      };
+      step();
     }
   }
+
+  // ---------- Hero: rotating accent word ----------
+  var rotator = document.querySelector(".rotator");
+  if (rotator && !reduceMotion) {
+    var rWords = rotator.getAttribute("data-words").split("|");
+    var rEl = rotator.querySelector(".rotator-word");
+    var ri = 0;
+    setInterval(function () {
+      if (document.hidden) return;
+      rEl.classList.add("out");
+      setTimeout(function () {
+        ri = (ri + 1) % rWords.length;
+        rEl.textContent = rWords[ri];
+        rEl.classList.remove("out");
+      }, 280);
+    }, 2400);
+  }
+
+  // ---------- Stats count up when they come into view ----------
+  var counters = Array.prototype.slice.call(document.querySelectorAll("[data-count]"));
+  var countUp = function (el) {
+    var text = el.textContent, m = text.match(/(\d+(?:\.\d+)?)(?!.*\d)/);   // last number in the string
+    if (!m || reduceMotion) return;
+    var target = parseFloat(m[1]), before = text.slice(0, m.index), after = text.slice(m.index + m[1].length);
+    var t0 = performance.now(), dur = 1300;
+    var frame = function (now) {
+      var k = Math.min(1, (now - t0) / dur), eased = 1 - Math.pow(1 - k, 3);
+      el.textContent = before + Math.round(target * eased) + after;
+      if (k < 1) requestAnimationFrame(frame);
+    };
+    requestAnimationFrame(frame);
+  };
+
+  // ---------- A small wave when you switch tabs ----------
+  var baseTitle = document.title;
+  document.addEventListener("visibilitychange", function () {
+    document.title = document.hidden ? "👋 Come back soon — Gauthem" : baseTitle;
+  });
 
   // ---------- Mobile menu ----------
   var toggle = document.querySelector(".menu-toggle");
@@ -312,6 +366,13 @@
     if (progress) {
       var max = document.documentElement.scrollHeight - vh;
       progress.style.transform = "scaleX(" + (max > 0 ? Math.min(1, scrollY / max) : 0) + ")";
+    }
+
+    if (counters.length) {
+      counters = counters.filter(function (el) {
+        if (el.getBoundingClientRect().top < vh * 0.9) { countUp(el); return false; }
+        return true;
+      });
     }
 
     if (pending.length) {

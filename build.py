@@ -174,7 +174,7 @@ def page(title, active, base, body, description=None, body_class=""):
 <script>document.documentElement.classList.add("js");if(/[?&]shot(&|=|$)/.test(location.search))document.documentElement.classList.add("shot")</script>
 </head>
 <body class="{body_class}">
-<div class="loader" aria-hidden="true"><p class="loader-name">{escape(SITE["name"]).upper()}</p><span class="loader-line"></span></div>
+<div class="loader" aria-hidden="true"><p class="loader-word" data-greetings='{GREETINGS}'>Hello</p></div>
 <canvas class="glow-canvas" aria-hidden="true"></canvas>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
@@ -248,6 +248,13 @@ def footer(base):
 
 # ---------- components ----------
 
+GREETINGS = escape(json.dumps([
+    ["Hello", "en"], ["Hej", "sv"], ["नमस्ते", "hi"], ["നമസ്കാരം", "ml"], ["ನಮಸ್ಕಾರ", "kn"],
+    ["வணக்கம்", "ta"], ["Hola", "es"], ["Bonjour", "fr"], ["こんにちは", "ja"], ["안녕하세요", "ko"],
+    ["Hi, I’m Gauthem.", "en"],
+], ensure_ascii=False), quote=True)
+
+
 def section_head(label, title, aside=""):
     if aside and not aside.lstrip().startswith("<"):
         aside = f'<p class="section-desc">{aside}</p>'
@@ -264,7 +271,7 @@ def ticker():
 
 def stats():
     rows = SITE["stats"]
-    cells = "".join(f'<div class="stat reveal"><strong>{v}</strong><span>{escape(l)}</span></div>' for v, l in rows)
+    cells = "".join(f'<div class="stat reveal"><strong data-count>{v}</strong><span>{escape(l)}</span></div>' for v, l in rows)
     return f'<section class="stats wrap" id="highlights" aria-label="Highlights">{cells}</section>'
 
 
@@ -441,7 +448,7 @@ def home():
     body = f"""<section class="hero">
   <div class="wrap hero-inner">
     <p class="eyebrow eyebrow-avatar reveal"><img src="{base}{SITE["avatar"]}" alt="{escape(SITE["name"])}" width="28" height="28"><span>{escape(SITE["role"])}</span></p>
-    <h1 class="hero-title reveal">I design products that <em>grow</em> — <br class="br-lg">from first insight to shipped pixel.</h1>
+    <h1 class="hero-title reveal">I design products that <em class="rotator" data-words="grow|convert|scale|delight|last"><span class="sr-only">grow</span><span class="rotator-word" aria-hidden="true">grow</span></em> — <br class="br-lg">from first insight to shipped pixel.</h1>
     <p class="hero-meta reveal"><span>Product Designer</span><i></i><span>{escape(SITE["stats"][0][0])} Years of Experience</span><i></i><span>{escape(SITE["location"])}</span><i></i><span>{escape(SITE["relocation"])}</span></p>
     <div class="hero-actions reveal">
       <a class="btn btn-accent btn-lg" href="#work">View selected work {icon("arrow-r")}</a>

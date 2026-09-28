@@ -102,10 +102,6 @@ main, .site-footer { position: relative; z-index: 1; }
   transition: opacity .7s var(--ease), visibility .7s;
 }
 .loader.done { opacity: 0; visibility: hidden; }
-.loader-name { font-weight: 600; font-size: 15px; letter-spacing: .16em; color: var(--text); }
-.loader-line { position: absolute; left: 50%; top: calc(50% + 24px); width: 120px; height: 1px; margin-left: -60px; background: var(--line-strong); overflow: hidden; }
-.loader-line::after { content: ""; position: absolute; inset: 0; background: var(--peach); transform-origin: 0 50%; animation: load 1.4s var(--ease) forwards; }
-@keyframes load { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 
 /* ---------- Buttons & links ---------- */
 .btn {
@@ -744,3 +740,17 @@ kbd {
   .menu-toggle { margin-left: 8px; }
 }
 .palette-input::-webkit-search-cancel-button { -webkit-appearance: none; display: none; }
+
+/* ---------- Intro greetings ---------- */
+.loader-word {
+  margin: 0; font-weight: 600; letter-spacing: -0.03em; color: var(--text);
+  font-size: clamp(36px, 6vw, 72px); line-height: 1.2; text-align: center; padding: 0 16px;
+}
+.loader-word.flash { animation: greet .32s var(--ease) both; }
+.loader-word.final { color: var(--peach); font-family: var(--font-serif); font-style: italic; font-weight: 400; letter-spacing: -0.01em; }
+@keyframes greet { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+/* ---------- Hero rotating word ---------- */
+.rotator { display: inline-block; }
+.rotator-word { display: inline-block; transition: opacity .28s var(--ease), transform .28s var(--ease); }
+.rotator-word.out { opacity: 0; transform: translateY(.25em); }
