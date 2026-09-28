@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Red+Hat+Display:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/style.css">
-<script>document.documentElement.classList.add("js");if(/[?&]shot(&|=|$)/.test(location.search))document.documentElement.classList.add("shot")</script>
+<script>document.documentElement.classList.add("js");if(/[?&]shot(&|=|$)/.test(location.search))document.documentElement.classList.add("shot");if(!("onpagereveal" in window))document.documentElement.classList.add("no-vt")</script>
 </head>
 <body class="case">
 <div class="loader" aria-hidden="true"><p class="loader-word" data-greetings='[[&quot;Hello&quot;, &quot;en&quot;], [&quot;Hej&quot;, &quot;sv&quot;], [&quot;നമസ്കാരം&quot;, &quot;ml&quot;], [&quot;Hola&quot;, &quot;es&quot;], [&quot;Bonjour&quot;, &quot;fr&quot;], [&quot;Ciao&quot;, &quot;it&quot;], [&quot;Olá&quot;, &quot;pt&quot;], [&quot;こんにちは&quot;, &quot;ja&quot;], [&quot;你好&quot;, &quot;zh&quot;], [&quot;مرحبا&quot;, &quot;ar&quot;], [&quot;Hi, I’m Gauthem.&quot;, &quot;en&quot;]]'>Hello</p></div>
@@ -32,7 +32,7 @@
     <button class="search-btn" type="button" aria-label="Search projects and pages" data-open-palette><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg><kbd>⌘K</kbd></button>
     <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
   </div>
-  <div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-menu" id="mobile-menu" data-lenis-prevent>
     <a href="../../">Home</a><a href="../../professional_works/">Work</a><a href="../../other_works/" aria-current="page">Other Works</a><a href="../../about/">About</a><a href="../../service/">Services</a><a href="../../contact/">Contact</a>
     <a class="btn btn-accent" href="https://calendly.com/gauthemk99" target="_blank" rel="noopener">Let’s talk <svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
   </div>
@@ -48,7 +48,7 @@
   </div>
 </section>
 <div class="wrap">
-  <figure class="case-cover reveal"><img class="" src="../../assets/images/noHqySK5SSMeWYhVLss2HbiRY.png" alt="MinFit"></figure>
+  <figure class="case-cover reveal" style="view-transition-name:cover-minfit"><img class="" src="../../assets/images/noHqySK5SSMeWYhVLss2HbiRY.png" alt="MinFit"></figure>
 </div>
 <section class="wrap case-layout">
   <aside class="case-aside"><nav class="toc" aria-label="On this page"><p class="label">On this page</p><ol><li><a href="#problem-statement">Problem Statement</a></li><li><a href="#goals">Goals</a></li><li><a href="#user-persona">User Persona</a></li><li><a href="#features-user-flow">Features &amp; User Flow</a></li><li><a href="#design-highlights">Design Highlights</a></li><li><a href="#development-with-claude-ai">Development with Claude AI</a></li><li><a href="#outcomes-reflection">Outcomes &amp; Reflection</a></li><li><a href="#future-outlook">Future Outlook</a></li><li><a href="#conclusion">Conclusion</a></li></ol></nav></aside>
@@ -117,7 +117,7 @@
   <a class="next-card reveal" href="../../other_works/flowvest/">
     <div class="next-text"><p class="label">Next project</p><h2>FlowVest</h2><p class="muted">Product</p>
       <span class="text-link">View case study <svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
-    <div class="next-media"><img class="" src="../../assets/images/BHAilodDHXOo49W0R92kN03QFU.jpg" alt="FlowVest" loading="lazy" decoding="async"></div>
+    <div class="next-media" style="view-transition-name:cover-flowvest"><img class="" src="../../assets/images/BHAilodDHXOo49W0R92kN03QFU.jpg" alt="FlowVest" loading="lazy" decoding="async"></div>
   </a>
 </section>
 <section class="cta wrap">
@@ -163,7 +163,7 @@
     <a href="#main" class="to-top">Back to top ↑</a>
   </div>
 </footer>
-<div class="palette" role="dialog" aria-modal="true" aria-label="Search" hidden>
+<div class="palette" data-lenis-prevent role="dialog" aria-modal="true" aria-label="Search" hidden>
   <div class="palette-box">
     <input class="palette-input" type="search" placeholder="Jump to a project or page…" aria-label="Search" autocomplete="off">
     <ul class="palette-list" role="listbox"></ul>
@@ -172,6 +172,7 @@
 </div>
 <div class="lightbox" hidden><img alt=""><button type="button" aria-label="Close image">×</button></div>
 <script>window.__INDEX=[{"t": "Home", "s": "Page", "u": "../../"}, {"t": "Professional works", "s": "Page", "u": "../../professional_works/"}, {"t": "Other works", "s": "Page", "u": "../../other_works/"}, {"t": "About", "s": "Page", "u": "../../about/"}, {"t": "Services", "s": "Page", "u": "../../service/"}, {"t": "Contact", "s": "Page", "u": "../../contact/"}, {"t": "Resume (PDF)", "s": "Link", "u": "../../assets/Resume_Gauthem.pdf", "x": 1}, {"t": "Book a call", "s": "Link", "u": "https://calendly.com/gauthemk99", "x": 1}, {"t": "LinkedIn", "s": "Link", "u": "https://www.linkedin.com/in/gauthemkrishna", "x": 1}, {"t": "Email gauthemk99@gmail.com", "s": "Link", "u": "mailto:gauthemk99@gmail.com"}, {"t": "HP-appen 2.0", "s": "Professional work · Product", "u": "../../professional_works/hp-appen-2-0/"}, {"t": "HP-appen 1.0", "s": "Professional work · Product", "u": "../../professional_works/hpappen/"}, {"t": "Agrivator", "s": "Professional work · Product", "u": "../../professional_works/agrivator/"}, {"t": "Zomato", "s": "Professional work · Brand", "u": "../../professional_works/zomato/"}, {"t": "IEEE", "s": "Professional work · Design", "u": "../../professional_works/ieee/"}, {"t": "Thesis Work", "s": "Professional work · Research and Analysis", "u": "../../professional_works/thesis-work/"}, {"t": "This Portfolio", "s": "Side project · Design and AI", "u": "../../other_works/portfolio/"}, {"t": "Flashback", "s": "Side project · Redesign", "u": "../../other_works/flashback/"}, {"t": "Molasses", "s": "Side project · Research and Design", "u": "../../other_works/molasses/"}, {"t": "MinFit", "s": "Side project · Product", "u": "../../other_works/minfit/"}, {"t": "FlowVest", "s": "Side project · Product", "u": "../../other_works/flowvest/"}, {"t": "SpeaRay", "s": "Side project · Product", "u": "../../other_works/spearay/"}, {"t": "VistaGo", "s": "Side project · Research and Design", "u": "../../other_works/vistago/"}, {"t": "Medi Connect", "s": "Side project · Product", "u": "../../other_works/mediconnect/"}, {"t": "IFE Case Study", "s": "Side project · Research and Design", "u": "../../other_works/ife/"}, {"t": "Game Hub", "s": "Side project · Redesign", "u": "../../other_works/ghub/"}, {"t": "AutoPulse", "s": "Side project · Research and Design", "u": "../../other_works/autopulse/"}, {"t": "Capella", "s": "Side project · Redesign", "u": "../../other_works/capella/"}, {"t": "FlightTracker", "s": "Side project · Design and AI", "u": "../../other_works/flighttracker/"}, {"t": "FumeCart", "s": "Side project · Redesign", "u": "../../other_works/fumecart/"}, {"t": "Limelight", "s": "Side project · Redesign", "u": "../../other_works/limelight/"}, {"t": "Branding Works", "s": "Side project · Brand", "u": "../../other_works/brandingworks/"}]</script>
+<script src="../../assets/js/vendor/lenis.min.js" defer></script>
 <script src="../../assets/js/main.js" defer></script>
 </body>
 </html>

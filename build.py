@@ -171,7 +171,7 @@ def page(title, active, base, body, description=None, body_class=""):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Red+Hat+Display:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{base}assets/css/style.css">
-<script>document.documentElement.classList.add("js");if(/[?&]shot(&|=|$)/.test(location.search))document.documentElement.classList.add("shot")</script>
+<script>document.documentElement.classList.add("js");if(/[?&]shot(&|=|$)/.test(location.search))document.documentElement.classList.add("shot");if(!("onpagereveal" in window))document.documentElement.classList.add("no-vt")</script>
 </head>
 <body class="{body_class}">
 <div class="loader" aria-hidden="true"><p class="loader-word" data-greetings='{GREETINGS}'>Hello</p></div>
@@ -187,7 +187,7 @@ def page(title, active, base, body, description=None, body_class=""):
     <button class="search-btn" type="button" aria-label="Search projects and pages" data-open-palette>{icon("search")}<kbd>⌘K</kbd></button>
     <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
   </div>
-  <div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-menu" id="mobile-menu" data-lenis-prevent>
     <a href="{base}">Home</a>{nav}
     {ext(L["calendly"], "Let’s talk " + icon("arrow-ur"), "btn btn-accent")}
   </div>
@@ -196,7 +196,7 @@ def page(title, active, base, body, description=None, body_class=""):
 {body}
 </main>
 {footer(base)}
-<div class="palette" role="dialog" aria-modal="true" aria-label="Search" hidden>
+<div class="palette" data-lenis-prevent role="dialog" aria-modal="true" aria-label="Search" hidden>
   <div class="palette-box">
     <input class="palette-input" type="search" placeholder="Jump to a project or page…" aria-label="Search" autocomplete="off">
     <ul class="palette-list" role="listbox"></ul>
@@ -205,6 +205,7 @@ def page(title, active, base, body, description=None, body_class=""):
 </div>
 <div class="lightbox" hidden><img alt=""><button type="button" aria-label="Close image">×</button></div>
 <script>window.__INDEX={search_index(base)}</script>
+<script src="{base}assets/js/vendor/lenis.min.js" defer></script>
 <script src="{base}assets/js/main.js" defer></script>
 </body>
 </html>
@@ -282,7 +283,7 @@ def feature_row(p, i, base):
   <a class="feature-link" href="{url_for(p, base)}">
     <span class="badge">{i:02d}</span>
     <span class="feature-corner">{escape(p.get("role") or p.get("domain") or p.get("category", ""))}</span>
-    <div class="feature-media" data-previews="{escape(previews(p, base))}">{img(p["cover"], base, p["title"])}</div>
+    <div class="feature-media" style="view-transition-name:cover-{p["slug"]}" data-previews="{escape(previews(p, base))}">{img(p["cover"], base, p["title"])}</div>
     <div class="feature-body">
       <p class="feature-meta">{escape(meta)}</p>
       <h3>{escape(p["title"])}</h3>
@@ -297,7 +298,7 @@ def feature_row(p, i, base):
 def work_card(p, base, show_tags=True):
     tag = escape(tags_of(p)[0]) if show_tags and tags_of(p) else ""
     return f"""<a class="work-card reveal" href="{url_for(p, base)}" data-category="{escape(p.get("category", ""))}">
-  <div class="work-media" data-previews="{escape(previews(p, base))}">{img(p["cover"], base, p["title"])}<span class="work-arrow">{icon("arrow-ur")}</span></div>
+  <div class="work-media" style="view-transition-name:cover-{p["slug"]}" data-previews="{escape(previews(p, base))}">{img(p["cover"], base, p["title"])}<span class="work-arrow">{icon("arrow-ur")}</span></div>
   <div class="work-info">
     <div><h3>{escape(p["title"])}</h3><p>{escape(p.get("category", ""))}</p></div>
     {f'<span class="pill">{tag}</span>' if tag else ""}
@@ -650,7 +651,7 @@ def project_page(p):
   </div>
 </section>
 <div class="wrap">
-  <figure class="case-cover reveal">{img(cover, base, p["title"], eager=True)}</figure>
+  <figure class="case-cover reveal" style="view-transition-name:cover-{p["slug"]}">{img(cover, base, p["title"], eager=True)}</figure>
 </div>
 <section class="wrap case-layout{" no-toc" if not toc_html else ""}">
   <aside class="case-aside">{toc_html}</aside>
@@ -663,7 +664,7 @@ def project_page(p):
   <a class="next-card reveal" href="{url_for(nxt, base)}">
     <div class="next-text"><p class="label">Next project</p><h2>{escape(nxt["title"])}</h2><p class="muted">{escape(nxt.get("category", ""))}</p>
       <span class="text-link">View case study {icon("arrow-r")}</span></div>
-    <div class="next-media">{img(nxt["cover"], base, nxt["title"])}</div>
+    <div class="next-media" style="view-transition-name:cover-{nxt["slug"]}">{img(nxt["cover"], base, nxt["title"])}</div>
   </a>
 </section>
 {cta(base)}"""

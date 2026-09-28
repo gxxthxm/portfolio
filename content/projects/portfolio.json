@@ -142,6 +142,11 @@
   {
    "t": "p",
    "list": "ul",
+   "h": "<strong>Seamless navigation:</strong> pages transition into each other, a project’s cover image morphs from its card into the case study, and scrolling is smooth and weighted, with gentle parallax on large images."
+  },
+  {
+   "t": "p",
+   "list": "ul",
    "h": "<strong>A hello in many languages:</strong> the first visit opens with greetings from around the world — including Swedish and Malayalam, for Sweden and Kerala, where I’ve studied and worked — before landing on “Hi, I’m Gauthem.”"
   },
   {

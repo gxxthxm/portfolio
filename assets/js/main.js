@@ -87,11 +87,12 @@
   if (toggle) {
     toggle.addEventListener("click", function () {
       var open = doc.classList.toggle("menu-open");
+      if (typeof lockScroll === "function") lockScroll(open);
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
       toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     });
     document.querySelectorAll(".mobile-menu a").forEach(function (a) {
-      a.addEventListener("click", function () { doc.classList.remove("menu-open"); });
+      a.addEventListener("click", function () { doc.classList.remove("menu-open"); if (typeof lockScroll === "function") lockScroll(false); });
     });
   }
 
@@ -223,6 +224,59 @@
   }
 
 
+
+  // ---------- Smooth scrolling ----------
+  var lenis = null;
+  var headerOffset = function () { return -((header && header.offsetHeight) || 72) - 16; };
+  if (window.Lenis && !reduceMotion) {
+    lenis = new window.Lenis({ lerp: 0.09, wheelMultiplier: 1, smoothWheel: true });
+    window.__lenis = lenis;   // handy for debugging in the console
+    var lraf = function (t) { lenis.raf(t); requestAnimationFrame(lraf); };
+    requestAnimationFrame(lraf);
+  }
+  // In-page links glide to their target (and keep the URL hash).
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest('a[href*="#"]');
+    if (!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    var url = new URL(a.href, location.href);
+    if (url.pathname !== location.pathname || !url.hash) return;
+    var target = url.hash === "#main" ? 0 : document.getElementById(decodeURIComponent(url.hash.slice(1)));
+    if (target === null) return;
+    e.preventDefault();
+    if (lenis) lenis.scrollTo(target, { offset: target === 0 ? 0 : headerOffset(), duration: 1.2 });
+    else window.scrollTo({ top: target === 0 ? 0 : target.getBoundingClientRect().top + window.scrollY + headerOffset(), behavior: reduceMotion ? "auto" : "smooth" });
+    history.replaceState(null, "", url.hash);
+  });
+  var lockScroll = function (on) { if (lenis) { on ? lenis.stop() : lenis.start(); } };
+
+  // ---------- Page transitions: fallback for browsers without View Transitions ----------
+  if (doc.classList.contains("no-vt") && !reduceMotion) {
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest("a[href]");
+      if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      if (a.target === "_blank" || a.hasAttribute("download")) return;
+      var url = new URL(a.href, location.href);
+      if (url.origin !== location.origin || (url.pathname === location.pathname && url.hash)) return;
+      if (/\.(pdf|jpg|png|mp4)$/i.test(url.pathname)) return;
+      e.preventDefault();
+      doc.classList.add("leaving");
+      setTimeout(function () { location.href = url.href; }, 240);
+    });
+    window.addEventListener("pageshow", function () { doc.classList.remove("leaving"); });
+  }
+
+  // ---------- Staggered reveals and parallax ----------
+  document.querySelectorAll(".work-grid, .features, .services-grid, .toolkit, .contact-grid, .edu-grid, .exp-list, .stats").forEach(function (group) {
+    var kids = group.querySelectorAll(":scope > .reveal");
+    kids.forEach(function (el, i) {
+      el.style.setProperty("--d", Math.min(i % 6, 5) * 80 + "ms");
+      // drop the delay once revealed, so hover effects stay instant
+      el.addEventListener("transitionend", function clear() { el.style.removeProperty("--d"); el.removeEventListener("transitionend", clear); });
+    });
+  });
+  var parallax = reduceMotion ? [] : Array.prototype.slice.call(document.querySelectorAll(".feature-media > img, .case-cover img, .next-media img"));
+  parallax.forEach(function (im) { im.classList.add("parallax"); });
+
   // ---------- Card hover previews: cycle through screens from the case study ----------
   if (!reduceMotion && window.matchMedia("(hover: hover)").matches) {
     document.querySelectorAll("[data-previews]").forEach(function (media) {
@@ -300,11 +354,11 @@
     }
     function open() {
       lastFocus = document.activeElement;
-      palette.hidden = false; doc.classList.add("palette-open");
+      palette.hidden = false; doc.classList.add("palette-open"); lockScroll(true);
       input.value = ""; active = 0; render(); input.focus();
     }
     function close() {
-      palette.hidden = true; doc.classList.remove("palette-open");
+      palette.hidden = true; doc.classList.remove("palette-open"); lockScroll(false);
       if (lastFocus && lastFocus.focus) lastFocus.focus();
     }
     document.addEventListener("keydown", function (e) {
@@ -330,10 +384,10 @@
       im.classList.add("zoomable");
       im.addEventListener("click", function () {
         lbImg.src = im.currentSrc || im.src; lbImg.alt = im.alt;
-        lightbox.hidden = false; doc.classList.add("lightbox-open");
+        lightbox.hidden = false; doc.classList.add("lightbox-open"); lockScroll(true);
       });
     });
-    var closeLb = function () { lightbox.hidden = true; doc.classList.remove("lightbox-open"); };
+    var closeLb = function () { lightbox.hidden = true; doc.classList.remove("lightbox-open"); lockScroll(false); };
     lightbox.addEventListener("click", closeLb);
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !lightbox.hidden) closeLb(); });
   }
@@ -366,6 +420,15 @@
     if (progress) {
       var max = document.documentElement.scrollHeight - vh;
       progress.style.transform = "scaleX(" + (max > 0 ? Math.min(1, scrollY / max) : 0) + ")";
+    }
+
+    if (parallax.length) {
+      for (var pi = 0; pi < parallax.length; pi++) {
+        var r = parallax[pi].parentElement.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > vh) continue;
+        var prog = (r.top + r.height / 2 - vh / 2) / vh;       // -0.5 .. 0.5 while on screen
+        parallax[pi].style.setProperty("--py", (prog * -48).toFixed(1) + "px");
+      }
     }
 
     if (counters.length) {

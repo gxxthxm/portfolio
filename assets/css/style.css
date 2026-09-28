@@ -754,3 +754,42 @@ kbd {
 .rotator { display: inline-block; }
 .rotator-word { display: inline-block; transition: opacity .28s var(--ease), transform .28s var(--ease); }
 .rotator-word.out { opacity: 0; transform: translateY(.25em); }
+
+/* ==========================================================
+   Page transitions (cross-document View Transitions)
+   ========================================================== */
+@view-transition { navigation: auto; }
+.site-header { view-transition-name: site-header; }
+.glow-canvas { view-transition-name: ribbons; }
+::view-transition-old(root) { animation: vt-out .32s cubic-bezier(.4, 0, .2, 1) both; }
+::view-transition-new(root) { animation: vt-in .6s cubic-bezier(.2, .7, .2, 1) .08s both; }
+::view-transition-old(ribbons), ::view-transition-new(ribbons) { animation: none; }
+::view-transition-group(*) { animation-duration: .6s; animation-timing-function: cubic-bezier(.2, .7, .2, 1); }
+@keyframes vt-out { to { opacity: 0; transform: translateY(-20px); } }
+@keyframes vt-in { from { opacity: 0; transform: translateY(28px); } }
+
+/* Fallback for browsers without them: fade the page in and out */
+.no-vt main, .no-vt .site-footer { animation: vt-in .55s cubic-bezier(.2, .7, .2, 1) both; }
+.no-vt.leaving main, .no-vt.leaving .site-footer { opacity: 0; transform: translateY(-16px); transition: opacity .25s ease, transform .25s ease; }
+
+/* ==========================================================
+   Smooth scrolling (Lenis) + scroll-linked motion
+   ========================================================== */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* Staggered reveals: siblings arrive one after another (delay set per item in JS) */
+.js .reveal { transition-delay: var(--d, 0ms); }
+
+/* Gentle parallax on large images */
+.parallax { translate: 0 var(--py, 0px); scale: 1.08; will-change: translate; }
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+  .no-vt main, .no-vt .site-footer { animation: none; }
+  .parallax { translate: none; scale: none; }
+}
+.shot main, .shot .site-footer { animation: none !important; }
+html.lenis { scroll-behavior: auto !important; }
