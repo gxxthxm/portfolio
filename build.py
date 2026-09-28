@@ -74,7 +74,8 @@ def ext(href, label, cls=""):
 
 
 def resume(base):
-    return base + SITE["links"]["resume"]
+    r = SITE["links"]["resume"]
+    return r if r.startswith("http") else base + r
 
 
 def fix_links(html, base):
@@ -109,7 +110,7 @@ def search_index(base):
         {"t": "About", "s": "Page", "u": base + "about/"},
         {"t": "Services", "s": "Page", "u": base + "service/"},
         {"t": "Contact", "s": "Page", "u": base + "contact/"},
-        {"t": "Resume (PDF)", "s": "Link", "u": base + L["resume"], "x": 1},
+        {"t": "Resume", "s": "Link", "u": resume(base), "x": 1},
         {"t": "Book a call", "s": "Link", "u": L["calendly"], "x": 1},
         {"t": "LinkedIn", "s": "Link", "u": L["linkedin"], "x": 1},
         {"t": "Email " + SITE["email"], "s": "Link", "u": "mailto:" + SITE["email"]},
@@ -522,7 +523,7 @@ def about():
     body += f"""<section class="section wrap split">
   <div class="split-side">{section_head("Career", "Work history")}
     <div class="reveal about-actions">
-      {ext(resume(base), icon("file") + " Download resume", "btn btn-accent")}
+      {ext(resume(base), icon("file") + " View resume", "btn btn-accent")}
       <a class="btn btn-ghost" href="{base}contact/">Get in touch</a>
     </div>
   </div>
@@ -572,7 +573,7 @@ def contact():
     {icon("linkedin")}<span class="label">LinkedIn</span><strong>in/gauthemkrishna</strong>
   </a>
   <a class="contact-card reveal" href="{escape(resume(base))}" target="_blank" rel="noopener">
-    {icon("file")}<span class="label">Resume</span><strong>Download PDF</strong>
+    {icon("file")}<span class="label">Resume</span><strong>View on Google Drive</strong>
   </a>
   <div class="contact-card reveal">
     {icon("pin")}<span class="label">Based in</span><strong>{escape(SITE["location"])}</strong><span class="muted">{escape(SITE["relocation"])}</span><span class="muted local-time" data-local-time></span>
