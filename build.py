@@ -146,7 +146,7 @@ def page(title, active, base, body, description=None, body_class=""):
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href="{base}" aria-label="{escape(SITE["name"])} — home">
-      <span class="brand-mark">G</span><span class="brand-name">{escape(SITE["name"])}</span><span class="brand-role">— Product designer</span>
+      <img class="brand-mark" src="{base}{SITE["avatar"]}" alt="" width="36" height="36"><span class="brand-name">{escape(SITE["name"])}</span><span class="brand-role">— Product designer</span>
     </a>
     <nav class="nav" aria-label="Main">{nav}</nav>
     {ext(L["calendly"], "Let’s talk " + icon("arrow-ur"), "btn btn-accent btn-sm header-cta")}
@@ -172,7 +172,7 @@ def footer(base):
     return f"""<footer class="site-footer">
   <div class="wrap footer-grid">
     <div>
-      <a class="brand" href="{base}"><span class="brand-mark">G</span><span class="brand-name">{escape(SITE["name"])}</span></a>
+      <a class="brand" href="{base}"><img class="brand-mark" src="{base}{SITE["avatar"]}" alt="" width="36" height="36"><span class="brand-name">{escape(SITE["name"])}</span></a>
       <p class="muted footer-blurb">{escape(SITE["contactBlurb"])}</p>
     </div>
     <div>
