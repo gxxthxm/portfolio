@@ -142,6 +142,11 @@
   {
    "t": "p",
    "list": "ul",
+   "h": "<strong>A 25-second showcase:</strong> the homepage hero plays a short reel built from the site’s own content — intro, impact, career journey, selected work, craft and a call to action — with story-style progress bars, pause and scene controls."
+  },
+  {
+   "t": "p",
+   "list": "ul",
    "h": "<strong>Seamless navigation:</strong> pages transition into each other, a project’s cover image morphs from its card into the case study, and scrolling is smooth and weighted, with gentle parallax on large images."
   },
   {

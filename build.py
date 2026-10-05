@@ -8,6 +8,7 @@ root so the site can be served directly by GitHub Pages.
 Usage: python3 build.py
 """
 import datetime
+import hashlib
 import json
 import os
 import re
@@ -23,6 +24,16 @@ for name in os.listdir(os.path.join(ROOT, "content", "projects")):
         PROJECTS[p["slug"]] = p
 
 YEAR = datetime.date.today().year
+
+def asset_version(rel):
+    """Short content hash, appended to CSS/JS URLs so browsers fetch new versions after a deploy."""
+    with open(os.path.join(ROOT, rel), "rb") as f:
+        return hashlib.sha1(f.read()).hexdigest()[:8]
+
+
+V_CSS = asset_version("assets/css/style.css")
+V_JS = asset_version("assets/js/main.js")
+
 
 NAV = [
     ("Work", "professional_works/", "professional_works"),
@@ -160,7 +171,7 @@ def page(title, active, base, body, description=None, body_class=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Red+Hat+Display:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{base}assets/css/style.css">
+<link rel="stylesheet" href="{base}assets/css/style.css?v={V_CSS}">
 <script>document.documentElement.classList.add("js");if(/[?&]shot(&|=|$)/.test(location.search))document.documentElement.classList.add("shot");if(!("onpagereveal" in window))document.documentElement.classList.add("no-vt")</script>
 </head>
 <body class="{body_class}">
@@ -196,7 +207,7 @@ def page(title, active, base, body, description=None, body_class=""):
 <div class="lightbox" hidden><img alt=""><button type="button" aria-label="Close image">×</button></div>
 <script>window.__INDEX={search_index(base)}</script>
 <script src="{base}assets/js/vendor/lenis.min.js" defer></script>
-<script src="{base}assets/js/main.js" defer></script>
+<script src="{base}assets/js/main.js?v={V_JS}" defer></script>
 </body>
 </html>
 """
@@ -446,6 +457,7 @@ def home():
       {ext(resume(base), icon("file") + " Resume", "btn btn-ghost btn-lg")}
       {ext(L["linkedin"], icon("linkedin") + '<span class="sr-only">LinkedIn</span>', "btn btn-ghost btn-lg btn-icon")}
     </div>
+    {showcase(base)}
     <p class="hero-lede reveal">{escape(SITE["intro"])}</p>
   </div>
 </section>
@@ -480,6 +492,81 @@ def home():
 </section>
 {cta(base)}"""
     return page("", "home", base, body, body_class="home")
+
+
+def showcase(base):
+    """Six-scene animated reel that summarises the portfolio (driven by main.js)."""
+    L = SITE["links"]
+    # 1 · Intro
+    s1 = f"""<div class="sc-intro">
+      <img class="sc-photo sc-in" style="--i:0" src="{base}{SITE["photoSquare"]}" alt="">
+      <div>
+        <p class="sc-kicker sc-in" style="--i:1">Product designer</p>
+        <p class="sc-name sc-in" style="--i:2">{escape(SITE["name"])}</p>
+        <p class="sc-line sc-in" style="--i:3">Head of Product at HP-appen</p>
+        <p class="sc-line sc-dim sc-in" style="--i:4">{escape(SITE["location"])} · {escape(SITE["relocation"])}</p>
+      </div>
+    </div>"""
+    # 2 · Impact
+    cells = "".join(
+        f'<div class="sc-stat sc-in" style="--i:{k}"><strong data-sc-count>{escape(v)}</strong><span>{escape(l)}</span></div>'
+        for k, (v, l) in enumerate(SITE["stats"])
+    )
+    s2 = f'<div class="sc-head sc-in" style="--i:0">Impact, measured</div><div class="sc-stats">{cells}</div>'
+    # 3 · Journey (oldest first)
+    stops = []
+    for e in reversed(SITE["experience"]):
+        year = re.search(r"\d{4}", e["period"]).group(0)
+        role = e["note"].split(" until")[0] if e.get("note") else e["role"].split(" — ")[0].split(" (")[0]
+        stops.append((year, e["org"], role))
+    stops.append(("2025", "HP-appen", "Head of Product"))
+    nodes = "".join(
+        f'<li class="sc-node sc-in" style="--i:{k + 1}"><span class="sc-year">{y}</span><span class="sc-dot"></span><strong>{escape(o)}</strong><small>{escape(r)}</small></li>'
+        for k, (y, o, r) in enumerate(stops)
+    )
+    s3 = f'<div class="sc-head sc-in" style="--i:0">The journey</div><div class="sc-track"><span class="sc-rail"></span><ol class="sc-nodes">{nodes}</ol></div>'
+    # 4 · Work
+    picks = SITE["professional"][:4] + [s for s in SITE["other"][:6] if s != "portfolio"][:4]
+    tiles = "".join(
+        f'<figure class="sc-tile"><img src="{base}{PROJECTS[s]["cover"]}" alt="" loading="lazy"><figcaption>{escape(PROJECTS[s]["title"])}</figcaption></figure>'
+        for s in picks
+    )
+    s4 = f'<div class="sc-head sc-in" style="--i:0">{len(PROJECTS)} case studies, from 0 → 1 to scale</div><div class="sc-reel"><div class="sc-reel-track">{tiles}{tiles}</div></div>'
+    # 5 · Craft
+    steps = "".join(
+        f'<span class="sc-step sc-in" style="--i:{k + 1}">{w}</span>' + ('<span class="sc-arrow sc-in" style="--i:%d">→</span>' % (k + 1) if k < 3 else "")
+        for k, w in enumerate(["Research", "Design", "Build", "Measure"])
+    )
+    tools = "".join(
+        f'<li class="sc-tool sc-pop" style="--i:{k}"><img src="{base}{t["icon"]}" alt=""><span>{escape(t["name"])}</span></li>'
+        for k, t in enumerate(SITE["stack"][:10])
+    )
+    s5 = f'<div class="sc-head sc-in" style="--i:0">How I work</div><div class="sc-steps">{steps}</div><ul class="sc-tools">{tools}</ul>'
+    # 6 · Outro
+    s6 = f"""<div class="sc-outro">
+      <p class="sc-big sc-in" style="--i:0">Let’s build something <em>people love</em> to use.</p>
+      <div class="sc-cta sc-in" style="--i:2">
+        <a class="btn btn-accent" href="#work">View work {icon("arrow-r")}</a>
+        {ext(L["calendly"], icon("calendar") + " Book a call", "btn btn-ghost")}
+      </div>
+    </div>"""
+    scenes = [("Intro", s1), ("Impact", s2), ("Journey", s3), ("Work", s4), ("Craft", s5), ("Let’s talk", s6)]
+    slides = "".join(
+        f'<div class="sc-scene sc-{k + 1}" data-label="{escape(t)}" role="group" aria-roledescription="slide" aria-label="{k + 1} of {len(scenes)}: {escape(t)}"{"" if k == 0 else " hidden"}>{html}</div>'
+        for k, (t, html) in enumerate(scenes)
+    )
+    bars = "".join(
+        f'<button type="button" class="sc-seg" aria-label="Go to scene {k + 1}: {escape(t)}"><i></i></button>'
+        for k, (t, _) in enumerate(scenes)
+    )
+    return f"""<section class="showcase reveal" aria-roledescription="carousel" aria-label="Showcase: me in 25 seconds" data-showcase>
+  <div class="sc-stage">{slides}</div>
+  <div class="sc-controls">
+    <button type="button" class="sc-play" aria-label="Pause showcase" aria-pressed="false"><span class="sc-icon-pause"></span></button>
+    <div class="sc-segs">{bars}</div>
+    <span class="sc-label" aria-live="polite">01 · Intro</span>
+  </div>
+</section>"""
 
 
 def page_hero(label, title, lede="", portrait=None, compact=False):

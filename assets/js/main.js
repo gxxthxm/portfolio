@@ -277,6 +277,101 @@
   var parallax = reduceMotion ? [] : Array.prototype.slice.call(document.querySelectorAll(".feature-media > img, .case-cover img, .next-media img"));
   parallax.forEach(function (im) { im.classList.add("parallax"); });
 
+  // ---------- Hero showcase reel ----------
+  var reel = document.querySelector("[data-showcase]");
+  if (reel) {
+    var scenes = Array.prototype.slice.call(reel.querySelectorAll(".sc-scene"));
+    var segs = Array.prototype.slice.call(reel.querySelectorAll(".sc-seg"));
+    var label = reel.querySelector(".sc-label");
+    var playBtn = reel.querySelector(".sc-play");
+    var durations = [4200, 4600, 5600, 6200, 5200, 5600];   // ms per scene
+    var cur = 0, userPaused = reduceMotion, elapsed = 0, lastT = null;
+    var countScene = function (scene) {
+      if (reduceMotion) return;
+      scene.querySelectorAll("[data-sc-count]").forEach(function (el) {
+        var text = el.getAttribute("data-final") || el.textContent;
+        el.setAttribute("data-final", text);
+        var m = text.match(/(\d+(?:\.\d+)?)(?!.*\d)/);
+        if (!m) return;
+        var target = parseFloat(m[1]), pre = text.slice(0, m.index), post = text.slice(m.index + m[1].length);
+        var t0 = null;
+        var tick = function (now) {
+          if (t0 === null) t0 = now;
+          var k = Math.min(1, (now - t0 - 500) / 1200);
+          if (k < 0) k = 0;
+          el.textContent = pre + Math.round(target * (1 - Math.pow(1 - k, 3))) + post;
+          if (k < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+    };
+    var restart = function (el, cls) { el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); };
+    var showScene = function (n, instant) {
+      n = (n + scenes.length) % scenes.length;
+      var prev = scenes[cur], next = scenes[n];
+      if (prev !== next) {
+        if (instant || reduceMotion) { prev.hidden = true; prev.classList.remove("play", "out"); }
+        else {
+          prev.classList.add("out");
+          setTimeout(function () { if (prev !== scenes[cur]) { prev.hidden = true; prev.classList.remove("play", "out"); } }, 380);
+        }
+      }
+      cur = n;
+      next.hidden = false; next.classList.remove("out");
+      restart(next, "play");
+      countScene(next);
+      reel.style.setProperty("--sc-dur", durations[n] + "ms");
+      segs.forEach(function (sg, i) {
+        sg.classList.toggle("done", i < n);
+        sg.classList.remove("active");
+        sg.setAttribute("aria-current", i === n ? "true" : "false");
+      });
+      segs[n].classList.add("active");
+      segs.forEach(function (sg, i) { sg.style.setProperty("--p", i < n ? 1 : 0); });
+      elapsed = 0;
+      label.textContent = (n < 9 ? "0" : "") + (n + 1) + " · " + next.getAttribute("data-label");
+    };
+    segs.forEach(function (sg, i) { sg.addEventListener("click", function () { showScene(i, true); }); });
+    // One clock drives the progress bar and the scene changes; it stops while paused,
+    // off-screen or in a background tab (animation frames don't run there).
+    var advance = function (ms) {
+      if (userPaused || reel.classList.contains("idle")) return;
+      elapsed += ms;
+      segs[cur].style.setProperty("--p", Math.min(1, elapsed / durations[cur]).toFixed(4));
+      if (elapsed >= durations[cur]) showScene(cur + 1);
+    };
+    reel.advance = advance;   // exposed for testing
+    var clock = function (t) {
+      if (lastT !== null) advance(Math.min(t - lastT, 100));
+      lastT = t;
+      requestAnimationFrame(clock);
+    };
+    if (!reduceMotion) requestAnimationFrame(clock);
+    var setPaused = function (p) {
+      userPaused = p;
+      reel.classList.toggle("paused", p);
+      playBtn.setAttribute("aria-pressed", p ? "true" : "false");
+      playBtn.setAttribute("aria-label", p ? "Play showcase" : "Pause showcase");
+    };
+    playBtn.addEventListener("click", function () {
+      if (reduceMotion) { showScene(cur + 1, true); return; }      // no autoplay: the button steps forward
+      setPaused(!userPaused);
+    });
+    reel.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") { showScene(cur + 1, true); e.preventDefault(); }
+      if (e.key === "ArrowLeft") { showScene(cur - 1, true); e.preventDefault(); }
+    });
+    // Only run while visible on screen and the tab is in front.
+    var onScreen = true;
+    var syncIdle = function () { reel.classList.toggle("idle", !onScreen || document.hidden); };
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (es) { onScreen = es[0].isIntersecting; syncIdle(); }, { threshold: 0.25 }).observe(reel);
+    }
+    document.addEventListener("visibilitychange", syncIdle);
+    if (reduceMotion) { setPaused(true); playBtn.setAttribute("aria-label", "Next scene"); }
+    showScene(0, true);
+  }
+
   // ---------- Try-it quiz ----------
   document.querySelectorAll("[data-quiz]").forEach(function (quiz) {
     var opts = quiz.querySelectorAll(".quiz-opt");
@@ -315,7 +410,7 @@
         return '<li role="option" aria-selected="' + (i === active) + '" data-i="' + i + '"><span>' + esc(it.t) + '</span><small>' + esc(it.s) + "</small></li>";
       }).join("") : '<li class="palette-empty">No matches</li>';
     }
-    function go(it) {
+    function openResult(it) {
       if (!it) return;
       if (it.x) window.open(it.u, "_blank", "noopener"); else location.href = it.u;
       close();
@@ -335,10 +430,10 @@
       if (e.key === "Escape") close();
       else if (e.key === "ArrowDown") { e.preventDefault(); active = Math.min(active + 1, shown.length - 1); render(); }
       else if (e.key === "ArrowUp") { e.preventDefault(); active = Math.max(active - 1, 0); render(); }
-      else if (e.key === "Enter") { e.preventDefault(); go(shown[active]); }
+      else if (e.key === "Enter") { e.preventDefault(); openResult(shown[active]); }
     });
     input.addEventListener("input", function () { active = 0; render(); });
-    listEl.addEventListener("click", function (e) { var li = e.target.closest("[data-i]"); if (li) go(shown[+li.getAttribute("data-i")]); });
+    listEl.addEventListener("click", function (e) { var li = e.target.closest("[data-i]"); if (li) openResult(shown[+li.getAttribute("data-i")]); });
     palette.addEventListener("click", function (e) { if (e.target === palette) close(); });
     document.querySelectorAll("[data-open-palette]").forEach(function (b) { b.addEventListener("click", open); });
     if (!/Mac|iPhone|iPad/.test(navigator.platform)) document.querySelectorAll(".search-btn kbd").forEach(function (k) { k.textContent = "Ctrl K"; });
