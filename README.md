@@ -47,3 +47,13 @@ The generated pages live at the repo root, so GitHub Pages can serve the `main`
 branch directly: **Settings → Pages → Deploy from a branch → `main` / `(root)`**.
 All links are relative, so it works at `https://<user>.github.io/portfolio/` or on a
 custom domain.
+
+## Mockups of this site
+
+The "This Portfolio" case study uses mockups rendered from the site itself. To refresh
+them after a design or domain change, serve the site locally and run:
+
+```bash
+python3 -m http.server 8765
+python3 tools/portfolio_mockups.py
+```
