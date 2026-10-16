@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MinFit — Gauthem Krishna</title>
-<meta name="description" content="After struggling to find a workout app that met my preference for a minimalistic, dark mode interface focused purely on workout tracking, I decided to create…">
+<meta name="description" content="MinFit is the workout app I wanted and couldn’t find: dark, calm and built around one job, logging a session without friction. It started as a Figma concept…">
 <meta property="og:title" content="MinFit — Gauthem Krishna">
-<meta property="og:description" content="After struggling to find a workout app that met my preference for a minimalistic, dark mode interface focused purely on workout tracking, I decided to create…">
+<meta property="og:description" content="MinFit is the workout app I wanted and couldn’t find: dark, calm and built around one job, logging a session without friction. It started as a Figma concept…">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://www.gauthem-portfolio.site.je/assets/images/gauthem-square.jpg">
 <meta name="twitter:card" content="summary">
@@ -44,73 +44,88 @@
     <a class="back-link reveal" href="../../other_works/"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Other works</a>
     <p class="eyebrow reveal">Case study / Product</p>
     <h1 class="case-title reveal">MinFit</h1>
-    <dl class="case-meta reveal"><div><dt>Domain</dt><dd>Product</dd></div><div><dt>Industry</dt><dd>Fitness</dd></div></dl>
+    <dl class="case-meta reveal"><div><dt>Domain</dt><dd>Product</dd></div><div><dt>Industry</dt><dd>Fitness · iOS</dd></div></dl>
   </div>
 </section>
 <div class="wrap">
-  <figure class="case-cover reveal" style="view-transition-name:cover-minfit"><img class="" src="../../assets/images/noHqySK5SSMeWYhVLss2HbiRY.png" alt="MinFit"></figure>
+  <figure class="case-cover reveal" style="view-transition-name:cover-minfit"><img class="" src="../../assets/media/minfit/cover.jpg" alt="MinFit"></figure>
 </div>
 <section class="wrap case-layout">
-  <aside class="case-aside"><nav class="toc" aria-label="On this page"><p class="label">On this page</p><ol><li><a href="#problem-statement">Problem Statement</a></li><li><a href="#goals">Goals</a></li><li><a href="#user-persona">User Persona</a></li><li><a href="#features-user-flow">Features &amp; User Flow</a></li><li><a href="#design-highlights">Design Highlights</a></li><li><a href="#development-with-claude-ai">Development with Claude AI</a></li><li><a href="#outcomes-reflection">Outcomes &amp; Reflection</a></li><li><a href="#future-outlook">Future Outlook</a></li><li><a href="#conclusion">Conclusion</a></li></ol></nav></aside>
+  <aside class="case-aside"><nav class="toc" aria-label="On this page"><p class="label">On this page</p><ol><li><a href="#problem-statement">Problem Statement</a></li><li><a href="#goals">Goals</a></li><li><a href="#from-figma-to-native">From Figma to Native</a></li><li><a href="#logging-a-workout">Logging a Workout</a></li><li><a href="#home-history-and-progress">Home, History and Progress</a></li><li><a href="#the-social-layer">The Social Layer</a></li><li><a href="#design-highlights">Design Highlights</a></li><li><a href="#building-it-with-claude-code">Building It with Claude Code</a></li><li><a href="#outcome">Outcome</a></li><li><a href="#what-s-next">What’s Next</a></li></ol></nav></aside>
   <article class="prose">
     
-    <p>After struggling to find a workout app that met my preference for a minimalistic, dark mode interface focused purely on workout tracking, I decided to create my own solution. I designed the entire user interface and experience in Figma, inspired by a clean and calming dark-themed aesthetic. To bring the design to life as a functional mobile app for my phone, I developed it using Claude AI, which enabled efficient and seamless app creation aligned with my vision.</p>
-<figure class="shot reveal"><img class="" src="../../assets/images/sYNARqV6SXif4oJcyWvtJkjsSss.png" alt="" loading="lazy" decoding="async"></figure>
-<figure class="shot reveal"><img class="" src="../../assets/images/yhHsaYXnPDDf8DXckJWFyfNVY.png" alt="" loading="lazy" decoding="async"></figure>
-<figure class="shot reveal"><img class="" src="../../assets/images/WpJMliW10HINcahbud98MHpY.png" alt="" loading="lazy" decoding="async"></figure>
+    <p>MinFit is the workout app I wanted and couldn’t find: dark, calm and built around one job, logging a session without friction. It started as a Figma concept and is now a <strong>native iOS app written in SwiftUI</strong>. It has four tabs, live set-by-set tracking, routines, progress charts, and a social feed of photo and video posts. I designed every screen and built the app end to end with <strong>Claude Code</strong>.</p>
+<figure class="shot reveal"><img class="" src="../../assets/media/minfit/tabs.jpg" alt="MinFit Home, Workouts, Social and Profile tabs" loading="lazy" decoding="async"><figcaption>The four tabs: Home, Workouts, Social and Profile. All screens are real, captured from the app running in the iOS Simulator.</figcaption></figure>
 <h2 id="problem-statement">Problem Statement</h2>
-<p>Most workout apps available are visually busy and filled with features that clutter the experience, detracting from quick and clear workout tracking. Bright and complex UIs made it difficult for me to focus during workouts and added unnecessary friction when logging exercise details. I needed a streamlined, distraction-free, dark mode app that prioritized simplicity and usability.</p>
+<p>Most workout apps are busy. Bright screens, upsells and nested menus get in the way at the one moment that matters: between sets, with sweaty hands and about 90 seconds to log what you just did. I wanted something closer to a paper logbook, the way people trained in the 80s, with just enough software to remember my numbers and keep me consistent.</p>
 <h2 id="goals">Goals</h2>
 <ul>
-<li>Build a minimalistic workout app with a dark theme optimized for ease of use in low-light environments.</li>
-<li>Design an intuitive card-based UI for workout sessions, exercises, and progress tracking.</li>
-<li>Implement straightforward navigation with essential app sections—Home, Workout Library, and Profile.</li>
-<li>Ensure accessibility with legible typography, proper contrast, and comfortable tap areas.</li>
-<li>Develop a functional mobile app from the Figma design using Claude AI to have a personal, usable tool.</li>
+<li>Make logging a set a single tap, with last session’s weight and reps already filled in.</li>
+<li>Keep the interface dark, quiet and readable in a gym, with large tap targets and one accent colour.</li>
+<li>Show progress honestly: volume, streaks, personal records and a simple weekly chart.</li>
+<li>Add a light social layer for motivation, without turning the app into a feed you scroll instead of training.</li>
+<li>Ship a real, native app instead of a prototype.</li>
 </ul>
-<h2 id="user-persona">User Persona</h2>
-<p><strong>Myself – The Only User:</strong></p>
+<h2 id="from-figma-to-native">From Figma to Native</h2>
+<figure class="shot reveal"><img class="" src="../../assets/images/sYNARqV6SXif4oJcyWvtJkjsSss.png" alt="Original MinFit Figma concept" loading="lazy" decoding="async"><figcaption>The first Figma concept: the session cards and the barbell-pulse logo carried through to the native app.</figcaption></figure>
+<p>The first version was a Figma design with three tabs. Moving it into SwiftUI kept the card-based home, the logo and the dark palette. Building it for real changed a lot more:</p>
 <ul>
-<li>A fitness enthusiast who values a calm, focused, and efficient workout logging experience.</li>
-<li>Prefers using apps with a minimalistic dark theme during early morning or late-night sessions.</li>
-<li>Looks for speed and clarity when reviewing or entering workout data on the go.</li>
+<li><strong>Four tabs instead of three:</strong> Social became a tab of its own once it was clear people train better with company.</li>
+<li><strong>Logging became the centre:</strong> the static exercise list turned into a full live-workout flow with rest timing and a completion summary.</li>
+<li><strong>Native details:</strong> a floating glass tab bar, haptic feedback on key actions, Swift Charts for progress and system pickers for photos and video.</li>
 </ul>
-<h2 id="features-user-flow">Features &amp; User Flow</h2>
+<h2 id="logging-a-workout">Logging a Workout</h2>
+<figure class="shot reveal"><img class="" src="../../assets/media/minfit/logging.jpg" alt="Routines and the live workout screen" loading="lazy" decoding="async"><figcaption>Routines on the left. On the right, a live Push Day: two sets ticked, volume updating and the rest timer counting down.</figcaption></figure>
 <ul>
-<li><strong>Home/Dashboard:</strong> Displays cards summarizing recent and scheduled workouts with session details, exercise breakdowns, and total volume. Tapping a card opens detailed session views.</li>
-<li><strong>Calendar:</strong> Month view highlighting workout days. Selecting a date reveals workouts for that day, with options to add or edit sessions.</li>
-<li><strong>Workout Session Details:</strong> Scrollable exercise list including sets, reps, duration, and minimalist iconography.</li>
-<li><strong>Workout Library:</strong> Browse predefined and custom routines easily accessible for planning.</li>
-<li><strong>Profile:</strong> Displays personal statistics, progress highlights, and preference settings.</li>
-<li><strong>Navigation:</strong> Fixed bottom navigation bar for swift movement between core sections.</li>
+<li><strong>Routines:</strong> split days such as Push, Pull and Legs, each with target muscles and an estimated duration. Start any of them with one tap, or begin a Quick Workout from scratch.</li>
+<li><strong>Live tracking:</strong> each exercise shows a table of sets with the previous session’s weight × reps beside it, and the inputs come pre-filled. Ticking a set adds it to the running duration, volume and set count at the top.</li>
+<li><strong>Rest timer:</strong> ticking a set starts a rest countdown in a bar above the content, with −15 s, +15 s and Skip. The default rest length is set in Settings.</li>
+<li><strong>Minimise and keep going:</strong> a workout can be collapsed into a banner above the tab bar, so you can check your history or the feed mid-session without losing anything.</li>
+<li><strong>Exercise library and routine editor:</strong> browse exercises, build your own routines, and add or remove exercises and sets during a session.</li>
+<li><strong>Finish:</strong> a completion screen sums up the session, and you can share it to the feed straight away.</li>
+</ul>
+<h2 id="home-history-and-progress">Home, History and Progress</h2>
+<ul>
+<li><strong>Home:</strong> recent sessions as cards with time, total volume and the first exercises, with a calendar for going further back. Each card opens a full session breakdown.</li>
+<li><strong>Profile:</strong> total workouts, total weight lifted, current streak and personal records, plus a weekly volume chart built with Swift Charts.</li>
+<li><strong>Achievements:</strong> milestones such as First Workout, Getting Consistent (10 workouts) and Record Breaker (10 personal records) reward the habit rather than the numbers.</li>
+<li><strong>Settings:</strong> kg or lbs, default rest time and profile details.</li>
+</ul>
+<h2 id="the-social-layer">The Social Layer</h2>
+<figure class="shot reveal"><img class="" src="../../assets/media/minfit/social.jpg" alt="Social feed and profile" loading="lazy" decoding="async"><figcaption>The feed with Clips along the top, next to the Profile tab. The feed shown here is the built-in sample feed.</figcaption></figure>
+<ul>
+<li><strong>Feed:</strong> photo and video posts from people you train with, filtered by All, Photos or Videos, with likes and comments. Posts can carry the workout they came from.</li>
+<li><strong>Clips:</strong> a row of short videos opens a full-screen vertical pager where only the visible clip plays. Landscape clips are letterboxed rather than cropped.</li>
+<li><strong>Video that behaves:</strong> videos in the feed autoplay muted when most of the post is on screen and pause when it scrolls away.</li>
+<li><strong>Posting:</strong> compose with the system photo picker, attach a workout and publish. You can delete your own posts, and comments and likes go with them.</li>
+<li><strong>Built for real accounts:</strong> the feed runs on a service layer with two backends. One is a shared CloudKit feed using iCloud identity, so the server sets each post’s author and nobody can post as someone else. The other is a sample feed for development and demos. Likes and comments are stored as separate records so that each user only ever writes their own.</li>
 </ul>
 <h2 id="design-highlights">Design Highlights</h2>
+<figure class="shot reveal"><img class="" src="../../assets/media/minfit/onboarding.jpg" alt="MinFit onboarding screen" loading="lazy" decoding="async"><figcaption>Onboarding sets the tone: “Make gym simple. Train like the 80s.”</figcaption></figure>
 <ul>
-<li>Dark gray background (#121212) reduces eye strain with softer card backgrounds offering contrast.</li>
-<li>Off-white and gray typography layered for clear hierarchy without harsh brightness.</li>
-<li>Single accent color (muted blue) for interactivity and focus points.</li>
-<li>Minimalist line icons represent exercises clearly but unobtrusively.</li>
-<li>Ample spacing and large touch targets create an easy-to-use interface during active gym sessions.</li>
-<li>Accessibility features such as scalable text sizes and contrast compliance ensure inclusivity.</li>
+<li>Near-black background (#121212) with slightly lighter cards (#1C1C1E) creates depth without borders or glow.</li>
+<li>One accent, a strong blue (#2F6BFF), marks everything you can act on: Start Workout, completed sets, the active tab.</li>
+<li>Numbers come first: weights, reps, time and volume are the largest text on every screen.</li>
+<li>Large, evenly spaced tap targets for sets and the rest timer, designed for use mid-workout.</li>
+<li>A floating tab bar that stays out of the way, with the active workout banner sitting just above it.</li>
 </ul>
-<h2 id="development-with-claude-ai">Development with Claude AI</h2>
-<p>Claude AI played a crucial role in translating the detailed Figma designs into a working mobile app. Its capabilities enabled rapid app development while maintaining fidelity to the original design aesthetic and functional requirements. This approach streamlined bringing MinFit from a visual concept to a practical tool I could use daily.</p>
-<h2 id="outcomes-reflection">Outcomes &amp; Reflection</h2>
+<h2 id="building-it-with-claude-code">Building It with Claude Code</h2>
+<p>I designed MinFit and built it with Claude Code, working the way I run product teams: I set the direction, define the behaviour and review every screen; AI speeds up the path to working software.</p>
 <ul>
-<li>MinFit successfully provides a distraction-free, elegant dark mode workout app that supports streamlined workout logging.</li>
-<li>The card-based UI and straightforward navigation reduce cognitive load, allowing quick access to essential info.</li>
-<li>Creating the app through Claude AI from detailed Figma designs combined the strengths of visual design with intelligent development.</li>
-<li>The project confirmed the viability and power of integrating design tools like Figma with AI-driven development platforms for personal app creation.</li>
+<li><strong>About 5,700 lines of Swift</strong> across 36 files, organised into App, Data, Design, Features and Models.</li>
+<li><strong>A shared design system</strong> (one Theme file) so every screen uses the same colours, spacing and type.</li>
+<li><strong>Swappable backends:</strong> the feed is written against one interface, so the app runs fully on sample data and switches to CloudKit through a single build setting.</li>
+<li><strong>Tested in the simulator:</strong> each flow was exercised on iPhone simulators, including a two-device setup to check that posts, likes and comments sync between different accounts.</li>
 </ul>
-<h2 id="future-outlook">Future Outlook</h2>
+<h2 id="outcome">Outcome</h2>
+<p>MinFit went from a Figma concept to a native app I use for my own training. It logs a set in one tap, remembers every number and adds just enough social pull to keep me showing up. It is also proof of how I work now: product and design judgement up front, with AI collapsing the time from idea to a real app on a phone.</p>
+<h2 id="what-s-next">What’s Next</h2>
 <ul>
-<li>Expanding customization options for workouts, themes, and notifications.</li>
-<li>Integrating with wearable devices or sensors for automatic data input.</li>
-<li>Enhancing onboarding to assist new users.</li>
-<li>Exploring social or community features for motivation and sharing.</li>
+<li>Turn on the shared CloudKit feed in production and invite a first group of friends.</li>
+<li>Apple Health and Apple Watch support for heart rate and automatic workout logging.</li>
+<li>Progress charts for each exercise and smarter suggestions for when to add weight.</li>
+<li>A TestFlight beta, then the App Store.</li>
 </ul>
-<h2 id="conclusion">Conclusion</h2>
-<p>MinFit embodies my vision of a minimal, user-centered workout app created through thoughtful design in Figma and brought to life via Claude AI development. This project highlights how combining robust design and AI-powered development platforms can empower individuals to build highly tailored, functional apps aligned with personal needs and aesthetics.</p>
   </article>
 </section>
 <section class="wrap next-wrap">
