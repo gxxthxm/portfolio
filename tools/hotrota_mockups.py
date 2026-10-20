@@ -16,7 +16,7 @@ import time
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOCAL = "http://localhost:8766/"
-DOMAIN = "hotrota.com/"                           # shown in the mock address bar
+DOMAIN = "gxxthxm.github.io/hotRota/"             # shown in the mock address bar
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 BACKDROP = "#2a2826"                              # warm charcoal, close to Hot Rota's ink
 

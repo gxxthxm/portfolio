@@ -5,6 +5,7 @@
  "category": "Web Design",
  "tags": "Film Studio | Customer Support",
  "cover": "assets/media/hotrota/cover.jpg",
+ "visit": "https://gxxthxm.github.io/hotRota/",
  "blocks": [
   {"t": "p", "h": "I designed and built a customer-support website for Hot Rota, a small studio making gentle, old-fashioned comedy films for couples, sold on disc in stores around the world. The brief asked for a site that puts help first, while still feeling as warm and crafted as the films themselves."},
   {"t": "h2", "h": "Problem Statement"},
